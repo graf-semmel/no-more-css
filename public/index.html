@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A CSS</title>
+    <link rel="stylesheet" href="/public/all.css" />
+  </head>
+  <body>
+    <header>
+      <container>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+          </ul>
+          <ul>
+            <li><a href="/typo.html">Typography</a></li>
+            <li><a href="/">Link 2</a></li>
+          </ul>
+        </nav>
+      </container>
+    </header>
+    <main>
+      <container>
+        <section style="background: #eee">
+          <h2>Button</h2>
+          <pre>
+            <code>
+              <button>Default</button>
+            </code>
+          </pre>
+          <button>Default</button>
+        </section>
+        <section style="background: #eee">
+          <h2>Typography</h2>
+        </section>
+        <section style="background: #eee">
+          <h2>Figure</h2>
+        </section>
+        <section style="background: #eee">
+          <h2>Code</h2>
+          <pre>
+            <code>
+              <button>Default</button>
+            </code>
+          </pre>
+        </section>
+        <section style="background: #eee">
+          <h2>Cards</h2>
+          <card>
+            <header>
+              <h1>Home</h1>
+            </header>
+            <main>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam voluptatum, quibusdam, voluptate, quia quod quos
+                voluptas voluptatem quas quidem doloribus quae. Quisquam
+                voluptatum, quibusdam, voluptate, quia quod quos voluptas
+                voluptatem quas quidem doloribus quae.
+              </p>
+            </main>
+            <footer>
+              <button>Click me</button>
+            </footer>
+          </card>
+        </section>
+      </container>
+    </main>
+    <footer></footer>
+  </body>
+  <script>
+    function escapeHtml(html) {
+      return html
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    const codeElements = document.getElementsByTagName("code");
+    console.log(codeElements);
+    for (let i = 0; i < codeElements.length; i++) {
+      const code = codeElements[i].innerHTML;
+      const escapedCode = escapeHtml(code);
+      codeElements[i].innerHTML = escapedCode;
+    }
+  </script>
+</html>
