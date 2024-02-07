@@ -1,0 +1,11 @@
+dl {
+}
+dt {
+  margin: 0;
+}
+dt:not(:first-child) {
+  margin-top: 0.5rem;
+}
+dd {
+  margin: 0 0 0 1rem;
+}

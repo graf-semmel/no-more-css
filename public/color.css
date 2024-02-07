@@ -1,0 +1,15 @@
+:root {
+  --primary: #1d2b53;
+  --primary-content: #fff;
+  --primary-content-muted: rgba(255, 255, 255, 0.7);
+  --secondary: #7e2553;
+  --secondary-content: #fff;
+  --success: #25aa6c;
+  --success-content: #fff;
+  --error: #ff004d;
+  --error-content: #fff;
+  --base: #fff;
+  --base-content: #27272a;
+  --surface: #eee;
+  --surface-content: #27272a;
+}

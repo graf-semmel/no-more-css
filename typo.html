@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/public/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.configure({ useBR: true });
+      // hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <header>
+      <container>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+          </ul>
+          <ul>
+            <li><a href="/">Typography</a></li>
+            <li><a href="/">Link 2</a></li>
+          </ul>
+        </nav>
+      </container>
+    </header>
+    <main>
+      <container>
+        <h1>Typography</h1>
+        <hr />
+        <section>
+          <h2>Headings</h2>
+          <card>
+            <main>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </main>
+            <pre><code><h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6></code></pre>
+          </card>
+        </section>
+        <section>
+          <h2>Code</h2>
+          <card>
+            <main>
+              <p>position the code inline to avoid additional padding</p>
+              <pre><code><pre><code><button>Default</button></code></pre></code></pre>
+            </main>
+            <pre><code><button>Default</button></code></pre>
+          </card>
+        </section>
+        <section>
+          <h2>Inline text elements</h2>
+          <card>
+            <main>
+              <!-- abbr, strong, b, i, em, cite, del, ins, kbd, mark, s, small, sub, sup, u, dfn -->
+              <dl>
+                <dt>
+                  <b>Strong</b> | <code><b>Strong</b></code>
+                </dt>
+                <dd>This text is strongly emphasized for importance.</dd>
+
+                <dt>
+                  <i>Italic</i> | <code><i>Italic</i></code>
+                </dt>
+                <dd>Using italics can provide a subtle emphasis.</dd>
+
+                <dt>
+                  <em>Emphasis</em> | <code><em>Emphasis</em></code>
+                </dt>
+                <dd>Adding emphasis often changes the tone of a sentence.</dd>
+
+                <dt>
+                  <u>Underline</u> | <code><u>Underline</u></code>
+                </dt>
+                <dd>Underlining text can signify its importance.</dd>
+
+                <dt>
+                  <s>Strikethrough</s> | <code><s>Strikethrough</s></code>
+                </dt>
+                <dd>
+                  Strikethrough is used to show that something is removed or
+                  incorrect.
+                </dd>
+
+                <dt>
+                  <mark>Highlight</mark> | <code><mark>Highlight</mark></code>
+                </dt>
+                <dd>Words can be highlighted to draw attention.</dd>
+
+                <dt>
+                  <small>Small</small> | <code><small>Small</small></code>
+                </dt>
+                <dd>Using small text can indicate less importance or size.</dd>
+
+                <dt>
+                  <sub>Subscript</sub> | <code><sub>Subscript</sub></code>
+                </dt>
+                <dd>
+                  Chemical formulas use subscript for representing elements.
+                </dd>
+
+                <dt>
+                  <sup>Superscript</sup> | <code><sup>Superscript</sup></code>
+                </dt>
+                <dd>Mathematical equations often have superscript numbers.</dd>
+
+                <dt>
+                  <kbd>Keyboard</kbd> | <code><kbd>Keyboard</kbd></code>
+                </dt>
+                <dd>Keyboard input is often represented in a unique way.</dd>
+
+                <dt>
+                  <cite>Citation</cite> | <code><cite>Citation</cite></code>
+                </dt>
+                <dd>Citations are crucial in academic writing.</dd>
+
+                <dt>
+                  <del>Deleted</del> | <code><del>Deleted</del></code>
+                </dt>
+                <dd>Deleted text shows what has been removed.</dd>
+
+                <dt>
+                  <ins>Inserted</ins> | <code><ins>Inserted</ins></code>
+                </dt>
+                <dd>Inserted text highlights additions to a document.</dd>
+
+                <dt>
+                  <dfn>Definition</dfn> | <code><dfn>Definition</dfn></code>
+                </dt>
+                <dd>A definition explains the meaning of a term.</dd>
+              </dl>
+            </main>
+          </card>
+        </section>
+        <section>
+          <h2>Block quotes</h2>
+          <card>
+            <main>
+              <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>
+                  It is a good thing for an uneducated man to read books of
+                  quotations.
+                </p>
+                <cite>Winston S. Churchill, Brave New World</cite>
+              </blockquote>
+            </main>
+            <pre><code><blockquote cite="https://www.huxley.net/bnw/four.html">
+  <p>
+    It is a good thing for an uneducated
+    man to read books of quotations.
+  </p>
+  <cite>Winston S. Churchill, Brave New World</cite>
+</blockquote></code></pre>
+          </card>
+        </section>
+      </container>
+    </main>
+    <footer></footer>
+  </body>
+  <script>
+    function escapeHtml(html) {
+      return html
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    let codeElements = document.querySelectorAll("code");
+
+    for (let i = 0; i < codeElements.length; i++) {
+      const code = codeElements[i].innerHTML;
+      const escapedCode = escapeHtml(code);
+      codeElements[i].innerHTML = escapedCode;
+    }
+  </script>
+</html>

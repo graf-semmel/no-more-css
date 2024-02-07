@@ -1,0 +1,38 @@
+card {
+  --card-spacing-x: 2rem;
+  --card-spacing-y: 2rem;
+  padding: var(--card-spacing-y) 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  border-radius: var(--rounded-box, 1rem);
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1, oklch(var(--b1) / var(--tw-bg-opacity)));
+  gap: var(--card-spacing-y);
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+card > main {
+  padding: 0 var(--card-spacing-x);
+}
+
+card > pre {
+  border-radius: var(--card-top-border-radius, 0rem)
+    var(--card-top-border-radius, 0rem) var(--card-bottom-border-radius, 0rem)
+    var(--card-bottom-border-radius, 0rem);
+}
+card > pre:first-child {
+  --card-top-border-radius: var(--rounded-box, 1rem);
+}
+card > pre:last-child {
+  margin-bottom: calc(var(--card-spacing-y) * -1);
+  --card-bottom-border-radius: var(--rounded-box, 1rem);
+}

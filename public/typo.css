@@ -1,0 +1,195 @@
+:root {
+  --font-family-sans: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --font-family: var(--font-family-sans);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-spacing-y: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --font-weight: 700;
+  margin-bottom: 0;
+  margin-top: var(--heading-spacing-y);
+  color: var(--color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+}
+
+h1 {
+  --font-size: 2rem;
+  --line-height: 1.125;
+  --typography-spacing-top: 3rem;
+}
+
+h2 {
+  --font-size: 1.75rem;
+  --line-height: 1.15;
+  --typography-spacing-top: 2.625rem;
+}
+
+h3 {
+  --font-size: 1.5rem;
+  --line-height: 1.175;
+  --typography-spacing-top: 2.25rem;
+}
+
+h4 {
+  --font-size: 1.25rem;
+  --line-height: 1.2;
+  --typography-spacing-top: 1.874rem;
+}
+
+h5 {
+  --font-size: 1.125rem;
+  --line-height: 1.225;
+  --typography-spacing-top: 1.6875rem;
+}
+
+h6 {
+  --font-size: 1rem;
+  --line-height: 1.25;
+  --typography-spacing-top: 1.5rem;
+}
+
+/**
+ * Code
+ */
+
+pre {
+  background-color: var(--primary);
+  color: var(--primary-content-muted);
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: initial;
+}
+
+pre,
+code {
+  font-family: var(--font-family-mono);
+  margin: 0;
+  display: block;
+}
+
+pre > code {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+abbr {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+b {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+em {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+
+s {
+  text-decoration: line-through;
+  text-decoration-color: var(--secondary);
+}
+
+kbd {
+  display: inline-block;
+  background-color: var(--surface);
+  color: var(--surface-content);
+  padding: 0.2rem 0.3rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+  border: solid 1px var(--surface-content);
+  box-shadow: 2px 2px 2px var(--surface-content);
+}
+
+cite {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+cite::before {
+  content: "— ";
+}
+
+mark {
+  --mark: var(--secondary);
+  background-color: var(--mark);
+  outline: solid 0.1rem var(--mark);
+  color: var(--secondary-content);
+  border-radius: 0.1rem;
+  vertical-align: baseline;
+}
+del {
+  --deleted: var(--error);
+  background-color: var(--deleted);
+  outline: solid 0.1rem var(--deleted);
+  color: var(--secondary-content);
+  border-radius: 0.1rem;
+  vertical-align: baseline;
+}
+
+ins {
+  --inserted: var(--success);
+  background-color: var(--success);
+  outline: solid 0.1rem var(--success);
+  color: var(--secondary-content);
+  border-radius: 0.1rem;
+  text-decoration: none;
+}
+
+code:not(pre > code) {
+  display: inline-block;
+  background-color: var(--surface);
+  color: var(--surface-content);
+  padding: 0.2rem 0.3rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-left: solid 0.2rem var(--secondary);
+}
+blockquote p {
+  padding: 0;
+  margin: 0;
+}
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote cite {
+  display: block;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
