@@ -1,31 +1,51 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = createSignal(0)
-
   return (
-    <>
-      <div>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={solidLogo} class="logo solid" alt="Solid logo" />
-        </a>
-      </div>
-      <h1>Vite + Solid</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count()}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Solid logos to learn more
-      </p>
-    </>
-  )
+    <container>
+      <section style="background: #eee">
+        <h2>Button</h2>
+        <pre>
+          <code>
+            <button>Default</button>
+          </code>
+        </pre>
+        <button>Default</button>
+      </section>
+      <section style="background: #eee">
+        <h2>Typography</h2>
+      </section>
+      <section style="background: #eee">
+        <h2>Figure</h2>
+      </section>
+      <section style="background: #eee">
+        <h2>Code</h2>
+        <pre>
+          <code>
+            <button>Default</button>
+          </code>
+        </pre>
+      </section>
+      <section style="background: #eee">
+        <h2>Cards</h2>
+        <card>
+          <header>
+            <h1>Home</h1>
+          </header>
+          <main>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, quibusdam, voluptate, quia quod quos voluptas
+              voluptatem quas quidem doloribus quae. Quisquam voluptatum,
+              quibusdam, voluptate, quia quod quos voluptas voluptatem quas
+              quidem doloribus quae.
+            </p>
+          </main>
+          <footer>
+            <button>Click me</button>
+          </footer>
+        </card>
+      </section>
+    </container>
+  );
 }
 
-export default App
+export default App;
