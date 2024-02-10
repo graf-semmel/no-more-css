@@ -4,15 +4,62 @@
   --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
   --font-family: var(--font-family-sans);
-  font-family: var(--font-family);
-  line-height: 1.5;
-  font-weight: 400;
+  --body-line-height: 1.5;
+  --body-font-size: 1.15rem;
+  --body-front-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  --heading-spacing-y: 1rem;
+body {
+  color: var(--base-content);
+  font-family: var(--font-family);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  font-size: var(--body-font-size);
+}
+
+h1 {
+  --font-size: 2rem;
+  --line-height: 1.125;
+  --font-weight: 800;
+  --letter-spacing: -0.09375 rem;
+}
+
+h2 {
+  --font-size: 1.75rem;
+  --line-height: 1.15;
+  --font-weight: 600;
+  --letter-spacing: -0.03125rem;
+}
+
+h3 {
+  --font-size: 1.5rem;
+  --line-height: 1.175;
+  --font-weight: 600;
+  --letter-spacing: 0rem;
+}
+
+h4 {
+  --font-size: 1.25rem;
+  --line-height: 1.2;
+  --font-weight: 600;
+  --letter-spacing: 0.015625rem;
+}
+
+h5 {
+  --font-size: 1.125rem;
+  --line-height: 1.225;
+  --font-weight: 700;
+  --letter-spacing: 0rem;
+}
+
+h6 {
+  --font-size: 1rem;
+  --line-height: 1.25;
+  --letter-spacing: 0.009375rem;
 }
 
 h1,
@@ -21,54 +68,37 @@ h3,
 h4,
 h5,
 h6 {
-  --font-weight: 700;
-  margin-bottom: 0;
-  margin-top: var(--heading-spacing-y);
-  color: var(--color);
-  font-weight: var(--font-weight);
+  --font-weight-default: var(--body-font-weight);
+  --marign-bottom-default: var(--dim-4);
+  margin: 0;
+  margin-bottom: var(--marign-bottom-default);
+  font-weight: var(--font-weight, var(--font-weight-default));
   font-size: var(--font-size);
   line-height: var(--line-height);
-  font-family: var(--font-family);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color);
 }
 
-h1 {
-  --font-size: 2rem;
-  --line-height: 1.125;
-  --typography-spacing-top: 3rem;
+hgroup {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: var(--dim-4);
+  padding: 0;
+  gap: var(--dim-1);
 }
 
-h2 {
-  --font-size: 1.75rem;
-  --line-height: 1.15;
-  --typography-spacing-top: 2.625rem;
+hgroup > * {
+  margin: 0;
+  padding: 0;
 }
 
-h3 {
-  --font-size: 1.5rem;
-  --line-height: 1.175;
-  --typography-spacing-top: 2.25rem;
-}
-
-h4 {
-  --font-size: 1.25rem;
-  --line-height: 1.2;
-  --typography-spacing-top: 1.874rem;
-}
-
-h5 {
-  --font-size: 1.125rem;
-  --line-height: 1.225;
-  --typography-spacing-top: 1.6875rem;
-}
-
-h6 {
-  --font-size: 1rem;
-  --line-height: 1.25;
-  --typography-spacing-top: 1.5rem;
+hgroup > p {
+  font-size: 1rem;
 }
 
 /**
- * Code
+* Code
  */
 
 pre {

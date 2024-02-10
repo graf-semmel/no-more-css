@@ -2,7 +2,7 @@
 import { render } from "solid-js/web";
 import { Router } from "@solidjs/router";
 import { lazy } from "solid-js";
-import Layout from "./layout";
+import Layout from "./layout.tsx";
 
 const routes = [
   {

@@ -1,5 +1,8 @@
 * {
   --rounded-box: 1rem;
+  --a-color: var(--base-content);
+  --a-color-hover: var(--primary);
+  list-style: none;
 }
 
 :root {
@@ -9,13 +12,12 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  color: var(--a-color);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #747bff;
+  color: var(--a-color-hover);
 }
 
 body {

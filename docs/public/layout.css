@@ -1,5 +1,12 @@
 :root {
   --container-spacing: 1rem;
+  --header-color: var(--base-content);
+  --header-background-color: var(--base);
+  --hr-color: var(--base-content);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 container {
@@ -44,9 +51,9 @@ container {
 }
 
 body > header {
-  display: flex;
   width: 100%;
-  background-color: var(--primary);
+  color: var(--header-color);
+  background-color: var(--header-background-color);
 }
 
 body > main {
@@ -59,4 +66,11 @@ section {
   --section-spacing-y: 2rem;
   padding: 0;
   margin: 0 0 var(--section-spacing-y) 0;
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: solid 1px var(--hr-color);
 }

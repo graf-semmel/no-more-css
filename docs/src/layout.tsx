@@ -6,7 +6,7 @@ export default function Layout(props: any) {
           <nav>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/">A-CSS</a>
               </li>
             </ul>
             <ul>
@@ -20,6 +20,7 @@ export default function Layout(props: any) {
           </nav>
         </container>
       </header>
+      <hr />
       <main>{props.children}</main>
       <footer></footer>
     </>

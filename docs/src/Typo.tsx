@@ -3,8 +3,10 @@ import Code from "./Code";
 function Typo() {
   return (
     <container>
-      <h1>Typography</h1>
-      <hr />
+      <hgroup>
+        <h1>Typography</h1>
+        <p>Collection of text elements and styles.</p>
+      </hgroup>
       <section>
         <h2>Headings</h2>
         <card>
@@ -29,7 +31,7 @@ function Typo() {
         </card>
       </section>
       <section>
-        <h2>Code</h2>
+        <h2>Code blocks</h2>
         <card>
           <main>
             <p>position the Code inline to avoid additional padding</p>
