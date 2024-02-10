@@ -6,7 +6,7 @@ export default function Layout(props: any) {
           <nav>
             <ul>
               <li>
-                <a href="/">A-CSS</a>
+                <a href="/a-css/a-css">A-CSS</a>
               </li>
             </ul>
             <ul>

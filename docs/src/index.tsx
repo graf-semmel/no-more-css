@@ -6,7 +6,7 @@ import Layout from "./layout.tsx";
 
 const routes = [
   {
-    path: "/a-css/",
+    path: "/a-css",
     component: (props: any) => <Layout>{props.children}</Layout>,
     children: [
       {
@@ -15,7 +15,7 @@ const routes = [
       },
       {
         path: "/typo",
-        component: lazy(() => import("./Typo.tsx")),
+        component: lazy(() => import("./pages/Typo.tsx")),
       },
     ],
   },

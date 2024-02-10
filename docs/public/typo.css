@@ -82,8 +82,7 @@ h6 {
 hgroup {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  margin-bottom: var(--dim-4);
+  margin: var(--dim-4) 0;
   padding: 0;
   gap: var(--dim-1);
 }
