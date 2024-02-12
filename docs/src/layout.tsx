@@ -11,10 +11,10 @@ export default function Layout(props: any) {
             </ul>
             <ul>
               <li>
-                <a href="/a-css/typo">Typography</a>
+                <a href="/a-css/interactive">Interactive</a>
               </li>
               <li>
-                <a href="/">Link 2</a>
+                <a href="/a-css/typo">Typography</a>
               </li>
             </ul>
           </nav>

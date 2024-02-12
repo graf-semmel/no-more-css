@@ -74,3 +74,13 @@ hr {
   border: none;
   border-bottom: solid 1px var(--hr-color);
 }
+
+row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+col {
+  display: flex;
+  flex-direction: column;
+}

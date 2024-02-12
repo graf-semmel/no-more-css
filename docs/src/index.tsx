@@ -14,6 +14,10 @@ const routes = [
         component: lazy(() => import("./App.tsx")),
       },
       {
+        path: "/interactive",
+        component: lazy(() => import("./pages/Interactive.tsx")),
+      },
+      {
         path: "/typo",
         component: lazy(() => import("./pages/Typo.tsx")),
       },

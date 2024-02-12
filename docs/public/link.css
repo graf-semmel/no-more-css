@@ -1,0 +1,24 @@
+* {
+  list-style: none;
+}
+
+:root {
+  color: #213547;
+  background-color: #ffffff;
+  line-height: 1.2;
+}
+
+a {
+  --color: var(--secondary);
+  --color-hover: var(--secondary);
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-hover);
+  text-decoration: underline;
+}

@@ -11,13 +11,8 @@
   line-height: 1.2;
 }
 
-a {
-  color: var(--a-color);
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: var(--a-color-hover);
+html {
+  width: 100vw;
 }
 
 body {

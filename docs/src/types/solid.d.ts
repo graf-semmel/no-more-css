@@ -6,6 +6,8 @@ declare global {
       interface IntrinsicElements {
         container: HTMLAttributes<HTMLDivElement>;
         card: HTMLAttributes<HTMLDivElement>;
+        row: HTMLAttributes<HTMLDivElement>;
+        col: HTMLAttributes<HTMLDivElement>;
       }
     }
   }
