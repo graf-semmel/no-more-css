@@ -1,16 +1,21 @@
 :root {
-  --primary: #1d2b53;
-  --primary-content: #fff;
-  --primary-content-muted: rgba(255, 255, 255, 0.7);
-  --secondary: #7e2553;
-  --secondary-content: #fff;
-
-  --success: #25aa6c;
-  --success-content: #fff;
-  --error: #ff004d;
-  --error-content: #fff;
-  --base: #fff;
-  --base-content: #27272a;
-  --surface: #f9f9f9;
-  --surface-content: #27272a;
+  --primary: hsl(224, 48%, 22%);
+  --primary-content: hsl(0, 0%, 100%);
+  --primary-hover: hsl(224, 48%, 32%);
+  --primary-content-muted: hsla(0, 0%, 100%, 0.7);
+  --secondary: hsl(329, 55%, 32%);
+  --secondary-hover: hsl(329, 55%, 42%);
+  --secondary-content: hsl(0, 0%, 100%);
+  --success: hsl(152, 64%, 41%);
+  --success-hover: hsl(152, 64%, 31%);
+  --success-content: hsl(0, 0%, 100%);
+  --error: hsl(342, 100%, 50%);
+  --error-hover: hsl(342, 100%, 40%);
+  --error-content: hsl(0, 0%, 100%);
+  --base: hsl(0, 0%, 100%);
+  --base-hover: hsl(0, 0%, 90%);
+  --base-content: hsl(240, 4%, 16%);
+  --surface: hsl(0, 0%, 95%);
+  --surface-hover: hsl(0, 0%, 85%);
+  --surface-content: hsl(240, 4%, 16%);
 }

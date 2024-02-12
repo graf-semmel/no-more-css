@@ -1,34 +1,93 @@
 :root {
-  --border-radius: 16px;
-  --border-radius-sm: 8px;
-  --button-padding-y: 0.6em;
-  --button-padding-x: 1.2em;
-  --button-font-weight: 500;
+  --border-radius: 1rem;
+  --border-radius-sm: 4px;
 }
 
 button {
-  background-color: var(--primary);
-  color: var(--primary-content);
-  padding: var(--button-padding-y) var(--button-padding-x);
+  --background-color: var(--primary);
+  --background-color-hover: var(--primary-hover);
+  --color: var(--primary-content);
+  --font-weight: 500;
+  --height: 2.6rem;
+  --padding-x: 1rem;
+  --font-size: 1rem;
+  --border-radius: 0.4rem;
+  padding: 0 var(--padding-x);
+  height: var(--height);
+  min-height: var(--height);
   border: none;
-  border-radius: var(--border-radius-sm);
-  font-size: inherit;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
   font-family: inherit;
-  font-weight: var(--button-font-weight);
+  font-weight: var(--font-weight);
+  box-shadow: none;
+  display: inline-block;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.25s;
-}
 
-button:hover {
-  background-color: var(--primary);
-}
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: var(--font-size);
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  &:hover {
+    background-color: var(--background-color-hover);
+  }
 
-button.secondary {
-  background-color: var(--secondary);
-  color: var(--secondary-content);
+  &.secondary {
+    --background-color: var(--secondary);
+    --background-color-hover: var(--secondary-hover);
+    --color: var(--secondary-content);
+  }
+  &.base {
+    --background-color: var(--base);
+    --background-color-hover: var(--base-hover);
+    --color: var(--base-content);
+    &.outline {
+      --background-color: var(--color);
+      &:hover {
+        --background-color-hover: var(--color);
+      }
+    }
+  }
+  &.success {
+    --background-color: var(--success);
+    --background-color-hover: var(--success-hover);
+    --color: var(--success-content);
+  }
+  &.error {
+    --background-color: var(--error);
+    --background-color-hover: var(--error-hover);
+    --color: var(--error-content);
+  }
+  &.XS {
+    --height: 1.8rem;
+    --padding-x: 0.6rem;
+    --font-size: 0.8rem;
+  }
+  &.S {
+    --height: 2.2rem;
+    --padding-x: 1rem;
+    --font-size: 0.9rem;
+  }
+  &.L {
+    --height: 3rem;
+    --padding-x: 1.2rem;
+    --font-size: 1.1rem;
+  }
+  &.XL {
+    --height: 3.4rem;
+    --padding-x: 1.4rem;
+    --font-size: 1.2rem;
+  }
+  &.outline {
+    background-color: transparent;
+    color: var(--background-color);
+    outline: 1px solid var(--background-color);
+    &:hover {
+      outline-width: 1.5px;
+      outline-color: var(--background-color-hover);
+      color: var(--background-color-hover);
+    }
+  }
 }
