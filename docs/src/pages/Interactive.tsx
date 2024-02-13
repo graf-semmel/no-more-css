@@ -1,4 +1,3 @@
-import { List } from "@mui/material";
 import Code from "../Code";
 
 function Interactive() {
