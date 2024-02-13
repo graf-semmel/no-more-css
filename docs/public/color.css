@@ -15,7 +15,10 @@
   --base: hsl(0, 0%, 100%);
   --base-hover: hsl(0, 0%, 90%);
   --base-content: hsl(240, 4%, 16%);
+  --base-content-hover: hsl(240, 4%, 26%);
   --surface: hsl(0, 0%, 95%);
   --surface-hover: hsl(0, 0%, 85%);
   --surface-content: hsl(240, 4%, 16%);
+  --disabled: hsl(0, 0%, 80%);
+  --disabled-content: hsl(0, 0%, 40%);
 }

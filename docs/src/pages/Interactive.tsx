@@ -1,3 +1,4 @@
+import { List } from "@mui/material";
 import Code from "../Code";
 
 function Interactive() {
@@ -11,11 +12,28 @@ function Interactive() {
         <h2>Links</h2>
         <card>
           <main>
-            <a href="">A normal link</a>
+            <a href="#">default</a>
+            <br />
+            <a class="hover" href="#">
+              hover
+            </a>
+            <br />
+            <a class="active" href="#">
+              active
+            </a>
+            <br />
+            <a class="visited" href="#">
+              visited
+            </a>
+            <br />
+            <a class="focus" href="#">
+              focus
+            </a>
+            <br />
           </main>
           <pre>
             <Code>
-              <a>A normal link</a>
+              <a href="#">A normal link</a>
             </Code>
           </pre>
         </card>
@@ -29,7 +47,8 @@ function Interactive() {
         <card>
           <main>
             <row class="gap-2">
-              <button>primary</button>
+              <button>default</button>
+              <button class="primary">primary</button>
               <button class="secondary">secondary</button>
               <button class="success">success</button>
               <button class="error">error</button>
@@ -38,7 +57,8 @@ function Interactive() {
           </main>
           <pre>
             <Code>
-              <button>primary</button>
+              <button>default</button>
+              <button class="primary">primary</button>
               <button class="secondary">secondary</button>
               <button class="success">success</button>
               <button class="error">error</button>
@@ -65,22 +85,33 @@ function Interactive() {
           </pre>
           <main>
             <row class="gap-2">
-              <button class="outline">primary</button>
-              <button class="secondary outline">secondary</button>
-              <button class="success outline">success</button>
-              <button class="error outline">error</button>
-              <button class="base outline">base</button>
+              <button class="outline">default</button>
+              <button class="outline primary">primary</button>
+              <button class="outline secondary">secondary</button>
+              <button class="outline success">success</button>
+              <button class="outline error">error</button>
             </row>
           </main>
           <pre>
             <Code>
-              <button class="outline">primary</button>
-              <button class="secondary outline">secondary</button>
-              <button class="success outline">success</button>
-              <button class="error outline">error</button>
-              <button class="base outline">base</button>
+              <button class="outline">default</button>
+              <button class="outline primary">primary</button>
+              <button class="outline secondary">secondary</button>
+              <button class="outline success">success</button>
+              <button class="outline error">error</button>
             </Code>
           </pre>
+          <main>
+            <row class="gap-2">
+              <button disabled>disabled</button>
+              <button class="primary" disabled>
+                primary disabled
+              </button>
+              <button class="outline" disabled>
+                outline disabled
+              </button>
+            </row>
+          </main>
         </card>
       </section>
     </container>

@@ -4,9 +4,9 @@
 }
 
 button {
-  --background-color: var(--primary);
-  --background-color-hover: var(--primary-hover);
-  --color: var(--primary-content);
+  --background-color: var(--base-content);
+  --background-color-hover: var(--base-content-hover);
+  --color: var(--base);
   --font-weight: 500;
   --height: 2.6rem;
   --padding-x: 1rem;
@@ -25,15 +25,18 @@ button {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.25s;
-
+  font-size: var(--font-size);
   background-color: var(--background-color);
   color: var(--color);
-  font-size: var(--font-size);
 
   &:hover {
     background-color: var(--background-color-hover);
   }
-
+  &.primary {
+    --background-color: var(--primary);
+    --background-color-hover: var(--primary-hover);
+    --color: var(--primary-content);
+  }
   &.secondary {
     --background-color: var(--secondary);
     --background-color-hover: var(--secondary-hover);
@@ -43,12 +46,6 @@ button {
     --background-color: var(--base);
     --background-color-hover: var(--base-hover);
     --color: var(--base-content);
-    &.outline {
-      --background-color: var(--color);
-      &:hover {
-        --background-color-hover: var(--color);
-      }
-    }
   }
   &.success {
     --background-color: var(--success);
@@ -89,5 +86,12 @@ button {
       outline-color: var(--background-color-hover);
       color: var(--background-color-hover);
     }
+  }
+  &:disabled,
+  &.outline:disabled {
+    background-color: var(--disabled);
+    color: var(--disabled-content);
+    cursor: not-allowed;
+    outline: none;
   }
 }
