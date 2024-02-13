@@ -6,15 +6,15 @@ export default function Layout(props: any) {
           <nav>
             <ul>
               <li>
-                <a href="/a-css/a-css">A-CSS</a>
+                <a href="/">A-CSS</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="/a-css/interactive">Interactive</a>
+                <a href="/interactive">Interactive</a>
               </li>
               <li>
-                <a href="/a-css/typo">Typography</a>
+                <a href="/typo">Typography</a>
               </li>
             </ul>
           </nav>

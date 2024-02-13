@@ -1,12 +1,11 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import { Router } from "@solidjs/router";
+import { HashRouter } from "@solidjs/router";
 import { lazy } from "solid-js";
-import Layout from "./layout.tsx";
+import Layout from "./Layout.tsx";
 
 const routes = [
   {
-    path: "/a-css",
     component: (props: any) => <Layout>{props.children}</Layout>,
     children: [
       {
@@ -25,4 +24,7 @@ const routes = [
   },
 ];
 
-render(() => <Router>{routes}</Router>, document.getElementById("root")!);
+render(
+  () => <HashRouter>{routes}</HashRouter>,
+  document.getElementById("root")!
+);
