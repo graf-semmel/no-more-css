@@ -2,7 +2,6 @@
   --rounded-box: 1rem;
   --a-color: var(--base-content);
   --a-color-hover: var(--primary);
-  list-style: none;
 }
 
 :root {

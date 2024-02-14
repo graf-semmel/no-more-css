@@ -18,7 +18,7 @@ const routes = [
       },
       {
         path: "/typo",
-        component: lazy(() => import("./pages/Typo.tsx")),
+        component: lazy(() => import("./pages/typo/Typo.tsx")),
       },
     ],
   },

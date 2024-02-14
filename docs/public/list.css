@@ -1,11 +1,48 @@
-dl {
-}
-dt {
+ul,
+ol {
+  --font-size: var(--body-font-size);
   margin: 0;
+  padding: 0;
+  margin-left: 1.2rem;
+  line-height: 1.6;
 }
-dt:not(:first-child) {
-  margin-top: 0.5rem;
+
+li {
+  --color-marker: var(--primary);
+
+  margin: 0;
+  padding: 0;
+
+  &::marker {
+    color: var(--color-marker);
+  }
 }
+
+ol > li {
+  list-style: decimal;
+  &::marker {
+    font-size: calc(var(--font-size) * 0.8);
+  }
+}
+
+dl {
+  --font-size: var(--body-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  --font-weight: 600;
+  --color: var(--primary);
+
+  font-weight: var(--font-weight);
+  color: var(--color);
+  margin: 0;
+  &::first-letter {
+    font-size: calc(var(--font-size) * 1.5);
+  }
+}
+
 dd {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 2rem;
 }
