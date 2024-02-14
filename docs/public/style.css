@@ -1,13 +1,5 @@
 * {
   --rounded-box: 1rem;
-  --a-color: var(--base-content);
-  --a-color-hover: var(--primary);
-}
-
-:root {
-  color: #213547;
-  background-color: #ffffff;
-  line-height: 1.2;
 }
 
 html {

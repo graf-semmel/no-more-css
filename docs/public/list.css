@@ -1,9 +1,8 @@
 ul,
 ol {
-  --font-size: var(--body-font-size);
   margin: 0;
   padding: 0;
-  margin-left: 1.2rem;
+  margin-left: 1.3rem;
   line-height: 1.6;
 }
 
@@ -20,29 +19,29 @@ li {
 
 ol > li {
   list-style: decimal;
-  &::marker {
-    font-size: calc(var(--font-size) * 0.8);
-  }
 }
 
 dl {
-  --font-size: var(--body-font-size);
   margin: 0;
   padding: 0;
 }
 
 dt {
+  --font-size: 1rem;
   --font-weight: 600;
   --color: var(--primary);
+  --first-letter-font-size: calc(var(--font-size) * 1.5);
 
+  font-size: var(--font-size);
   font-weight: var(--font-weight);
   color: var(--color);
   margin: 0;
   &::first-letter {
-    font-size: calc(var(--font-size) * 1.5);
+    font-size: var(--first-letter-font-size);
   }
 }
 
 dd {
+  font-size: 1rem;
   margin: 0 0 0 2rem;
 }

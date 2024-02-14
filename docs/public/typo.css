@@ -4,9 +4,9 @@
   --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
   --font-family: var(--font-family-sans);
-  --body-line-height: 1.5;
-  --body-font-size: 1.15rem;
-  --body-front-weight: 400;
+  --font-weight: 500;
+  --font-size: 1.15rem;
+  --line-height: 1.5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,9 +16,9 @@
 body {
   color: var(--base-content);
   font-family: var(--font-family);
-  font-weight: var(--body-font-weight);
-  line-height: var(--body-line-height);
-  font-size: var(--body-font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  font-size: var(--font-size);
 }
 
 h1 {
@@ -68,11 +68,10 @@ h3,
 h4,
 h5,
 h6 {
-  --font-weight-default: var(--body-font-weight);
   --marign-bottom-default: var(--dim-4);
   margin: 0;
   margin-bottom: var(--marign-bottom-default);
-  font-weight: var(--font-weight, var(--font-weight-default));
+  font-weight: var(--font-weight);
   font-size: var(--font-size);
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
@@ -127,7 +126,7 @@ abbr {
 
 b {
   color: var(--secondary);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 em {

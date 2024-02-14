@@ -5,119 +5,146 @@ export default function InlineTextElements() {
     <section>
       <h2>Inline text elements</h2>
       <dl>
-        <dt>
-          <b>Strong</b> |{" "}
+        <dt>Strong</dt>
+        <dd>
           <Code>
             <b>Strong</b>
           </Code>
-        </dt>
-        <dd>This text is strongly emphasized for importance.</dd>
+        </dd>
+        <dd>
+          This text is <b>strongly emphasized</b> for importance.
+        </dd>
 
-        <dt>
-          <i>Italic</i> |{" "}
+        <dt>Italic</dt>
+        <dd>
           <Code>
             <i>Italic</i>
           </Code>
-        </dt>
-        <dd>Using italics can provide a subtle emphasis.</dd>
+        </dd>
+        <dd>
+          Using italics can provide <i>a subtle emphasis</i>.
+        </dd>
 
-        <dt>
-          <em>Emphasis</em> |{" "}
+        <dt>Emphasis</dt>
+        <dd>
           <Code>
             <em>Emphasis</em>
           </Code>
-        </dt>
-        <dd>Adding emphasis often changes the tone of a sentence.</dd>
+        </dd>
+        <dd>
+          Adding <em>emphasis</em> often changes the tone of a sentence.
+        </dd>
 
-        <dt>
-          <u>Underline</u> |{" "}
+        <dt>Underline</dt>
+        <dd>
           <Code>
             <u>Underline</u>
           </Code>
-        </dt>
-        <dd>Underlining text can signify its importance.</dd>
+        </dd>
+        <dd>
+          Underlining text can <u>signify its importance</u>.
+        </dd>
 
-        <dt>
-          <s>Strikethrough</s> |{" "}
+        <dt>Strikethrough</dt>
+        <dd>
           <Code>
             <s>Strikethrough</s>
           </Code>
-        </dt>
+        </dd>
         <dd>
-          Strikethrough is used to show that something is removed or incorrect.
+          <s>Strikethrough</s> is used to show that something is removed or
+          incorrect.
         </dd>
 
-        <dt>
-          <mark>Highlight</mark> |{" "}
+        <dt>Highlight</dt>
+        <dd>
           <Code>
             <mark>Highlight</mark>
           </Code>
-        </dt>
-        <dd>Words can be highlighted to draw attention.</dd>
+        </dd>
+        <dd>
+          Words can be <mark>highlighted</mark> to draw attention.
+        </dd>
 
-        <dt>
-          <small>Small</small> |{" "}
+        <dt>Small</dt>
+        <dd>
           <Code>
             <small>Small</small>
           </Code>
-        </dt>
-        <dd>Using small text can indicate less importance or size.</dd>
+        </dd>
+        <dd>
+          Using <small>small text</small> can indicate less importance or size.
+        </dd>
 
-        <dt>
-          <sub>Subscript</sub> |{" "}
+        <dt>Subscript</dt>
+        <dd>
           <Code>
             <sub>Subscript</sub>
           </Code>
-        </dt>
-        <dd>Chemical formulas use subscript for representing elements.</dd>
+        </dd>
+        <dd>
+          Chemical formulas use <sub>subscript</sub> for representing elements.
+        </dd>
 
-        <dt>
-          <sup>Superscript</sup> |{" "}
+        <dt>Superscript</dt>
+        <dd>
           <Code>
             <sup>Superscript</sup>
           </Code>
-        </dt>
-        <dd>Mathematical equations often have superscript numbers.</dd>
+        </dd>
+        <dd>
+          Mathematical equations often have <sup>superscript</sup> numbers.
+        </dd>
 
-        <dt>
-          <kbd>Keyboard</kbd> |{" "}
+        <dt>Keyboard</dt>
+        <dd>
           <Code>
             <kbd>Keyboard</kbd>
           </Code>
-        </dt>
-        <dd>Keyboard input is often represented in a unique way.</dd>
+        </dd>
+        <dd>
+          Keyboard input is often represented in <kbd>a unique way</kbd>.
+        </dd>
 
-        <dt>
-          <cite>Citation</cite> |{" "}
+        <dt>Citation</dt>
+        <dd>
           <Code>
             <cite>Citation</cite>
           </Code>
-        </dt>
-        <dd>Citations are crucial in academic writing.</dd>
+        </dd>
+        <dd>
+          Citations are crucial in <cite>academic writing</cite>.
+        </dd>
 
-        <dt>
-          <del>Deleted</del> |{" "}
+        <dt>Deleted</dt>
+        <dd>
           <Code>
             <del>Deleted</del>
           </Code>
-        </dt>
-        <dd>Deleted text shows what has been removed.</dd>
+        </dd>
+        <dd>
+          <del>Deleted text</del> shows what has been removed.
+        </dd>
 
-        <dt>
-          <ins>Inserted</ins> |{" "}
+        <dt>Inserted</dt>
+        <dd>
           <Code>
             <ins>Inserted</ins>
           </Code>
-        </dt>
-        <dd>Inserted text highlights additions to a document.</dd>
+        </dd>
+        <dd>
+          <ins>Inserted text</ins> highlights additions to a document.
+        </dd>
 
-        <dt>
-          <dfn>Definition</dfn> |{" "}
+        <dt>Definition</dt>
+        <dd>
           <Code>
             <dfn>Definition</dfn>
           </Code>
-        </dt>
-        <dd>A definition explains the meaning of a term.</dd>
+        </dd>
+        <dd>
+          A <dfn>definition</dfn> explains the meaning of a term.
+        </dd>
       </dl>
     </section>
   );
