@@ -9,8 +9,9 @@
 }
 
 nav {
+  --font-weight: var(--nav-font-weight);
   font-size: var(--nav-font-size);
-  font-weight: var(--nav-font-weight);
+  font-weight: var(--font-weight);
   width: 100%;
   margin: 0;
   padding: var(--nav-padding-y) var(--nav-padding-x);
@@ -19,6 +20,25 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  & > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & a {
+    font-weight: var(--nav-font-weight);
+    color: var(--nav-a-color);
+    display: inline-block;
+    padding: var(--nav-spacing-y) var(--nav-spacing-x);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 container > nav > ul:first-of-type {
@@ -27,21 +47,4 @@ container > nav > ul:first-of-type {
 
 container > nav > ul:last-of-type {
   margin-right: calc(var(--nav-spacing-x) * -1);
-}
-
-nav > ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav a {
-  color: var(--nav-a-color);
-  display: inline-block;
-  padding: var(--nav-spacing-y) var(--nav-spacing-x);
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
