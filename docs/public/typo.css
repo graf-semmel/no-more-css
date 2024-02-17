@@ -100,7 +100,7 @@ hgroup > p {
  */
 
 pre {
-  background-color: var(--primary);
+  background-color: var(--base-content);
   color: var(--primary-content-muted);
   padding: 1rem;
   overflow-x: auto;
@@ -148,7 +148,9 @@ kbd {
   display: inline-block;
   background-color: var(--surface);
   color: var(--surface-content);
-  padding: 0.2rem 0.3rem;
+  font-weight: 600;
+  letter-spacing: +0.05rem;
+  padding: 0.1rem 0.2rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
   border: solid 1px var(--surface-content);

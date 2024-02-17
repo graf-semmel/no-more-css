@@ -8,6 +8,7 @@ declare global {
         card: HTMLAttributes<HTMLDivElement>;
         row: HTMLAttributes<HTMLDivElement>;
         col: HTMLAttributes<HTMLDivElement>;
+        column: HTMLAttributes<HTMLDivElement>;
       }
     }
   }

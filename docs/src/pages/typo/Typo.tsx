@@ -20,16 +20,14 @@ function Typo() {
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
           </main>
-          <pre>
-            <Code>
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
-              <h5>Heading 5</h5>
-              <h6>Heading 6</h6>
-            </Code>
-          </pre>
+          <Code>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </Code>
         </card>
       </section>
       <section>
@@ -47,14 +45,12 @@ function Typo() {
               <p>Some meaningful description.</p>
             </hgroup>
           </main>
-          <pre>
-            <Code>
-              <hgroup>
-                <h1>Header Group</h1>
-                <p>Collection of headings.</p>
-              </hgroup>
-            </Code>
-          </pre>
+          <Code>
+            <hgroup>
+              <h1>Header Group</h1>
+              <p>Collection of headings.</p>
+            </hgroup>
+          </Code>
         </card>
       </section>
       <Lists />
@@ -73,11 +69,9 @@ function Typo() {
               </Code>
             </pre>
           </main>
-          <pre>
-            <Code>
-              <button>Default</button>
-            </Code>
-          </pre>
+          <Code>
+            <button>Default</button>
+          </Code>
         </card>
       </section>
       <InlineTextElements />
@@ -93,17 +87,15 @@ function Typo() {
               <cite>Winston S. Churchill, Brave New World</cite>
             </blockquote>
           </main>
-          <pre>
-            <Code>
-              <blockquote cite="https://www.huxley.net/bnw/four.html">
-                <p>
-                  It is a good thing for an uneducated man to read books of
-                  quotations.
-                </p>
-                <cite>Winston S. Churchill, Brave New World</cite>
-              </blockquote>
-            </Code>
-          </pre>
+          <Code>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+              <p>
+                It is a good thing for an uneducated man to read books of
+                quotations.
+              </p>
+              <cite>Winston S. Churchill, Brave New World</cite>
+            </blockquote>
+          </Code>
         </card>
       </section>
     </container>

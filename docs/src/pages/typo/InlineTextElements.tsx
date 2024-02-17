@@ -1,5 +1,3 @@
-import Code from "../../Code";
-
 export default function InlineTextElements() {
   return (
     <section>
@@ -7,9 +5,9 @@ export default function InlineTextElements() {
       <dl>
         <dt>Strong</dt>
         <dd>
-          <Code>
+          <code>
             <b>Strong</b>
-          </Code>
+          </code>
         </dd>
         <dd>
           This text is <b>strongly emphasized</b> for importance.
@@ -17,9 +15,9 @@ export default function InlineTextElements() {
 
         <dt>Italic</dt>
         <dd>
-          <Code>
+          <code>
             <i>Italic</i>
-          </Code>
+          </code>
         </dd>
         <dd>
           Using italics can provide <i>a subtle emphasis</i>.
@@ -27,9 +25,9 @@ export default function InlineTextElements() {
 
         <dt>Emphasis</dt>
         <dd>
-          <Code>
+          <code>
             <em>Emphasis</em>
-          </Code>
+          </code>
         </dd>
         <dd>
           Adding <em>emphasis</em> often changes the tone of a sentence.
@@ -37,9 +35,9 @@ export default function InlineTextElements() {
 
         <dt>Underline</dt>
         <dd>
-          <Code>
+          <code>
             <u>Underline</u>
-          </Code>
+          </code>
         </dd>
         <dd>
           Underlining text can <u>signify its importance</u>.
@@ -47,9 +45,9 @@ export default function InlineTextElements() {
 
         <dt>Strikethrough</dt>
         <dd>
-          <Code>
+          <code>
             <s>Strikethrough</s>
-          </Code>
+          </code>
         </dd>
         <dd>
           <s>Strikethrough</s> is used to show that something is removed or
@@ -58,9 +56,9 @@ export default function InlineTextElements() {
 
         <dt>Highlight</dt>
         <dd>
-          <Code>
+          <code>
             <mark>Highlight</mark>
-          </Code>
+          </code>
         </dd>
         <dd>
           Words can be <mark>highlighted</mark> to draw attention.
@@ -68,9 +66,9 @@ export default function InlineTextElements() {
 
         <dt>Small</dt>
         <dd>
-          <Code>
+          <code>
             <small>Small</small>
-          </Code>
+          </code>
         </dd>
         <dd>
           Using <small>small text</small> can indicate less importance or size.
@@ -78,9 +76,9 @@ export default function InlineTextElements() {
 
         <dt>Subscript</dt>
         <dd>
-          <Code>
+          <code>
             <sub>Subscript</sub>
-          </Code>
+          </code>
         </dd>
         <dd>
           Chemical formulas use <sub>subscript</sub> for representing elements.
@@ -88,9 +86,9 @@ export default function InlineTextElements() {
 
         <dt>Superscript</dt>
         <dd>
-          <Code>
+          <code>
             <sup>Superscript</sup>
-          </Code>
+          </code>
         </dd>
         <dd>
           Mathematical equations often have <sup>superscript</sup> numbers.
@@ -98,19 +96,19 @@ export default function InlineTextElements() {
 
         <dt>Keyboard</dt>
         <dd>
-          <Code>
+          <code>
             <kbd>Keyboard</kbd>
-          </Code>
+          </code>
         </dd>
         <dd>
-          Keyboard input is often represented in <kbd>a unique way</kbd>.
+          To refresh the page press <kbd>CMD+R</kbd>.
         </dd>
 
         <dt>Citation</dt>
         <dd>
-          <Code>
+          <code>
             <cite>Citation</cite>
-          </Code>
+          </code>
         </dd>
         <dd>
           Citations are crucial in <cite>academic writing</cite>.
@@ -118,9 +116,9 @@ export default function InlineTextElements() {
 
         <dt>Deleted</dt>
         <dd>
-          <Code>
+          <code>
             <del>Deleted</del>
-          </Code>
+          </code>
         </dd>
         <dd>
           <del>Deleted text</del> shows what has been removed.
@@ -128,9 +126,9 @@ export default function InlineTextElements() {
 
         <dt>Inserted</dt>
         <dd>
-          <Code>
+          <code>
             <ins>Inserted</ins>
-          </Code>
+          </code>
         </dd>
         <dd>
           <ins>Inserted text</ins> highlights additions to a document.
@@ -138,9 +136,9 @@ export default function InlineTextElements() {
 
         <dt>Definition</dt>
         <dd>
-          <Code>
+          <code>
             <dfn>Definition</dfn>
-          </Code>
+          </code>
         </dd>
         <dd>
           A <dfn>definition</dfn> explains the meaning of a term.

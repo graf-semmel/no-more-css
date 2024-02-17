@@ -62,10 +62,14 @@ body > main {
   padding-bottom: var(--main-spacing-y);
 }
 
-section {
-  --section-spacing-y: 2rem;
+section,
+article {
+  --spacing-y: 2rem;
+  /* --spacing-y: 0rem; */
+  display: flex;
+  flex-direction: column;
   padding: 0;
-  margin: 0 0 var(--section-spacing-y) 0;
+  margin: 0 0 var(--spacing-y) 0;
 }
 
 hr {

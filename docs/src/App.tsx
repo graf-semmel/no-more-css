@@ -1,13 +1,13 @@
+import Code from "./Code";
+
 function App() {
   return (
     <container>
       <section style="background: #eee">
         <h2>Button</h2>
-        <pre>
-          <code>
-            <button>Default</button>
-          </code>
-        </pre>
+        <Code>
+          <button>Default</button>
+        </Code>
         <button>Default</button>
       </section>
       <section style="background: #eee">
@@ -18,11 +18,9 @@ function App() {
       </section>
       <section style="background: #eee">
         <h2>Code</h2>
-        <pre>
-          <code>
-            <button>Default</button>
-          </code>
-        </pre>
+        <Code>
+          <button>Default</button>
+        </Code>
       </section>
       <section style="background: #eee">
         <h2>Cards</h2>

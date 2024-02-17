@@ -8,4 +8,7 @@ export default defineConfig({
     open: true,
   },
   plugins: [solid()],
+  build: {
+    cssMinify: true,
+  },
 });

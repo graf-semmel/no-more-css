@@ -30,11 +30,9 @@ function Interactive() {
             </a>
             <br />
           </main>
-          <pre>
-            <Code>
-              <a href="#">A normal link</a>
-            </Code>
-          </pre>
+          <Code>
+            <a href="#">A normal link</a>
+          </Code>
         </card>
       </section>
       <section>
@@ -54,16 +52,14 @@ function Interactive() {
               <button class="base">base</button>
             </row>
           </main>
-          <pre>
-            <Code>
-              <button>default</button>
-              <button class="primary">primary</button>
-              <button class="secondary">secondary</button>
-              <button class="success">success</button>
-              <button class="error">error</button>
-              <button class="base">base</button>
-            </Code>
-          </pre>
+          <Code>
+            <button>default</button>
+            <button class="primary">primary</button>
+            <button class="secondary">secondary</button>
+            <button class="success">success</button>
+            <button class="error">error</button>
+            <button class="base">base</button>
+          </Code>
           <main>
             <row class="gap-2">
               <button class="XS">extra small</button>
@@ -73,15 +69,13 @@ function Interactive() {
               <button class="XL">extra large</button>
             </row>
           </main>
-          <pre>
-            <Code>
-              <button class="XS">extra small</button>
-              <button class="S">small</button>
-              <button>normal</button>
-              <button class="L">large</button>
-              <button class="XL">extra large</button>
-            </Code>
-          </pre>
+          <Code>
+            <button class="XS">extra small</button>
+            <button class="S">small</button>
+            <button>normal</button>
+            <button class="L">large</button>
+            <button class="XL">extra large</button>
+          </Code>
           <main>
             <row class="gap-2">
               <button class="outline">default</button>
@@ -91,15 +85,13 @@ function Interactive() {
               <button class="outline error">error</button>
             </row>
           </main>
-          <pre>
-            <Code>
-              <button class="outline">default</button>
-              <button class="outline primary">primary</button>
-              <button class="outline secondary">secondary</button>
-              <button class="outline success">success</button>
-              <button class="outline error">error</button>
-            </Code>
-          </pre>
+          <Code>
+            <button class="outline">default</button>
+            <button class="outline primary">primary</button>
+            <button class="outline secondary">secondary</button>
+            <button class="outline success">success</button>
+            <button class="outline error">error</button>
+          </Code>
           <main>
             <row class="gap-2">
               <button disabled>disabled</button>

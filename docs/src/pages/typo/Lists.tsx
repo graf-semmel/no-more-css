@@ -26,21 +26,19 @@ export default function Lists() {
             </li>
           </ul>
         </main>
-        <pre>
-          <Code>
-            <ul>
-              <li>Coffee</li>
-              <li>Milk</li>
-              <li>
-                Tea
-                <ul>
-                  <li>Black tea</li>
-                  <li>Green tea</li>
-                </ul>
-              </li>
-            </ul>
-          </Code>
-        </pre>
+        <Code>
+          <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>
+              Tea
+              <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+              </ul>
+            </li>
+          </ul>
+        </Code>
         <main>
           <h3>Ordered Lists</h3>
           <ol>
@@ -62,21 +60,19 @@ export default function Lists() {
             </li>
           </ol>
         </main>
-        <pre>
-          <Code>
-            <ol>
-              <li>Coffee</li>
-              <li>Milk</li>
-              <li>
-                Tea
-                <ol>
-                  <li>Black tea</li>
-                  <li>Green tea</li>
-                </ol>
-              </li>
-            </ol>
-          </Code>
-        </pre>
+        <Code>
+          <ol>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>
+              Tea
+              <ol>
+                <li>Black tea</li>
+                <li>Green tea</li>
+              </ol>
+            </li>
+          </ol>
+        </Code>
         <main>
           <h3>Definition Lists</h3>
           <dl>
@@ -88,6 +84,16 @@ export default function Lists() {
             <dd>Green hot drink</dd>
           </dl>
         </main>
+        <Code>
+          <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+            <dt>Tea</dt>
+            <dd>Green hot drink</dd>
+          </dl>
+        </Code>
       </card>
     </section>
   );
