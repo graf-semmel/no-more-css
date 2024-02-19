@@ -1,5 +1,7 @@
 import { defineConfig } from "vite";
 import solid from "vite-plugin-solid";
+import { browserslistToTargets } from "lightningcss";
+import browserslist from "browserslist";
 
 export default defineConfig({
   base: "/a-css",
@@ -9,6 +11,6 @@ export default defineConfig({
   },
   plugins: [solid()],
   build: {
-    cssMinify: true,
+    cssMinify: "lightningcss",
   },
 });

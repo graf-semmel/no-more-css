@@ -1,9 +1,13 @@
 * {
   --rounded-box: 1rem;
+  box-sizing: border-box;
 }
 
 html {
   width: 100vw;
+  background-color: var(--base);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {

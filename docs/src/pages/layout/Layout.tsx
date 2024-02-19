@@ -1,4 +1,5 @@
 import Code, { escapeHtml } from "../../Code";
+import Footer from "./Footer";
 
 export default function Layout() {
   return (
@@ -73,32 +74,7 @@ export default function Layout() {
           </code>
         </pre>
       </section>
-      <section>
-        <h2>Footer</h2>
-        <p>
-          The <code>footer</code> element defines a footer for a document or
-          section. A footer typically contains information about the author of
-          the section, copyright data, links to terms of use, contact
-          information, and so on.
-        </p>
-        <h3>As page footer</h3>
-        <pre>
-          <code>
-            &lt;body&gt;
-            <br />
-            ...
-            <br />
-            {escapeHtml(
-              <footer>
-                <p>© 2021 A-CSS</p>
-              </footer>,
-              1
-            )}
-            <br />
-            &lt;/body&gt;
-          </code>
-        </pre>
-      </section>
+      <Footer />
       <section>
         <h2>Row</h2>
         <p>

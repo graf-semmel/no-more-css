@@ -1,59 +1,60 @@
-:root {
-  --container-spacing: 1rem;
-  --header-color: var(--base-content);
-  --header-background-color: var(--base);
-  --hr-color: var(--base-content);
+@import url(container.css);
+
+main {
+  & section,
+  & article {
+    --spacing-y: 2rem;
+    /* --spacing-y: 0rem; */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 var(--spacing-y) 0;
+  }
 }
 
-* {
-  box-sizing: border-box;
+hr {
+  --color: var(--base-content-muted);
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: solid 1px var(--color);
 }
 
-container {
-  display: block;
+row {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: var(--container-spacing);
-  padding-left: var(--container-spacing);
-}
-
-@media (min-width: 576px) {
-  container {
-    max-width: 510px;
-    padding-right: 0;
-    padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  & > * {
+    flex: 1;
   }
 }
 
-@media (min-width: 768px) {
-  container {
-    max-width: 700px;
-  }
-}
-
-@media (min-width: 1024px) {
-  container {
-    max-width: 950px;
-  }
-}
-
-@media (min-width: 1280px) {
-  container {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1536px) {
-  container {
-    max-width: 1450px;
-  }
+col {
+  display: flex;
+  flex-direction: column;
 }
 
 body > header {
+  --background-color: var(--base);
+  --color: var(--base-content);
+  background-color: var(--background-color);
+  color: var(--color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body > footer {
+  --space-y: 1rem;
+  --space-x: 3rem;
   width: 100%;
-  color: var(--header-color);
-  background-color: var(--header-background-color);
+  padding: var(--space-y) var(--space-x);
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 body > main {
@@ -62,30 +63,26 @@ body > main {
   padding-bottom: var(--main-spacing-y);
 }
 
-section,
-article {
-  --spacing-y: 2rem;
-  /* --spacing-y: 0rem; */
+body > footer,
+#footer {
+  --background-color: var(--base);
+  --color: var(--base-content);
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0 0 var(--spacing-y) 0;
-}
+  flex-direction: row;
+  font-size: 0.8rem;
 
-hr {
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-bottom: solid 1px var(--hr-color);
-}
+  & nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-col {
-  display: flex;
-  flex-direction: column;
+  a {
+    padding: 0;
+    margin: 0;
+  }
 }
