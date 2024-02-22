@@ -14,7 +14,7 @@ export default function Layout(props: any) {
       <hr />
       <main>{props.children}</main>
       <footer>
-        <row class="gap-8">
+        <row class="gap-8 justify-center">
           <section>
             <img id="footer-logo" src="/a-css/img/logo.png" />
             <p>
