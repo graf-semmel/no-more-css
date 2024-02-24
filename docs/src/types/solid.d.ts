@@ -9,6 +9,9 @@ declare global {
         row: HTMLAttributes<HTMLDivElement>;
         col: HTMLAttributes<HTMLDivElement>;
         column: HTMLAttributes<HTMLDivElement>;
+        tabs: HTMLAttributes<HTMLDivElement>;
+        tab: HTMLAttributes<HTMLDivElement>;
+        content: HTMLAttributes<HTMLDivElement>;
       }
     }
   }

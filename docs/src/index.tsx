@@ -19,11 +19,15 @@ const routes = [
       },
       {
         path: "/interactive",
-        component: lazy(() => import("./pages/Interactive.tsx")),
+        component: lazy(() => import("./pages/interactive/Interactive.tsx")),
       },
       {
         path: "/typo",
         component: lazy(() => import("./pages/typo/Typo.tsx")),
+      },
+      {
+        path: "/form",
+        component: lazy(() => import("./pages/form/Form.tsx")),
       },
     ],
   },

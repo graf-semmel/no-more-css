@@ -1,0 +1,19 @@
+tabs {
+  & tab {
+    & label:has(input:checked) {
+      background-color: var(--primary);
+      & + content {
+        display: block;
+      }
+    }
+  }
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  & content {
+    padding: 10px;
+    display: none;
+  }
+}

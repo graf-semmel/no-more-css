@@ -8,6 +8,7 @@ export default function Layout(props: any) {
         <nav>
           <a href="/layout">Layout</a>
           <a href="/interactive">Interactive</a>
+          <a href="/form">Form</a>
           <a href="/typo">Typography</a>
         </nav>
       </header>
