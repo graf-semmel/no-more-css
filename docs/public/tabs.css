@@ -1,19 +1,64 @@
 tabs {
-  & tab {
-    & label:has(input:checked) {
-      background-color: var(--primary);
-      & + content {
+  display: grid;
+
+  & label[role="tab"] {
+    --height: var(--button-height);
+    --font-weight: 500;
+    --font-size: 1rem;
+    --padding-x: 1rem;
+
+    grid-row-start: 1;
+    display: inline-flex;
+    align-items: center;
+    height: var(--height);
+    min-height: var(--height);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    padding: 0 var(--padding-x);
+    margin: 0 1px;
+    color: var(--base-content);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    position: relative;
+
+    & input[type="radio"] {
+      appearance: none;
+      border: none;
+      position: absolute;
+      height: var(--height);
+      border-bottom: solid 1px var(--base);
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      &:checked {
+        display: block;
+      }
+    }
+
+    &:has(input[type="radio"]:checked) {
+      color: var(--primary);
+      border: solid 1px var(--surface);
+      border-bottom: solid 1px var(--base);
+      margin: 0;
+
+      & + section[role="tabpanel"] {
         display: block;
       }
     }
   }
 
-  & input[type="radio"] {
+  & section[role="tabpanel"] {
     display: none;
-  }
-
-  & content {
-    padding: 10px;
-    display: none;
+    border: solid 1px var(--surface);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding: 1rem;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 9999;
   }
 }

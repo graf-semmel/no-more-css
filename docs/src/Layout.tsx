@@ -6,10 +6,10 @@ export default function Layout(props: any) {
           <a href="/">A-CSS</a>
         </nav>
         <nav>
-          <a href="/layout">Layout</a>
-          <a href="/interactive">Interactive</a>
-          <a href="/form">Form</a>
-          <a href="/typo">Typography</a>
+          <a href="#/layout">Layout</a>
+          <a href="#/interactive">Interactive</a>
+          <a href="#/form">Form</a>
+          <a href="#/typo">Typography</a>
         </nav>
       </header>
       <hr />

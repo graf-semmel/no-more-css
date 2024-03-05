@@ -11,6 +11,7 @@ fieldset {
   border: solid 1px var(--surface);
   padding: 1rem;
   margin: 0;
+  border-radius: var(--border-radius);
 
   & legend {
     font-size: inherit;
