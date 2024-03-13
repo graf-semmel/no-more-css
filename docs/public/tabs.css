@@ -33,10 +33,6 @@ tabs {
       top: 0;
       left: 0;
       right: 0;
-
-      &:checked {
-        display: block;
-      }
     }
 
     &:has(input[type="radio"]:checked) {
@@ -47,6 +43,16 @@ tabs {
 
       & + section[role="tabpanel"] {
         display: block;
+      }
+
+      &:has(+ section pre) {
+        background-color: var(--base-content);
+        color: var(--primary-content-muted);
+        border-bottom: solid 1px var(--base-content);
+
+        & input[type="radio"] {
+          border-bottom: solid 1px var(--base-content);
+        }
       }
     }
   }
@@ -60,5 +66,10 @@ tabs {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 9999;
+
+    &:has(pre) {
+      padding: 0;
+      border-color: var(--base-content);
+    }
   }
 }
