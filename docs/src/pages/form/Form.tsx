@@ -1,4 +1,4 @@
-import { JSX, children } from "solid-js";
+import { JSX } from "solid-js";
 import Tabs from "./Tabs";
 import Code from "../../Code";
 
