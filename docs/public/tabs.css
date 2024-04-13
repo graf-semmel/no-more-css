@@ -44,16 +44,6 @@ tabs {
       & + section[role="tabpanel"] {
         display: block;
       }
-
-      &:has(+ section pre) {
-        background-color: var(--base-content);
-        color: var(--primary-content-muted);
-        border-bottom: solid 1px var(--base-content);
-
-        & input[type="radio"] {
-          border-bottom: solid 1px var(--base-content);
-        }
-      }
     }
   }
 
@@ -69,7 +59,6 @@ tabs {
 
     &:has(pre) {
       padding: 0;
-      border-color: var(--base-content);
     }
   }
 }

@@ -25,7 +25,7 @@ h1 {
   --font-size: 2rem;
   --line-height: 1.125;
   --font-weight: 800;
-  --letter-spacing: -0.09375 rem;
+  --letter-spacing: -0.09375rem;
 }
 
 h2 {
@@ -95,30 +95,6 @@ hgroup > p {
   font-size: 1rem;
 }
 
-/**
-* Code
- */
-
-pre {
-  background-color: var(--base-content);
-  color: var(--primary-content-muted);
-  padding: 1rem;
-  overflow-x: auto;
-  line-height: initial;
-}
-
-pre,
-code {
-  font-family: var(--font-family-mono);
-  margin: 0;
-  display: block;
-}
-
-pre > code {
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
 abbr {
   color: var(--secondary);
   font-style: italic;
@@ -174,6 +150,7 @@ mark {
   border-radius: 0.1rem;
   vertical-align: baseline;
 }
+
 del {
   --deleted: var(--error);
   background-color: var(--deleted);
@@ -192,24 +169,17 @@ ins {
   text-decoration: none;
 }
 
-code:not(pre > code) {
-  display: inline-block;
-  background-color: var(--surface);
-  color: var(--surface-content);
-  padding: 0.2rem 0.3rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
-}
-
 blockquote {
   margin: 0;
   padding: 0.5rem 1rem;
   border-left: solid 0.2rem var(--secondary);
 }
+
 blockquote p {
   padding: 0;
   margin: 0;
 }
+
 blockquote p::before {
   content: "\201C";
 }
