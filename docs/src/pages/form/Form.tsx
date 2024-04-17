@@ -13,7 +13,7 @@ export default function Form() {
         <h2>Example</h2>
         <ElementPreview
           html={
-            <form>
+            <form class="gap-4">
               <label for="name">
                 Name
                 <input id="name" type="text" placeholder="Name" />
@@ -43,7 +43,7 @@ export default function Form() {
         <ElementPreview
           html={
             <form>
-              <fieldset>
+              <fieldset class="gap-4">
                 <legend>Sign up</legend>
                 <label for="name">
                   Name
@@ -54,7 +54,6 @@ export default function Form() {
                   <input id="email" type="email" placeholder="your@email.com" />
                 </label>
               </fieldset>
-              <button type="submit">Submit</button>
             </form>
           }
           css={`
@@ -79,7 +78,6 @@ export default function Form() {
               <input type="number" placeholder="number" />
               <input type="tel" placeholder="tel" />
               <input type="url" placeholder="url" />
-              <input type="search" placeholder="search" />
             </form>
           }
         />
@@ -102,30 +100,104 @@ export default function Form() {
         <h2>Checkbox</h2>
         <p>
           The <code>checkbox</code> input type is used to create a checkbox
-          control.
+          control. The <code>label</code> element is used to provide a caption.
         </p>
         <ElementPreview
           html={
-            <form>
-              <label for="checkbox">
-                Checkbox 1
-                <input id="checkbox 1" type="checkbox" />
-              </label>
-              <label for="checkbox">
-                Checkbox 2
-                <input id="checkbox 2" type="checkbox" />
-              </label>
+            <form class="gap-4">
+              <fieldset>
+                <legend>Checkboxes</legend>
+                <label for="checkbox 1">
+                  <input id="checkbox 1" type="checkbox" value="value 1" />
+                  Checkbox 1
+                </label>
+                <label for="checkbox 2">
+                  <input
+                    id="checkbox 2"
+                    type="checkbox"
+                    value="value 2"
+                    checked
+                  />
+                  Checkbox 2
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend>Reversed</legend>
+                <label for="checkbox 3">
+                  Checkbox 3
+                  <input
+                    id="checkbox 3"
+                    type="checkbox"
+                    value="value 3"
+                    checked
+                  />
+                </label>
+                <label for="checkbox 4">
+                  Checkbox 4
+                  <input id="checkbox 4" type="checkbox" value="value 4" />
+                </label>
+              </fieldset>
             </form>
           }
         />
       </section>
-      <Tabs
-        items={[
-          { label: "Tab 1", content: <p>Hello World from Tab 1!</p> },
-          { label: "Tab 2", content: <p>Hello World from Tab 2!</p> },
-          { label: "Tab 3", content: <p>Hello World from Tab 3!</p> },
-        ]}
-      />
+      <section>
+        <h2>Radio buttons</h2>
+        <p>
+          The <code>radio</code> input type is used to create a radio button
+          control. The <code>label</code> element is used to provide a caption.
+        </p>
+        <ElementPreview
+          html={
+            <form class="gap-4">
+              <fieldset>
+                <legend>Radio buttons</legend>
+                <label for="radio 1">
+                  <input
+                    id="radio 1"
+                    type="radio"
+                    name="radio 1"
+                    value="value 1"
+                  />
+                  Radio 1
+                </label>
+                <label for="radio 2">
+                  <input
+                    id="radio 2"
+                    type="radio"
+                    name="radio 1"
+                    value="value 2"
+                    checked
+                  />
+                  Radio 2
+                </label>
+              </fieldset>
+              <fieldset>
+                <legend>Reversed</legend>
+                <label for="radio 3">
+                  Radio 3
+                  <input
+                    id="radio 3"
+                    type="radio"
+                    name="radio 2"
+                    value="value 3"
+                    checked
+                  />
+                </label>
+                <label for="radio 4">
+                  Radio 4
+                  <input
+                    id="radio 4"
+                    type="radio"
+                    name="radio 2"
+                    value="value 4"
+                  />
+                </label>
+              </fieldset>
+            </form>
+          }
+        />
+      </section>
     </container>
   );
 }

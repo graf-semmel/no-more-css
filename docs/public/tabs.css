@@ -23,6 +23,7 @@ tabs {
 
     & input[type="radio"] {
       appearance: none;
+      display: none;
       border: none;
       position: absolute;
       height: var(--height);
