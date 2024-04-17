@@ -202,7 +202,7 @@ export default function Form() {
   );
 }
 
-function ElementPreview(props: { html: JSX.Element; css: string }) {
+function ElementPreview(props: { html: JSX.Element; css?: string }) {
   return (
     <Tabs
       items={[
