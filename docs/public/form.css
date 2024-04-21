@@ -42,19 +42,23 @@ fieldset label {
   margin: 0;
 }
 
-input {
+input,
+textarea {
   --padding: 0.8rem;
-  --icon: none;
-  --icon-size: 1rem;
   font-size: inherit;
   background: transparent;
   outline: none;
   padding: var(--padding);
   border: solid 1px var(--surface);
+}
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+textarea {
+  resize: vertical;
+}
+
+input {
+  --icon: none;
+  --icon-size: 1rem;
 
   &:is(
       [type="text"],
@@ -63,13 +67,15 @@ input {
       [type="search"],
       [type="tel"],
       [type="number"],
-      [type="url"]
+      [type="url"],
+      [type="date"],
+      [type="time"]
     ) {
     background-image: var(--icon);
     background-size: var(--icon-size);
-    background-position: left calc(var(--padding)) center;
+    background-position: right calc(var(--padding)) center;
     background-repeat: no-repeat;
-    padding-left: calc(
+    padding-right: calc(
       var(--padding) + var(--icon-size) + calc(var(--padding) / 2)
     );
 
@@ -77,6 +83,11 @@ input {
     &:focus-visible {
       outline: var(--primary) solid 2px;
     }
+  }
+
+  &:is([type="date"], [type="time"]) {
+    background-image: none;
+    padding-right: var(--padding);
   }
 
   &::placeholder {
@@ -111,6 +122,19 @@ input {
   &[type="url"] {
     --icon: var(--icon-link);
   }
+
+  &:disabled {
+    background-color: var(--disabled);
+    color: var(--disabled-content);
+  }
+}
+
+label:has(> :is(input[type="checkbox"], input[type="radio"])) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
 }
 
 input[type="checkbox"] {
@@ -133,22 +157,6 @@ input[type="checkbox"] {
     background-size: 100% 100%;
     background-color: var(--primary);
   }
-}
-
-label:has(input[type="checkbox"]) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
-}
-
-label:has(input[type="radio"]) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-  width: fit-content;
 }
 
 input[type="radio"] {

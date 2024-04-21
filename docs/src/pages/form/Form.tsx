@@ -71,13 +71,16 @@ export default function Form() {
         </p>
         <ElementPreview
           html={
-            <form>
+            <form class="gap-4">
               <input type="text" placeholder="text" />
               <input type="password" placeholder="password" />
               <input type="email" placeholder="email" />
               <input type="number" placeholder="number" />
               <input type="tel" placeholder="tel" />
               <input type="url" placeholder="url" />
+              <input type="date" placeholder="date" />
+              <input type="time" placeholder="time" />
+              <input type="text" placeholder="disabled" disabled />
             </form>
           }
         />
@@ -194,6 +197,20 @@ export default function Form() {
                   />
                 </label>
               </fieldset>
+            </form>
+          }
+        />
+      </section>
+      <section>
+        <h2>Textarea</h2>
+        <p>
+          The <code>textarea</code> element is used to create a multiline text
+          input.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <textarea placeholder="textarea"></textarea>
             </form>
           }
         />
