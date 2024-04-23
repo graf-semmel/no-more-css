@@ -4,7 +4,7 @@
   --button-height: 2.4rem;
 }
 
-button {
+button, input::file-selector-button {
   --background-color: var(--base-content);
   --background-color-hover: var(--base-content-hover);
   --color: var(--base);
@@ -26,7 +26,6 @@ button {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.25s;
-  font-size: var(--font-size);
   background-color: var(--background-color);
   color: var(--color);
   white-space: nowrap;

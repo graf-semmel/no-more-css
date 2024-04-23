@@ -10,6 +10,7 @@
   --icon-number: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M7.78428 14L8.2047 10H4V8H8.41491L8.94043 3H10.9514L10.4259 8H14.4149L14.9404 3H16.9514L16.4259 8H20V10H16.2157L15.7953 14H20V16H15.5851L15.0596 21H13.0486L13.5741 16H9.58509L9.05957 21H7.04855L7.57407 16H4V14H7.78428ZM9.7953 14H13.7843L14.2047 10H10.2157L9.7953 14Z'%3E%3C/path%3E%3C/svg%3E");
   --icon-check: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>');
   --icon-arrow-down-s: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z'%3E%3C/path%3E%3C/svg%3E");
+  --icon-folder-open-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 21C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5H20C20.5523 5 21 5.44772 21 6V9H4V18.996L6 11H22.5L20.1894 20.2425C20.0781 20.6877 19.6781 21 19.2192 21H3Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 fieldset,
@@ -44,20 +45,18 @@ fieldset label {
   margin: 0;
 }
 
-input,
 textarea,
-select {
+select,
+input:not([type="file"]) {
   --padding-x: 1rem;
   --padding-y: 0.8rem;
-
 
   font-size: inherit;
   background: transparent;
   outline: transparent solid 2px;
   padding: var(--padding-y) var(--padding-x);
   border: solid 1px var(--surface);
-  transition:
-    outline-color var(--transition-duration) ease;
+  transition: outline-color var(--transition-duration) ease;
 
   &:focus,
   &:focus-visible {
@@ -88,7 +87,7 @@ input {
       [type="url"],
       [type="date"],
       [type="time"]
-    ) {
+    ), &::file-selector-button {
     background-image: var(--icon);
     background-size: var(--icon-size);
     background-position: right calc(var(--padding-x)) center;
@@ -134,6 +133,11 @@ input {
 
   &[type="url"] {
     --icon: var(--icon-link);
+  }
+
+  &::file-selector-button{
+    --icon: var(--icon-folder-open-white);
+    margin-right: var(--padding-x);
   }
 
   &:disabled {

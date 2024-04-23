@@ -232,6 +232,20 @@ export default function Form() {
           }
         />
       </section>
+      <section>
+        <h2>File</h2>
+        <p>
+          The <code>file</code> input type is used to create a file select
+          input.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <input type="file" />
+            </form>
+          }
+        />
+      </section>
     </container>
   );
 }
