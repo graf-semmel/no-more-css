@@ -4,7 +4,8 @@
   --button-height: 2.4rem;
 }
 
-button, input::file-selector-button {
+button,
+input::file-selector-button {
   --background-color: var(--base-content);
   --background-color-hover: var(--base-content-hover);
   --color: var(--base);
@@ -33,61 +34,73 @@ button, input::file-selector-button {
   &:hover {
     background-color: var(--background-color-hover);
   }
+
   &.primary {
     --background-color: var(--primary);
     --background-color-hover: var(--primary-hover);
     --color: var(--primary-content);
   }
+
   &.secondary {
     --background-color: var(--secondary);
     --background-color-hover: var(--secondary-hover);
     --color: var(--secondary-content);
   }
+
   &.base {
     --background-color: var(--base);
     --background-color-hover: var(--base-hover);
     --color: var(--base-content);
   }
+
   &.success {
     --background-color: var(--success);
     --background-color-hover: var(--success-hover);
     --color: var(--success-content);
   }
+
   &.error {
     --background-color: var(--error);
     --background-color-hover: var(--error-hover);
     --color: var(--error-content);
   }
+
   &.XS {
     --height: calc(var(--button-height) - 0.8rem);
     --padding-x: 0.6rem;
     --font-size: 0.8rem;
   }
+
   &.S {
     --height: calc(var(--button-height) - 0.4rem);
     --padding-x: 1rem;
     --font-size: 0.9rem;
   }
+
   &.L {
     --height: calc(var(--button-height) + 0.4rem);
     --padding-x: 1.2rem;
     --font-size: 1.1rem;
   }
+
   &.XL {
     --height: calc(var(--button-height) + 0.8rem);
     --padding-x: 1.4rem;
     --font-size: 1.2rem;
   }
+
   &.outline {
     background-color: transparent;
     color: var(--background-color);
     outline: 1px solid var(--background-color);
+
     &:hover {
       outline-width: 1.5px;
       outline-color: var(--background-color-hover);
       color: var(--background-color-hover);
     }
   }
+
   &:disabled,
   &.outline:disabled {
     background-color: var(--disabled);
@@ -95,4 +108,8 @@ button, input::file-selector-button {
     cursor: not-allowed;
     outline: none;
   }
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--background-color-hover);
 }

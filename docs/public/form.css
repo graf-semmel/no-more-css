@@ -87,7 +87,8 @@ input {
       [type="url"],
       [type="date"],
       [type="time"]
-    ), &::file-selector-button {
+    ),
+  &::file-selector-button {
     background-image: var(--icon);
     background-size: var(--icon-size);
     background-position: right calc(var(--padding-x)) center;
@@ -135,7 +136,12 @@ input {
     --icon: var(--icon-link);
   }
 
-  &::file-selector-button{
+  &[type="file"] {
+    font-size: inherit;
+    font-style: italic;
+  }
+
+  &::file-selector-button {
     --icon: var(--icon-folder-open-white);
     margin-right: var(--padding-x);
   }
