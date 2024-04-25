@@ -1,0 +1,46 @@
+input:where([type="checkbox"][role="switch"]) {
+  --height: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: var(--height);
+  width: calc(var(--height) * 2);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  border-radius: calc(var(--height) / 2);
+  outline: 1px solid currentColor;
+  vertical-align: text-bottom;
+  transition: background-color var(--transition-duration) ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    width: 45%;
+    height: 90%;
+    border: none;
+    border-radius: 50%;
+    background: currentcolor;
+    transition:
+      background-color var(--transition-duration) ease,
+      left var(--transition-duration) ease;
+  }
+
+  &:checked {
+    background-color: var(--primary);
+
+    &::before {
+      left: 50%;
+      background-color: var(--primary-content);
+    }
+  }
+}
+
+input:where([type="checkbox"][role="switch"]):disabled {
+  opacity: 0.4;
+}

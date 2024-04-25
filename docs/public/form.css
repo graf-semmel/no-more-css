@@ -47,7 +47,7 @@ fieldset label {
 
 textarea,
 select,
-input:not([type="file"]) {
+input:not([type="file"], [role="switch"]) {
   --padding-x: 1rem;
   --padding-y: 0.8rem;
 
@@ -160,7 +160,7 @@ label:has(> :is(input[type="checkbox"], input[type="radio"])) {
   width: fit-content;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"]:not([role="switch"]) {
   appearance: none;
   background-color: transparent;
   border: solid 1px var(--base-content);

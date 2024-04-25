@@ -246,6 +246,27 @@ export default function Form() {
           }
         />
       </section>
+      <section>
+        <h2>Switch</h2>
+        <p>
+          The <code>checkbox</code> input type is used to create a switch
+          control.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <label for="switch">
+                <input type="checkbox" role="switch" id="switch" />
+                I am a switch
+              </label>
+              <label for="switch-disabled">
+                <input type="checkbox" role="switch" id="switch-disabled" disabled/>
+                I am a disabled switch
+              </label>
+            </form>
+          }
+        />
+      </section>
     </container>
   );
 }
