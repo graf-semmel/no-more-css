@@ -256,12 +256,39 @@ export default function Form() {
           html={
             <form>
               <label for="switch">
-                <input type="checkbox" role="switch" id="switch" />
-                I am a switch
+                <input type="checkbox" role="switch" id="switch" />I am a switch
               </label>
               <label for="switch-disabled">
-                <input type="checkbox" role="switch" id="switch-disabled" disabled/>
+                <input
+                  type="checkbox"
+                  role="switch"
+                  id="switch-disabled"
+                  disabled
+                />
                 I am a disabled switch
+              </label>
+            </form>
+          }
+        />
+      </section>
+      <section>
+        <h2>Range</h2>
+        <p>
+          The <code>range</code> input type is used to create a slider control.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <label for="range">
+                Range slider
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  id="range"
+                  name="range"
+                />
               </label>
             </form>
           }
