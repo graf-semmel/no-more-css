@@ -294,6 +294,22 @@ export default function Form() {
           }
         />
       </section>
+      <section>
+        <h2>Color</h2>
+        <p>
+          The <code>color</code> input type is used to create a color picker.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <label for="color">
+                Color picker
+                <input type="color" id="color" name="color" />
+              </label>
+            </form>
+          }
+        />
+      </section>
     </container>
   );
 }

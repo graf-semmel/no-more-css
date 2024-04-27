@@ -48,7 +48,7 @@ fieldset label {
 
 textarea,
 select,
-input:not([type="file"], [role="switch"], [type="range"]) {
+input:not([type="file"], [role="switch"], [type="range"], [type="color"]) {
   --padding-x: 1rem;
   --padding-y: 0.8rem;
 
@@ -153,7 +153,7 @@ input {
   }
 }
 
-label:has(> :is(input[type="checkbox"], input[type="radio"])) {
+label:has(> :is(input[type="checkbox"], input[type="radio"], [type="color"])) {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -266,5 +266,46 @@ input[type="range"] {
     &::-webkit-slider-runnable-track {
       background-color: var(--surface-hover);
     }
+  }
+}
+
+input[type="color"] {
+  --size: 1rem;
+  --border-radius: 0.2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--size);
+  height: var(--size);
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+
+  &:focus {
+    outline: solid 2px var(--base-content);
+    outline-offset: 2px;
+  }
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch {
+    border: solid 1px var(--base-content);
+    border-radius: var(--border-radius);
+    /*border: none;*/
+  }
+
+  &::-moz-color-swatch {
+    border: solid 1px var(--base-content);
+    border-radius: var(--border-radius);
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
   }
 }
