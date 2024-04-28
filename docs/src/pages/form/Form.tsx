@@ -310,6 +310,25 @@ export default function Form() {
           }
         />
       </section>
+      <section>
+        <h2>Submit and Reset</h2>
+        <p>
+          The <code>submit</code> input type is used to create a submit button
+          and submit the form data to the server. The <code>reset</code> input
+          type is used to create a reset button and reset the form data to its
+          initial state.
+        </p>
+        <ElementPreview
+          html={
+            <form>
+              <row class="justify-stretch">
+                <input type="reset" value="Reset" class="grow" />
+                <input type="submit" value="Submit" class="grow" />
+              </row>
+            </form>
+          }
+        />
+      </section>
     </container>
   );
 }

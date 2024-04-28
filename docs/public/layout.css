@@ -13,17 +13,6 @@ main {
   }
 }
 
-row {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-}
-
-col {
-  display: flex;
-  flex-direction: column;
-}
-
 body > header {
   --background-color: var(--base);
   --color: var(--base-content);

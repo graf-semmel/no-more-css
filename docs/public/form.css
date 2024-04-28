@@ -12,6 +12,7 @@
   --icon-check: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>');
   --icon-arrow-down-s: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z'%3E%3C/path%3E%3C/svg%3E");
   --icon-folder-open-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 21C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5H20C20.5523 5 21 5.44772 21 6V9H4V18.996L6 11H22.5L20.1894 20.2425C20.0781 20.6877 19.6781 21 19.2192 21H3Z'%3E%3C/path%3E%3C/svg%3E");
+  --icon-alert: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF004D'%3E%3Cpath d='M12.8659 3.00017L22.3922 19.5002C22.6684 19.9785 22.5045 20.5901 22.0262 20.8662C21.8742 20.954 21.7017 21.0002 21.5262 21.0002H2.47363C1.92135 21.0002 1.47363 20.5525 1.47363 20.0002C1.47363 19.8246 1.51984 19.6522 1.60761 19.5002L11.1339 3.00017C11.41 2.52187 12.0216 2.358 12.4999 2.63414C12.6519 2.72191 12.7782 2.84815 12.8659 3.00017ZM10.9999 16.0002V18.0002H12.9999V16.0002H10.9999ZM10.9999 9.00017V14.0002H12.9999V9.00017H10.9999Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 fieldset,
@@ -48,7 +49,17 @@ fieldset label {
 
 textarea,
 select,
-input:not([type="file"], [role="switch"], [type="range"], [type="color"]) {
+input:not(
+    [type="file"],
+    [role="switch"],
+    [type="range"],
+    [type="color"],
+    [type="checkbox"],
+    [type="radio"],
+    [type="button"],
+    [type="reset"],
+    [type="submit"]
+  ) {
   --padding-x: 1rem;
   --padding-y: 0.8rem;
 
@@ -150,6 +161,12 @@ input {
   &:disabled {
     background-color: var(--disabled);
     color: var(--disabled-content);
+  }
+
+  &:invalid,
+  &[aria-invalid="true"] {
+    --icon: var(--icon-alert);
+    outline-color: var(--error);
   }
 }
 

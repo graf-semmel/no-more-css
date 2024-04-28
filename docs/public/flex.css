@@ -11,52 +11,71 @@ col {
 
 row,
 col {
+  gap: var(--dim-4);
+
   &.justify-normal {
     justify-content: normal;
   }
+
   &.justify-start {
     justify-content: flex-start;
   }
+
   &.justify-end {
     justify-content: flex-end;
   }
+
   &.justify-center {
     justify-content: center;
   }
+
   &.justify-between {
     justify-content: space-between;
   }
+
   &.justify-around {
     justify-content: space-around;
   }
+
   &.justify-evenly {
     justify-content: space-evenly;
   }
+
   /* No effect */
+
   &.justify-stretch {
     justify-content: stretch;
   }
+
   &.align-normal {
     align-content: normal;
   }
+
   &.align-start {
     align-content: flex-start;
   }
+
   &.align-end {
     align-content: flex-end;
   }
+
   &.align-center {
     align-content: center;
   }
+
   /* 
-  content-normal	align-content: normal;
-content-center	align-content: center;
-content-start	align-content: flex-start;
-content-end	align-content: flex-end;
-content-between	align-content: space-between;
-content-around	align-content: space-around;
-content-evenly	align-content: space-evenly;
-content-baseline	align-content: baseline;
-content-stretch	align-content: stretch;
- */
+    content-normal	align-content: normal;
+  content-center	align-content: center;
+  content-start	align-content: flex-start;
+  content-end	align-content: flex-end;
+  content-between	align-content: space-between;
+  content-around	align-content: space-around;
+  content-evenly	align-content: space-evenly;
+  content-baseline	align-content: baseline;
+  content-stretch	align-content: stretch;
+   */
+}
+
+.grow {
+  flex-grow: 1;
 }

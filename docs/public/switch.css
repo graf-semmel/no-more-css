@@ -44,11 +44,6 @@ input:where([type="checkbox"][role="switch"]) {
       background-color: var(--color-content);
     }
   }
-
-  &:focus {
-  outline-offset: 0;
-    background-color: var(--surface-hover);
-  }
 }
 
 input:where([type="checkbox"][role="switch"]):disabled {
