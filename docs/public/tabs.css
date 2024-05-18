@@ -1,65 +1,45 @@
 tabs {
-  display: grid;
+    display: grid;
+    row-gap: 1rem;
 
-  & label[role="tab"] {
-    --height: var(--button-height);
-    --font-weight: 500;
-    --font-size: 1rem;
-    --padding-x: 1rem;
+    & label[role="tab"] {
+        --height: var(--button-height);
+        --font-weight: 500;
+        --font-size: 1rem;
+        --border: solid var(--dim-1) var(--base-content);
+        margin-inline-end: 1rem;
 
-    grid-row-start: 1;
-    display: inline-flex;
-    align-items: center;
-    height: var(--height);
-    min-height: var(--height);
-    font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    padding: 0 var(--padding-x);
-    margin: 0 1px;
-    color: var(--base-content);
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    position: relative;
+        grid-row-start: 1;
+        min-height: var(--height);
+        font-weight: var(--font-weight);
+        font-size: var(--font-size);
+        border-color: transparent;
+        border-width: 0;
+        transition: border-bottom-color var(--transition-duration),
+        border-bottom-width var(--transition-duration);
 
-    & input[type="radio"] {
-      appearance: none;
-      display: none;
-      border: none;
-      position: absolute;
-      height: var(--height);
-      border-bottom: solid 1px var(--base);
-      border-radius: 0;
-      padding: 0;
-      margin: 0;
-      top: 0;
-      left: 0;
-      right: 0;
+        & input[type="radio"] {
+            appearance: none;
+            display: none;
+            position: absolute;
+        }
+
+        &:has(input[type="radio"]:checked) {
+            border-bottom: var(--border);
+
+            & + section[role="tabpanel"] {
+                display: block;
+            }
+        }
     }
 
-    &:has(input[type="radio"]:checked) {
-      color: var(--primary);
-      border: solid 1px var(--surface);
-      border-bottom: solid 1px var(--base);
-      margin: 0;
+    & section[role="tabpanel"] {
+        display: none;
+        grid-column-start: 1;
+        grid-column-end: 9999;
 
-      & + section[role="tabpanel"] {
-        display: block;
-      }
+        &:has(pre) {
+            padding: 0;
+        }
     }
-  }
-
-  & section[role="tabpanel"] {
-    display: none;
-    border: solid 1px var(--surface);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    padding: 1rem;
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: 9999;
-
-    &:has(pre) {
-      padding: 0;
-    }
-  }
 }
