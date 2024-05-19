@@ -4,7 +4,7 @@ import Code from "../../Code";
 
 export default function Form() {
   return (
-    <container>
+    <container class="gap-8">
       <hgroup>
         <h1>Forms</h1>
         <p>Collection of common form elements.</p>
@@ -13,7 +13,7 @@ export default function Form() {
         <h2>Example</h2>
         <ElementPreview
           html={
-            <form class="gap-4">
+            <form>
               <label for="name">
                 Name
                 <input id="name" type="text" placeholder="Name" />
@@ -43,7 +43,7 @@ export default function Form() {
         <ElementPreview
           html={
             <form>
-              <fieldset class="gap-4">
+              <fieldset>
                 <legend>Sign up</legend>
                 <label for="name">
                   Name
@@ -71,7 +71,7 @@ export default function Form() {
         </p>
         <ElementPreview
           html={
-            <form class="gap-4">
+            <form>
               <input type="text" placeholder="text" />
               <input type="password" placeholder="password" />
               <input type="email" placeholder="email" />
@@ -107,7 +107,7 @@ export default function Form() {
         </p>
         <ElementPreview
           html={
-            <form class="gap-4">
+            <form>
               <fieldset>
                 <legend>Checkboxes</legend>
                 <label for="checkbox 1">
@@ -152,7 +152,7 @@ export default function Form() {
         </p>
         <ElementPreview
           html={
-            <form class="gap-4">
+            <form>
               <fieldset>
                 <legend>Radio buttons</legend>
                 <label for="radio 1">
@@ -328,6 +328,54 @@ export default function Form() {
             </form>
           }
         />
+      </section>
+      <section>
+        <h2>Validation</h2>
+        <p>
+          The <code>:user-valid</code> CSS pseudo-class represents any validated form element whose value validates
+          correctly based on its validation constraints. However, unlike <code>:valid</code> it only matches once the
+          user has
+          interacted with it. This pseudo-class is applied if the form control is valid and any of the following has
+          occurred:
+        </p>
+        <ul>
+          <li>
+            The user made a change to the form control and committed the change such as by moving focus elsewhere.
+          </li>
+          <li>
+            The user has attempted to submit the form, even if no change was made to the control.
+          </li>
+          <li>
+            The value was invalid when it gained focus, and the user made a change making it valid, even if focus is
+            still in the control.
+          </li>
+        </ul>
+        <ElementPreview html={
+          <form>
+            <label for="no-validation">No validation</label>
+            <input id="no-validation" type="text" placeholder="This field won't be validated" />
+            <label for="required">Required</label>
+            <input id="required" type="text" placeholder="will automatically add *" required />
+            <label for="type">Type</label>
+            <input id="type" placeholder="native validation based on type attribute" type="email" />
+            <label for="pattern">Pattern</label>
+            <input id="pattern" type="text" placeholder="Only digits allowed" pattern="\\d" />
+            <label for="aria">Aria attributes</label>
+            <input id="aria" type="text" placeholder="mark fields usign aria attributes" aria-invalid="true"
+                   aria-required="true" />
+            <input type="submit" value="Submit" />
+          </form>
+        } />
+        <h2>Display errors</h2>
+        <ElementPreview html={
+          <form>
+            <label for="aria">Required</label>
+            <input id="aria" type="text" placeholder="mark fields usign aria attributes" aria-invalid="true"
+                   aria-required="true" />
+            <label for="aria" aria-errormessage="aria">This field is required</label>
+            <input type="submit" value="Submit" />
+          </form>
+        } />
       </section>
     </container>
   );

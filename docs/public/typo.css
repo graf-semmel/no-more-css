@@ -1,65 +1,65 @@
 :root {
-  --font-family-sans: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    --font-family-sans: Inter, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
-  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
-  --font-family: var(--font-family-sans);
-  --font-weight: 500;
-  --font-size: 1.15rem;
-  --line-height: 1.5;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --font-family: var(--font-family-sans);
+    --font-weight: 500;
+    --font-size: 1.15rem;
+    --line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: var(--base-content);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-  font-size: var(--font-size);
+    color: var(--base-content);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    font-size: var(--font-size);
 }
 
 h1 {
-  --font-size: 2rem;
-  --line-height: 1.125;
-  --font-weight: 800;
-  --letter-spacing: -0.09375rem;
+    --font-size: 2rem;
+    --line-height: 1.125;
+    --font-weight: 800;
+    --letter-spacing: -0.09375rem;
 }
 
 h2 {
-  --font-size: 1.75rem;
-  --line-height: 1.15;
-  --font-weight: 600;
-  --letter-spacing: -0.03125rem;
+    --font-size: 1.75rem;
+    --line-height: 1.15;
+    --font-weight: 600;
+    --letter-spacing: -0.03125rem;
 }
 
 h3 {
-  --font-size: 1.5rem;
-  --line-height: 1.175;
-  --font-weight: 600;
-  --letter-spacing: 0rem;
+    --font-size: 1.5rem;
+    --line-height: 1.175;
+    --font-weight: 600;
+    --letter-spacing: 0rem;
 }
 
 h4 {
-  --font-size: 1.25rem;
-  --line-height: 1.2;
-  --font-weight: 600;
-  --letter-spacing: 0.015625rem;
+    --font-size: 1.25rem;
+    --line-height: 1.2;
+    --font-weight: 600;
+    --letter-spacing: 0.015625rem;
 }
 
 h5 {
-  --font-size: 1.125rem;
-  --line-height: 1.225;
-  --font-weight: 700;
-  --letter-spacing: 0rem;
+    --font-size: 1.125rem;
+    --line-height: 1.225;
+    --font-weight: 700;
+    --letter-spacing: 0rem;
 }
 
 h6 {
-  --font-size: 1rem;
-  --line-height: 1.25;
-  --letter-spacing: 0.009375rem;
+    --font-size: 1rem;
+    --line-height: 1.25;
+    --letter-spacing: 0.009375rem;
 }
 
 h1,
@@ -68,128 +68,133 @@ h3,
 h4,
 h5,
 h6 {
-  --marign-bottom-default: var(--dim-4);
-  margin: 0;
-  margin-bottom: var(--marign-bottom-default);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  letter-spacing: var(--letter-spacing);
-  color: var(--color);
+    --marign-bottom-default: var(--dim-4);
+    margin: var(--marign-bottom-default) 0 0;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    color: var(--color);
 }
 
 hgroup {
-  display: flex;
-  flex-direction: column;
-  margin: var(--dim-4) 0;
-  padding: 0;
-  gap: var(--dim-1);
+    display: flex;
+    flex-direction: column;
+    margin: var(--dim-4) 0;
+    padding: 0;
+    gap: var(--dim-1);
 }
 
 hgroup > * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 hgroup > p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 abbr {
-  color: var(--secondary);
-  font-style: italic;
+    color: var(--secondary);
+    font-style: italic;
 }
 
 b {
-  color: var(--secondary);
-  font-weight: 600;
+    color: var(--secondary);
+    font-weight: 600;
 }
 
 em {
-  color: var(--secondary);
-  font-style: italic;
+    color: var(--secondary);
+    font-style: italic;
 }
 
 u {
-  text-decoration: underline;
-  text-decoration-color: var(--secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--secondary);
 }
 
 s {
-  text-decoration: line-through;
-  text-decoration-color: var(--secondary);
+    text-decoration: line-through;
+    text-decoration-color: var(--secondary);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+
 }
 
 kbd {
-  display: inline-block;
-  background-color: var(--surface);
-  color: var(--surface-content);
-  font-weight: 600;
-  letter-spacing: +0.05rem;
-  padding: 0.1rem 0.2rem;
-  font-size: 0.875rem;
-  border-radius: 0.2rem;
-  border: solid 1px var(--surface-content);
-  box-shadow: 2px 2px 2px var(--surface-content);
+    display: inline-block;
+    background-color: var(--surface);
+    color: var(--surface-content);
+    font-weight: 600;
+    letter-spacing: +0.05rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+    border: solid 1px var(--surface-content);
+    box-shadow: 2px 2px 2px var(--surface-content);
 }
 
 cite {
-  font-style: italic;
-  font-size: 0.8rem;
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
 cite::before {
-  content: "— ";
+    content: "— ";
 }
 
 mark {
-  --mark: var(--secondary);
-  background-color: var(--mark);
-  outline: solid 0.1rem var(--mark);
-  color: var(--secondary-content);
-  border-radius: 0.1rem;
-  vertical-align: baseline;
+    --mark: var(--secondary);
+    background-color: var(--mark);
+    outline: solid 0.1rem var(--mark);
+    color: var(--secondary-content);
+    border-radius: 0.1rem;
+    vertical-align: baseline;
 }
 
 del {
-  --deleted: var(--error);
-  background-color: var(--deleted);
-  outline: solid 0.1rem var(--deleted);
-  color: var(--secondary-content);
-  border-radius: 0.1rem;
-  vertical-align: baseline;
+    --deleted: var(--error);
+    background-color: var(--deleted);
+    outline: solid 0.1rem var(--deleted);
+    color: var(--secondary-content);
+    border-radius: 0.1rem;
+    vertical-align: baseline;
 }
 
 ins {
-  --inserted: var(--success);
-  background-color: var(--success);
-  outline: solid 0.1rem var(--success);
-  color: var(--secondary-content);
-  border-radius: 0.1rem;
-  text-decoration: none;
+    --inserted: var(--success);
+    background-color: var(--success);
+    outline: solid 0.1rem var(--success);
+    color: var(--secondary-content);
+    border-radius: 0.1rem;
+    text-decoration: none;
 }
 
 blockquote {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  border-left: solid 0.2rem var(--secondary);
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-left: solid 0.2rem var(--secondary);
 }
 
 blockquote p {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 blockquote p::before {
-  content: "\201C";
+    content: "\201C";
 }
 
 blockquote p::after {
-  content: "\201D";
+    content: "\201D";
 }
 
 blockquote cite {
-  display: block;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
+    display: block;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
 }
