@@ -143,7 +143,7 @@ input {
     background-position: right calc(var(--padding-x)) center;
     background-repeat: no-repeat;
     padding-right: calc(
-        var(--padding-x) + var(--icon-size) + calc(var(--padding-x) / 2)
+      var(--padding-x) + var(--icon-size) + calc(var(--padding-x) / 2)
     );
   }
 
@@ -224,9 +224,10 @@ input[type="checkbox"]:not([role="switch"]) {
   padding: 0;
   width: 1rem;
   height: 1rem;
-  transition: background-color var(--transition-duration) ease,
-  opacity var(--transition-duration) ease,
-  border-color var(--transition-duration) ease;
+  transition:
+    background-color var(--transition-duration) ease,
+    opacity var(--transition-duration) ease,
+    border-color var(--transition-duration) ease;
 
   &:checked {
     background-image: var(--icon-check);
@@ -244,8 +245,9 @@ input[type="radio"] {
   border-radius: 50%;
   border: solid 0.1rem var(--base-content-muted);
   background-color: var(--base);
-  transition: border-width var(--transition-duration) ease,
-  border-color var(--transition-duration) ease;
+  transition:
+    border-width var(--transition-duration) ease,
+    border-color var(--transition-duration) ease;
 
   &:checked {
     border-width: 0.3rem;
@@ -286,8 +288,9 @@ input[type="range"] {
     background: var(--color);
     cursor: pointer;
     outline: solid 2px var(--base);
-    transition: background-color var(--transition),
-    transform var(--transition);
+    transition:
+      background-color var(--transition),
+      transform var(--transition);
   }
 
   &:hover::-webkit-slider-thumb {
@@ -306,8 +309,9 @@ input[type="range"] {
     background: var(--surface);
     border: none;
     border-radius: calc(var(--track-height) / 2);
-    transition: background-color var(--transition),
-    transform var(--transition);
+    transition:
+      background-color var(--transition),
+      transform var(--transition);
   }
 
   &:focus {

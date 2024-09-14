@@ -6,9 +6,9 @@
 
 button,
 input::file-selector-button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   --background-color: var(--base-content);
   --background-color-hover: var(--base-content-hover);
   --color: var(--base);
@@ -112,7 +112,7 @@ input[type=submit] {
     outline: none;
   }
 
-  &:is([type=reset]){
+  &:is([type="reset"]) {
     --background-color: var(--surface);
     --background-color-hover: var(--surface-hover);
     --color: var(--surface-content);

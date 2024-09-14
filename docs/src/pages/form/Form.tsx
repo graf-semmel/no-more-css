@@ -14,13 +14,9 @@ export default function Form() {
         <ElementPreview
           html={
             <form>
-              <label for="name">
-                Name
-              </label>
+              <label for="name">Name</label>
               <input id="name" type="text" placeholder="Name" />
-              <label for="email">
-                Email
-              </label>
+              <label for="email">Email</label>
               <input id="email" type="email" placeholder="your@email.com" />
               <button type="submit">Submit</button>
             </form>
@@ -45,13 +41,9 @@ export default function Form() {
             <form>
               <fieldset>
                 <legend>Sign up</legend>
-                <label for="name">
-                  Name
-                </label>
+                <label for="name">Name</label>
                 <input id="name" type="text" placeholder="Name" />
-                <label for="email">
-                  Email
-                </label>
+                <label for="email">Email</label>
                 <input id="email" type="email" placeholder="your@email.com" />
               </fieldset>
             </form>
@@ -115,9 +107,7 @@ export default function Form() {
                   <input id="checkbox 1" type="checkbox" value="value 1" />
                   <p>ads</p>
                 </row>
-                <label for="checkbox 2">
-                  Checkbox 2
-                </label>
+                <label for="checkbox 2">Checkbox 2</label>
                 <input
                   id="checkbox 2"
                   type="checkbox"
@@ -133,13 +123,9 @@ export default function Form() {
                   value="value 3"
                   checked
                 />
-                <label for="checkbox 3">
-                  Checkbox 3
-                </label>
+                <label for="checkbox 3">Checkbox 3</label>
                 <input id="checkbox 4" type="checkbox" value="value 4" />
-                <label for="checkbox 4">
-                  Checkbox 4
-                </label>
+                <label for="checkbox 4">Checkbox 4</label>
               </fieldset>
             </form>
           }
@@ -280,9 +266,7 @@ export default function Form() {
         <ElementPreview
           html={
             <form>
-              <label for="range">
-                Range slider
-              </label>
+              <label for="range">Range slider</label>
               <input
                 type="range"
                 min="0"
@@ -303,9 +287,7 @@ export default function Form() {
         <ElementPreview
           html={
             <form>
-              <label for="color">
-                Color picker
-              </label>
+              <label for="color">Color picker</label>
               <input type="color" id="color" name="color" />
             </form>
           }
@@ -333,50 +315,86 @@ export default function Form() {
       <section>
         <h2>Validation</h2>
         <p>
-          The <code>:user-valid</code> CSS pseudo-class represents any validated form element whose value validates
-          correctly based on its validation constraints. However, unlike <code>:valid</code> it only matches once the
-          user has
-          interacted with it. This pseudo-class is applied if the form control is valid and any of the following has
-          occurred:
+          The <code>:user-valid</code> CSS pseudo-class represents any validated
+          form element whose value validates correctly based on its validation
+          constraints. However, unlike <code>:valid</code> it only matches once
+          the user has interacted with it. This pseudo-class is applied if the
+          form control is valid and any of the following has occurred:
         </p>
         <ul>
           <li>
-            The user made a change to the form control and committed the change such as by moving focus elsewhere.
+            The user made a change to the form control and committed the change
+            such as by moving focus elsewhere.
           </li>
           <li>
-            The user has attempted to submit the form, even if no change was made to the control.
+            The user has attempted to submit the form, even if no change was
+            made to the control.
           </li>
           <li>
-            The value was invalid when it gained focus, and the user made a change making it valid, even if focus is
-            still in the control.
+            The value was invalid when it gained focus, and the user made a
+            change making it valid, even if focus is still in the control.
           </li>
         </ul>
-        <ElementPreview html={
-          <form>
-            <label for="no-validation">No validation</label>
-            <input id="no-validation" type="text" placeholder="This field won't be validated" />
-            <label for="required">Required</label>
-            <input id="required" type="text" placeholder="will automatically add *" required />
-            <label for="type">Type</label>
-            <input id="type" placeholder="native validation based on type attribute" type="email" />
-            <label for="pattern">Pattern</label>
-            <input id="pattern" type="text" placeholder="Only digits allowed" pattern="\\d" />
-            <label for="aria">Aria attributes</label>
-            <input id="aria" type="text" placeholder="mark fields usign aria attributes" aria-invalid="true"
-                   aria-required="true" />
-            <input type="submit" value="Submit" />
-          </form>
-        } />
+        <ElementPreview
+          html={
+            <form>
+              <label for="no-validation">No validation</label>
+              <input
+                id="no-validation"
+                type="text"
+                placeholder="This field won't be validated"
+              />
+              <label for="required">Required</label>
+              <input
+                id="required"
+                type="text"
+                placeholder="will automatically add *"
+                required
+              />
+              <label for="type">Type</label>
+              <input
+                id="type"
+                placeholder="native validation based on type attribute"
+                type="email"
+              />
+              <label for="pattern">Pattern</label>
+              <input
+                id="pattern"
+                type="text"
+                placeholder="Only digits allowed"
+                pattern="\\d"
+              />
+              <label for="aria">Aria attributes</label>
+              <input
+                id="aria"
+                type="text"
+                placeholder="mark fields usign aria attributes"
+                aria-invalid="true"
+                aria-required="true"
+              />
+              <input type="submit" value="Submit" />
+            </form>
+          }
+        />
         <h2>Display errors</h2>
-        <ElementPreview html={
-          <form>
-            <label for="aria">Required</label>
-            <input id="aria" type="text" placeholder="mark fields usign aria attributes" aria-invalid="true"
-                   aria-required="true" />
-            <label for="aria" aria-errormessage="aria">This field is required</label>
-            <input type="submit" value="Submit" />
-          </form>
-        } />
+        <ElementPreview
+          html={
+            <form>
+              <label for="aria">Required</label>
+              <input
+                id="aria"
+                type="text"
+                placeholder="mark fields usign aria attributes"
+                aria-invalid="true"
+                aria-required="true"
+              />
+              <label for="aria" aria-errormessage="aria">
+                This field is required
+              </label>
+              <input type="submit" value="Submit" />
+            </form>
+          }
+        />
       </section>
     </container>
   );

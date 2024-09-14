@@ -1,45 +1,46 @@
 tabs {
-    display: grid;
-    row-gap: 1rem;
+  display: grid;
+  row-gap: 1rem;
 
-    & label[role="tab"] {
-        --height: var(--button-height);
-        --font-weight: 500;
-        --font-size: 1rem;
-        --border: solid var(--dim-1) var(--base-content);
-        margin-inline-end: 1rem;
+  & label[role="tab"] {
+    --height: var(--button-height);
+    --font-weight: 500;
+    --font-size: 1rem;
+    --border: solid var(--dim-1) var(--base-content);
+    margin-inline-end: 1rem;
 
-        grid-row-start: 1;
-        min-height: var(--height);
-        font-weight: var(--font-weight);
-        font-size: var(--font-size);
-        border-color: transparent;
-        border-width: 0;
-        transition: border-bottom-color var(--transition-duration),
-        border-bottom-width var(--transition-duration);
+    grid-row-start: 1;
+    min-height: var(--height);
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    border-color: transparent;
+    border-width: 0;
+    transition:
+      border-bottom-color var(--transition-duration),
+      border-bottom-width var(--transition-duration);
 
-        & input[type="radio"] {
-            appearance: none;
-            display: none;
-            position: absolute;
-        }
-
-        &:has(input[type="radio"]:checked) {
-            border-bottom: var(--border);
-
-            & + section[role="tabpanel"] {
-                display: block;
-            }
-        }
+    & input[type="radio"] {
+      appearance: none;
+      display: none;
+      position: absolute;
     }
 
-    & section[role="tabpanel"] {
-        display: none;
-        grid-column-start: 1;
-        grid-column-end: 9999;
+    &:has(input[type="radio"]:checked) {
+      border-bottom: var(--border);
 
-        &:has(pre) {
-            padding: 0;
-        }
+      & + section[role="tabpanel"] {
+        display: block;
+      }
     }
+  }
+
+  & section[role="tabpanel"] {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 9999;
+
+    &:has(pre) {
+      padding: 0;
+    }
+  }
 }
