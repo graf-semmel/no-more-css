@@ -16,12 +16,12 @@ export default function Form() {
             <form>
               <label for="name">
                 Name
-                <input id="name" type="text" placeholder="Name" />
               </label>
+              <input id="name" type="text" placeholder="Name" />
               <label for="email">
                 Email
-                <input id="email" type="email" placeholder="your@email.com" />
               </label>
+              <input id="email" type="email" placeholder="your@email.com" />
               <button type="submit">Submit</button>
             </form>
           }
@@ -47,12 +47,12 @@ export default function Form() {
                 <legend>Sign up</legend>
                 <label for="name">
                   Name
-                  <input id="name" type="text" placeholder="Name" />
                 </label>
+                <input id="name" type="text" placeholder="Name" />
                 <label for="email">
                   Email
-                  <input id="email" type="email" placeholder="your@email.com" />
                 </label>
+                <input id="email" type="email" placeholder="your@email.com" />
               </fieldset>
             </form>
           }
@@ -110,34 +110,35 @@ export default function Form() {
             <form>
               <fieldset>
                 <legend>Checkboxes</legend>
-                <label for="checkbox 1">
+                <row>
+                  <label for="checkbox 1">Checkbox 1</label>
                   <input id="checkbox 1" type="checkbox" value="value 1" />
-                  Checkbox 1
-                </label>
+                  <p>ads</p>
+                </row>
                 <label for="checkbox 2">
-                  <input
-                    id="checkbox 2"
-                    type="checkbox"
-                    value="value 2"
-                    checked
-                  />
                   Checkbox 2
                 </label>
+                <input
+                  id="checkbox 2"
+                  type="checkbox"
+                  value="value 2"
+                  checked
+                />
               </fieldset>
               <fieldset>
                 <legend>Reversed</legend>
+                <input
+                  id="checkbox 3"
+                  type="checkbox"
+                  value="value 3"
+                  checked
+                />
                 <label for="checkbox 3">
                   Checkbox 3
-                  <input
-                    id="checkbox 3"
-                    type="checkbox"
-                    value="value 3"
-                    checked
-                  />
                 </label>
+                <input id="checkbox 4" type="checkbox" value="value 4" />
                 <label for="checkbox 4">
                   Checkbox 4
-                  <input id="checkbox 4" type="checkbox" value="value 4" />
                 </label>
               </fieldset>
             </form>
@@ -281,15 +282,15 @@ export default function Form() {
             <form>
               <label for="range">
                 Range slider
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="50"
-                  id="range"
-                  name="range"
-                />
               </label>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                id="range"
+                name="range"
+              />
             </form>
           }
         />
@@ -304,8 +305,8 @@ export default function Form() {
             <form>
               <label for="color">
                 Color picker
-                <input type="color" id="color" name="color" />
               </label>
+              <input type="color" id="color" name="color" />
             </form>
           }
         />
