@@ -1,60 +1,95 @@
 aside {
-  width: 250px;
-  height: 100vh;
-  background: blueviolet;
-  position: fixed;
+  --padding: var(--dim-4);
+  --toggle-width: var(--dim-8);
+  --width: 300px;
+  --width-hidden: calc(var(--toggle-width) + var(--padding) * 2);
 
-  color: #fff;
-
+  width: var(--width);
+  height: 100%;
+  background: var(--surface);
+  color: var(--surface-content);
+  padding: var(--dim-4);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  transition: width 0.2s ease-out;
 
-  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.75);
-}
+  & > input[type="checkbox"] {
+    display: none;
+  }
 
-aside ul {
-  padding-inline-start: 0;
-}
+  &:has(input[type="checkbox"]:first-child:checked) {
+    width: var(--width-hidden);
+  }
 
-aside ul li {
-  list-style: none;
-  font-size: 18px;
-  padding: 20px 0;
-  cursor: pointer;
-}
+  & label[for="toggle"] {
+    align-self: end;
+    cursor: pointer;
+    width: var(--dim-8);
+    height: var(--dim-8);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5rem;
 
-aside ul li .fas {
-  width: 50px;
-}
+    &:hover {
+      background-color: var(--surface-hover);
+    }
+  }
 
-.aside-wrapper {
-  padding: 0 40px;
-  box-sizing: border-box;
-}
+  & details {
+    overflow: hidden;
+    position: relative;
 
-.logo-text {
-  font-size: 32px;
-  position: relative;
-}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset -1em 0 1em -0.5em var(--surface);
+      pointer-events: none;
+    }
 
-.sidebar-toggle {
-  position: absolute;
-  top: 5px;
-  left: 205px;
-  background: blueviolet;
-  padding: 4px 11px;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-}
+    & summary {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--base-content-muted);
+      margin-top: var(--dim-2);
+      margin-bottom: var(--dim-1);
+    }
 
-input {
-  display: none;
-  transition: transform 1s ease-out;
-}
+    & nav {
+      display: flex;
+      flex-direction: column;
 
-input:checked ~ aside {
-  transition: transform 1s ease-out;
-  transform: translateX(-240px);
+      & ul {
+        padding: 0;
+        margin: 0;
+        padding-inline: 0;
+
+        & li {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          padding-inline: 0;
+
+          & a {
+            --border-radius: 0.3rem;
+            font-size: 1rem;
+            color: var(--surface-content);
+            text-decoration: none;
+            padding: var(--dim-1) var(--dim-2);
+            display: block;
+
+            &:hover {
+              color: var(--primary);
+              background-color: var(--surface-hover);
+              border-radius: var(--border-radius);
+            }
+          }
+        }
+      }
+    }
+  }
 }

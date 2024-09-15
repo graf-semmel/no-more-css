@@ -17,6 +17,8 @@ main {
 body > header {
   --background-color: var(--base);
   --color: var(--base-content);
+
+  width: 100%;
   background-color: var(--background-color);
   color: var(--color);
   margin: 0;
@@ -32,14 +34,10 @@ body > footer {
   width: 100%;
   padding: var(--space-y) var(--space-x);
   margin: 0;
-  background-color: var(--background-color);
   color: var(--color);
 }
 
 body > main {
-  --main-spacing-y: 2rem;
-  padding-top: var(--main-spacing-y);
-  padding-bottom: var(--main-spacing-y);
 }
 
 body > footer,

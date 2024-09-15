@@ -1,6 +1,6 @@
 card {
-  --card-spacing-x: 2rem;
-  --card-spacing-y: 2rem;
+  --card-spacing-x: 1rem;
+  --card-spacing-y: 1rem;
   padding: var(--card-spacing-y) 0;
   margin: 0;
   position: relative;

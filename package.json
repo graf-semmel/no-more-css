@@ -1,0 +1,33 @@
+{
+  "name": "a-css",
+  "version": "0.1.0",
+  "description": "Lightweight utility-bases CSS library",
+  "main": "index.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graf-semmel/a-css.git"
+  },
+  "keywords": [
+    "css",
+    "web",
+    "framework",
+    "library",
+    "UI",
+    "design-system"
+  ],
+  "author": "Tristan Heinig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graf-semmel/a-css/issues"
+  },
+  "homepage": "https://github.com/graf-semmel/a-css#readme"
+}

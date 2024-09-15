@@ -36,6 +36,7 @@ dt {
   font-weight: var(--font-weight);
   color: var(--color);
   margin: 0;
+
   &::first-letter {
     font-size: var(--first-letter-font-size);
   }

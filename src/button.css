@@ -14,12 +14,11 @@ input[type="submit"] {
   --color: var(--base);
   --font-weight: 500;
   --padding-x: 1rem;
+  --padding-y: 0.75rem;
   --font-size: 1rem;
   --height: var(--button-height);
 
-  padding: 0 var(--padding-x);
-  height: var(--height);
-  min-height: var(--height);
+  padding: var(--padding-y) var(--padding-x);
   border: none;
   border-radius: var(--border-radius);
   font-size: var(--font-size);
@@ -33,6 +32,7 @@ input[type="submit"] {
   background-color: var(--background-color);
   color: var(--color);
   white-space: nowrap;
+  width: fit-content;
 
   &:hover {
     background-color: var(--background-color-hover);
