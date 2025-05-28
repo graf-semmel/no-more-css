@@ -3,7 +3,7 @@ export default function Layout(props: any) {
     <>
       <header>
         <nav>
-          <a href="/">A-CSS</a>
+          <a href="/">NO-MORE-CSS</a>
         </nav>
         <nav>
           <a href="#/layout">Layout</a>
@@ -17,9 +17,9 @@ export default function Layout(props: any) {
       <footer>
         <row class="gap-8 justify-center">
           <section>
-            <img id="footer-logo" src="/a-css/img/logo.png" />
+            <img id="footer-logo" src="/no-more-css/img/logo.png" />
             <p>
-              <b>a CSS</b> by <a href="">@graf-semmel</a>
+              <b>no more CSS</b> by <a href="">@graf-semmel</a>
             </p>
           </section>
           <section>

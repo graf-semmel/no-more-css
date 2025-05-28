@@ -61,7 +61,7 @@ export default function Layout() {
             {escapeHtml(
               <header>
                 <nav>
-                  <a href="/">A-CSS</a>
+                  <a href="/">NO-MORE-CSS</a>
                   <a href="/layout">Layout</a>
                 </nav>
               </header>,

@@ -5,7 +5,7 @@ import browserslist from "browserslist";
 import * as path from "node:path";
 
 export default defineConfig({
-  base: "/a-css",
+  base: "/no-more-css",
   server: {
     port: 3000,
     open: true,
