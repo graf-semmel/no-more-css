@@ -32,7 +32,7 @@ fieldset label {
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: var(--dim-4) 0 var(--dim-1) 0;
+  margin: 0 0 var(--dim-1) 0;
 
   &[aria-errormessage] {
     color: var(--error-content);

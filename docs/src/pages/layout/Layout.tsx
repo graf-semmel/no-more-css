@@ -1,4 +1,5 @@
 import Code, { escapeHtml } from "../../Code";
+import Flexbox from "./Flexbox";
 import Footer from "./Footer";
 
 export default function Layout() {
@@ -10,6 +11,7 @@ export default function Layout() {
           <p>Layouts are the foundation of your website.</p>
         </hgroup>
       </section>
+      <Flexbox />
       <section>
         <h2>Section</h2>
         <p>
