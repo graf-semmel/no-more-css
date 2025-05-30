@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 export default function Layout() {
   return (
-    <container>
+    <container class="blog">
       <section>
         <hgroup>
           <h1>Layout</h1>

@@ -63,3 +63,11 @@ body > footer,
     margin: 0;
   }
 }
+
+.blog {
+  width: 48rem;
+}
+
+.w-full {
+  width: 100%;
+}
