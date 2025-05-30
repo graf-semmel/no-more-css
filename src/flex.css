@@ -38,42 +38,42 @@ row, .row, column, .column {
   }
 
   &.items-start {
-    align-content: flex-start;
+    align-items: flex-start;
   }
 
   &.items-end {
-    align-content: flex-end;
+    align-items: flex-end;
   }
 
   &.items-center {
-    align-content: center;
+    align-items: center;
   }
 
   &.items-baseline {
-    align-content: baseline;
+    align-items: baseline;
   }
 
   &.items-stretch {
-    align-content: stretch;
-  }
-
-  &.items-space-between {
-    align-content: space-between;
-  }
-
-  &.items-space-around {
-    align-content: space-around;
-  }
-
-  &.items-space-evenly {
-    align-content: space-evenly;
+    align-items: stretch;
   }
 
   &.items-grow > * {
-    flex-grow: 1;
+    flex: 1 0 auto;
+  }
+
+  &.items-shrink > * {
+    flex: 0 1 auto;
+  }
+
+  &.items-auto > * {
+    flex: 1 1 auto;
   }
 }
 
 .grow {
   flex-grow: 1;
+}
+
+.shrink {
+  flex-shrink: 1;
 }

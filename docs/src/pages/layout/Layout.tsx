@@ -12,7 +12,7 @@ export default function Layout() {
         </hgroup>
       </section>
       <Flexbox />
-      <section>
+      {/* <section>
         <h2>Section</h2>
         <p>
           The <code>section</code> element defines a section in a document.
@@ -102,7 +102,7 @@ export default function Layout() {
             <p>Column</p>
           </column>
         </Code>
-      </section>
+      </section> */}
     </container>
   );
 }

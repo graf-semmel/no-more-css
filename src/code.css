@@ -1,21 +1,24 @@
-pre {
-  background-color: var(--base);
-  color: var(--base-content-muted);
-  padding: 1rem;
-  overflow-x: auto;
-  line-height: initial;
-}
-
 pre,
 code {
   font-family: var(--font-family-mono);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  padding: 0;
   margin: 0;
-  display: block;
 }
 
 pre > code {
-  font-size: 0.8rem;
-  line-height: 1.5;
+  display: block;
+  overflow: auto;
+  padding: 1em;
+  background-color: var(--surface);
+  color: var(--surface-content);
+  min-height: 100%;
+}
+
+pre {
+  line-height: 1.25;
+  font-size: 0.875rem;
 }
 
 code:not(pre > code) {
