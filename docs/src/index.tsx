@@ -5,7 +5,7 @@ import { lazy } from "solid-js";
 import Layout from "./Layout";
 import "@acss/all.css";
 import "./index.css";
-import 'highlight.js/styles/github-dark-dimmed.css';
+import 'highlight.js/styles/intellij-light.css';
 
 const routes = [
   {

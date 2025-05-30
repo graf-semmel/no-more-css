@@ -11,8 +11,8 @@ pre > code {
   display: block;
   overflow: auto;
   padding: 1em;
-  background-color: var(--surface);
-  color: var(--surface-content);
+  /* background-color: var(--surface); */
+  /* color: var(--surface-content); */
   min-height: 100%;
 }
 

@@ -8,6 +8,16 @@ column, .column {
   flex-direction: column;
 }
 
+row-reverse, .row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+column-reverse, .column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 row, .row, column, .column {
   &.content-start {
     justify-content: flex-start;
@@ -76,4 +86,14 @@ row, .row, column, .column {
 
 .shrink {
   flex-shrink: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+wrap-reverse {
+  flex-wrap: wrap-reverse;
 }

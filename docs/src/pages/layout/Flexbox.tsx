@@ -6,7 +6,7 @@ export default function Flexbox() {
   const [justifyContent, setJustifyContent] = createSignal("flex-start");
   const [alignItems, setAlignItems] = createSignal("flex-start");
   const [flexWrap, setFlexWrap] = createSignal("nowrap");
-  const [gap, setGap] = createSignal(128);
+  const [gap, setGap] = createSignal(8);
   const [cssText, setCssText] = createSignal("");
   let ref!: HTMLDivElement;
 
@@ -14,13 +14,13 @@ export default function Flexbox() {
   createEffect(() => {
     setCssText(
       `.flexbox-playground {\n` +
-      `  display: flex;\n` +
-      `  flex-direction: ${flexDirection()};\n` +
-      `  justify-content: ${justifyContent()};\n` +
-      `  align-items: ${alignItems()};\n` +
-      `  flex-wrap: ${flexWrap()};\n` +
-      `  gap: ${gap()}px;\n` +
-      `}`
+        `  display: flex;\n` +
+        `  flex-direction: ${flexDirection()};\n` +
+        `  justify-content: ${justifyContent()};\n` +
+        `  align-items: ${alignItems()};\n` +
+        `  flex-wrap: ${flexWrap()};\n` +
+        `  gap: ${gap()}px;\n` +
+        `}`
     );
   });
 
@@ -32,7 +32,7 @@ export default function Flexbox() {
         or columns. Items flex (expand) to fill additional space or shrink to
         fit into smaller spaces.
       </p>
-      <div class="row items-grow gap-4">
+      <div class="row items-grow wrap gap-4">
         <fieldset>
           <legend>flex-direction</legend>
           {["row", "row-reverse", "column", "column-reverse"].map((option) => (
@@ -102,26 +102,33 @@ export default function Flexbox() {
             </label>
           ))}
         </fieldset>
+        <fieldset>
+          <legend>gap</legend>
+          <label>
+            <input
+              type="range"
+              min={0}
+              max={128}
+              step={8}
+              value={gap()}
+              onInput={(e) => setGap(Number(e.currentTarget.value))}
+            />
+            <span>{gap()}px</span>
+          </label>
+        </fieldset>
+        <fieldset
+          style={{
+            flex: "1 0 300px",
+          }}
+        >
+          <legend>CSS</legend>
+          <Code language="css">{cssText()}</Code>
+        </fieldset>
       </div>
-      <fieldset>
-        <legend>gap</legend>
-        <label>
-          <input
-            type="range"
-            min={0}
-            max={128}
-            step={8}
-            value={gap()}
-            onInput={(e) => setGap(Number(e.currentTarget.value))}
-          />
-          <span>{gap()}px</span>
-        </label>
-      </fieldset>
 
-      <section id="flexbox-playground" class="row items-stretch">
+      <section id="flexbox-playground">
         <div
           ref={ref}
-          class="flexbox-playground"
           style={{
             display: "flex",
             "flex-direction": flexDirection() as any,
@@ -137,7 +144,6 @@ export default function Flexbox() {
           <div style={{ "font-size": "2rem" }}>CSS</div>
           <div style={{ "font-size": "1.3rem" }}>!</div>
         </div>
-        <Code language="css">{cssText()}</Code>
       </section>
     </section>
   );

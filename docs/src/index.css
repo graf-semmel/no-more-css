@@ -11,13 +11,17 @@ footer row section {
 }
 
 #flexbox-playground {
-  width: 100%;  
+  width: 100%; 
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
 
   > div {
+    margin-inline: auto;
+    background: var(--surface-content);
     padding: 0.5rem;
     width: 400px;
     min-height: 20rem;
-    border: solid 1px var(--surface);
     border-radius: var(--border-radius);
 
     & > * {
@@ -27,7 +31,9 @@ footer row section {
       padding: 0.5rem;
     }
   }
-  > pre {
-    flex: 1 1 auto;
-  }
+}
+
+/* Overwrites theme background */
+code.hljs {
+  background: none;
 }
