@@ -12,12 +12,14 @@
     "@solidjs/router": "^0.15.3",
     "@types/js-beautify": "^1.14.3",
     "@types/node": "^22.15.21",
+    "highlight.js": "^11.11.1",
     "js-beautify": "^1.15.4",
     "solid-js": "^1.9.7"
   },
   "devDependencies": {
     "browserlist": "^1.0.1",
     "lightningcss": "^1.30.1",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-solid": "^2.11.6"
