@@ -25,7 +25,8 @@ code:not(pre > code) {
   display: inline-block;
   background-color: var(--surface);
   color: var(--surface-content);
-  padding: 0.2rem 0.3rem;
+  padding: 0.05rem 0.3rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 0.25rem;
+  user-select: all;
 }
