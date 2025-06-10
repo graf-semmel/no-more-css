@@ -1,5 +1,6 @@
 import { createEffect, createSignal } from "solid-js";
 import Code from "../../Code";
+import { FlexItemPlayground } from "./FlexItemPlayground"; // Added import
 
 export default function Flexbox() {
   return (
@@ -11,13 +12,14 @@ export default function Flexbox() {
         fit into smaller spaces.
       </p>
       <ContainerPropertiesSection />
-      <FlexboxPlayGround />
+      <FlexContainerPlayGround />
       <ItemPropertiesSection />
+      <FlexItemPlayground />
     </article>
   );
 }
 
-export function FlexboxPlayGround() {
+export function FlexContainerPlayGround() {
   const [flexDirection, setFlexDirection] = createSignal("row");
   const [justifyContent, setJustifyContent] = createSignal("flex-start");
   const [alignItems, setAlignItems] = createSignal("flex-start");
@@ -158,7 +160,7 @@ export function FlexboxPlayGround() {
   );
 }
 
-function ContainerPropertiesSection() {
+export function ContainerPropertiesSection() {
   return (
     <section>
       <h3>Container Properties</h3>
@@ -225,7 +227,7 @@ function ContainerPropertiesSection() {
   );
 }
 
-function ItemPropertiesSection() {
+export function ItemPropertiesSection() {
   return (
     <section>
       <h3>Item Properties</h3>
