@@ -24,28 +24,28 @@ body {
 h1 {
   --font-size: 2rem;
   --line-height: 1.125;
-  --font-weight: 800;
+  --font-weight: 300;
   --letter-spacing: -0.09375rem;
 }
 
 h2 {
-  --font-size: 1.75rem;
+  --font-size: 1.7rem;
   --line-height: 1.15;
-  --font-weight: 600;
+  --font-weight: 500;
   --letter-spacing: -0.03125rem;
 }
 
 h3 {
-  --font-size: 1.5rem;
+  --font-size: 1.2rem;
   --line-height: 1.175;
   --font-weight: 600;
   --letter-spacing: 0rem;
 }
 
 h4 {
-  --font-size: 1.25rem;
+  --font-size: 1rem;
   --line-height: 1.2;
-  --font-weight: 600;
+  --font-weight: 700;
   --letter-spacing: 0.015625rem;
 }
 
@@ -68,8 +68,10 @@ h3,
 h4,
 h5,
 h6 {
-  --marign-bottom-default: var(--dim-4);
-  margin: var(--marign-bottom-default) 0 0;
+  --margin-bottom: var(--dim-4);
+  --margin-top: calc(var(--font-size) * 1.5);
+  margin: var(--margin-top) 0 var(--margin-bottom) 0;
+  padding: 0;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -83,14 +85,18 @@ hgroup {
   margin: var(--dim-4) 0;
   padding: 0;
   gap: var(--dim-1);
+  padding-left: var(--dim-4);
+  border-left: solid var(--dim-2) var(--base-content);
 }
 
-hgroup > * {
+hgroup > *{
   margin: 0;
   padding: 0;
 }
 
 hgroup > p {
+  margin: 0;
+  padding: 0;
   font-size: 1rem;
 }
 
@@ -120,7 +126,7 @@ s {
 }
 
 p {
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
 }
 
