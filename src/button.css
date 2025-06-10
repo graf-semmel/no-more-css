@@ -14,7 +14,7 @@ input[type="submit"] {
   --color: var(--base);
   --font-weight: 500;
   --padding-x: 1rem;
-  --padding-y: 0.75rem;
+  --padding-y: calc(var(--padding-x) * 0.75);
   --font-size: 1rem;
   --height: var(--button-height);
 
@@ -33,6 +33,7 @@ input[type="submit"] {
   color: var(--color);
   white-space: nowrap;
   width: fit-content;
+  max-height: min-content;
 
   &:hover {
     background-color: var(--background-color-hover);
@@ -76,7 +77,7 @@ input[type="submit"] {
 
   &.S {
     --height: calc(var(--button-height) - 0.4rem);
-    --padding-x: 1rem;
+    --padding-x: 0.8rem;
     --font-size: 0.9rem;
   }
 
