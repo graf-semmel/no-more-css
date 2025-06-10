@@ -4,15 +4,12 @@ import Code from "../../Code";
 export default function Flexbox() {
   return (
     <article>
-      <hgroup>
-        <h2>Flexbox</h2>
-        <p>
-          Flexbox is a one-dimensional layout method for arranging items in rows
-          or columns. Items flex (expand) to fill additional space or shrink to
-          fit into smaller spaces.
-        </p>
-      </hgroup>
-
+      <h2>Flexbox</h2>
+      <p>
+        Flexbox is a one-dimensional layout method for arranging items in rows
+        or columns. Items flex (expand) to fill additional space or shrink to
+        fit into smaller spaces.
+      </p>
       <ContainerPropertiesSection />
       <FlexboxPlayGround />
       <ItemPropertiesSection />
@@ -166,7 +163,10 @@ function ContainerPropertiesSection() {
     <section>
       <h3>Container Properties</h3>
       <p>
-        Flexbox container properties control how the flex container behaves and how its children are laid out. These properties let you define the main axis, wrapping behavior, alignment, and spacing between items, giving you powerful tools to create flexible and responsive layouts.
+        Flexbox container properties control how the flex container behaves and
+        how its children are laid out. These properties let you define the main
+        axis, wrapping behavior, alignment, and spacing between items, giving
+        you powerful tools to create flexible and responsive layouts.
       </p>
       <h4>display</h4>
       <p>
@@ -230,7 +230,11 @@ function ItemPropertiesSection() {
     <section>
       <h3>Item Properties</h3>
       <p>
-        Flexbox item properties let you control how each individual flex item behaves inside the container. With these properties, you can adjust how items grow, shrink, align, and even change their order—giving you fine-grained control over your layout and making it easy to create flexible, responsive designs.
+        Flexbox item properties let you control how each individual flex item
+        behaves inside the container. With these properties, you can adjust how
+        items grow, shrink, align, and even change their order—giving you
+        fine-grained control over your layout and making it easy to create
+        flexible, responsive designs.
       </p>
       <h4>align-self</h4>
       <p>
