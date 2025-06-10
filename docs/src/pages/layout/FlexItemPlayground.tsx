@@ -30,7 +30,7 @@ function FlexItemControls(props: FlexItemControlsProps) {
         <input
           type="range"
           min={0}
-          max={10}
+          max={5}
           step={1}
           value={item().flexGrow}
           onInput={(e) =>
@@ -43,7 +43,7 @@ function FlexItemControls(props: FlexItemControlsProps) {
         <input
           type="range"
           min={0}
-          max={10}
+          max={5}
           step={1}
           value={item().flexShrink}
           onInput={(e) =>
@@ -56,8 +56,8 @@ function FlexItemControls(props: FlexItemControlsProps) {
         <input
           type="range"
           min={0}
-          max={200}
-          step={10}
+          max={500}
+          step={50}
           value={item().flexBasis}
           onInput={(e) =>
             setItem({ ...item(), flexBasis: Number(e.currentTarget.value) })
