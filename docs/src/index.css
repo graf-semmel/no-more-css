@@ -31,9 +31,9 @@ footer row section {
       padding: 0.5rem;
     }
   }
-}
-
-/* Overwrites theme background */
-code.hljs {
-  background: none;
+  
+  /* Overwrites theme background */
+  & code.hljs {
+    background: none;
+  }
 }
