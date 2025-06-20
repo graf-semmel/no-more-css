@@ -104,6 +104,7 @@ row, .row, column, .column {
 .no-wrap {
   flex-wrap: nowrap;
 }
+
 wrap-reverse {
   flex-wrap: wrap-reverse;
 }

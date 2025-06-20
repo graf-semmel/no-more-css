@@ -288,13 +288,13 @@ function FlexDisplayExample() {
     <section>
       <Tabs
         items={["block", "flex", "inline-flex"].map((type) => {
-          const mappedType = mapToClass(type) ;
+          const mappedType = mapToClass(type);
           return {
             label: type,
             content: (
               <div class="row gap-4 mt-1 wrap">
                 <div class="grow canvas" style={{ "flex-basis": "400px" }}>
-                  Lorem ipsum dolor 
+                  Lorem ipsum dolor
                   <div class={`${mappedType} gap-2`}>
                     <div class="item">Item 1</div>
                     <div class="item">Item 2</div>
