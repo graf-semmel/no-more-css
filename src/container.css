@@ -1,4 +1,4 @@
-container {
+.container {
   --container-spacing: 1rem;
 
   display: flex;
@@ -11,7 +11,7 @@ container {
 }
 
 @media (min-width: 576px) {
-  container {
+  .container {
     max-width: 510px;
     padding-right: 0;
     padding-left: 0;
@@ -19,25 +19,25 @@ container {
 }
 
 @media (min-width: 768px) {
-  container {
+  .container {
     max-width: 700px;
   }
 }
 
 @media (min-width: 1024px) {
-  container {
+  .container {
     max-width: 950px;
   }
 }
 
 @media (min-width: 1280px) {
-  container {
+  .container {
     max-width: 1200px;
   }
 }
 
 @media (min-width: 1536px) {
-  container {
+  .container {
     max-width: 1450px;
   }
 }

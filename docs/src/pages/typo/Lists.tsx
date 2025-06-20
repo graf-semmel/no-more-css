@@ -11,9 +11,10 @@ export default function Lists() {
         unordered, and they can contain a mix of text, images, and other
         elements.
       </p>
-      <card>
-        <main>
-          <h3>Unordered</h3>
+
+      <h3>Unordered</h3>
+      <div class="row gap-2">
+        <div class="canvas grow">
           <ul>
             <li>Coffee</li>
             <li>Milk</li>
@@ -25,7 +26,7 @@ export default function Lists() {
               </ul>
             </li>
           </ul>
-        </main>
+        </div>
         <Code>
           <ul>
             <li>Coffee</li>
@@ -39,8 +40,11 @@ export default function Lists() {
             </li>
           </ul>
         </Code>
-        <main>
-          <h3>Ordered Lists</h3>
+      </div>
+
+      <h3>Ordered Lists</h3>
+      <div class="row gap-2">
+        <div class="canvas grow">
           <ol>
             <li>Coffee</li>
             <li>Milk</li>
@@ -59,7 +63,7 @@ export default function Lists() {
               </ol>
             </li>
           </ol>
-        </main>
+        </div>
         <Code>
           <ol>
             <li>Coffee</li>
@@ -73,8 +77,11 @@ export default function Lists() {
             </li>
           </ol>
         </Code>
-        <main>
-          <h3>Definition Lists</h3>
+      </div>
+
+      <h3>Definition Lists</h3>
+      <div class="row gap-2">
+        <div class="canvas grow">
           <dl>
             <dt>Coffee</dt>
             <dd>Black hot drink</dd>
@@ -83,7 +90,7 @@ export default function Lists() {
             <dt>Tea</dt>
             <dd>Green hot drink</dd>
           </dl>
-        </main>
+        </div>
         <Code>
           <dl>
             <dt>Coffee</dt>
@@ -94,7 +101,7 @@ export default function Lists() {
             <dd>Green hot drink</dd>
           </dl>
         </Code>
-      </card>
+      </div>
     </section>
   );
 }

@@ -4,22 +4,22 @@ import Lists from "./Lists";
 
 function Typo() {
   return (
-    <container>
+    <article class="container blog">
       <hgroup>
         <h1>Typography</h1>
         <p>Collection of text elements and styles.</p>
       </hgroup>
       <section>
         <h2>Headings</h2>
-        <card>
-          <main>
+        <div class="row gap-2">
+          <div class="canvas grow">
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
             <h4>Heading 4</h4>
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
-          </main>
+          </div>
           <Code>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -28,7 +28,7 @@ function Typo() {
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
           </Code>
-        </card>
+        </div>
       </section>
       <section>
         <h2>Header groups</h2>
@@ -38,26 +38,26 @@ function Typo() {
           elements containing content representing a subheading, alternative
           title, or tagline.
         </p>
-        <card>
-          <main>
+        <div class="row gap-2">
+          <div class="canvas grow">
             <hgroup>
               <h1>Heading</h1>
               <p>Some meaningful description.</p>
             </hgroup>
-          </main>
+          </div>
           <Code>
             <hgroup>
-              <h1>Header Group</h1>
-              <p>Collection of headings.</p>
+              <h1>Heading</h1>
+              <p>Some meaningful description.</p>
             </hgroup>
           </Code>
-        </card>
+        </div>
       </section>
       <Lists />
       <section>
         <h2>Code blocks</h2>
-        <card>
-          <main>
+        <div class="row gap-2">
+          <div class="canvas grow">
             <p>position the Code inline to avoid additional padding</p>
             <pre>
               <Code>
@@ -68,17 +68,17 @@ function Typo() {
                 </pre>
               </Code>
             </pre>
-          </main>
+          </div>
           <Code>
             <button>Default</button>
           </Code>
-        </card>
+        </div>
       </section>
       <InlineTextElements />
       <section>
         <h2>Block quotes</h2>
-        <card>
-          <main>
+        <div class="row gap-2">
+          <div class="canvas grow">
             <blockquote cite="https://www.huxley.net/bnw/four.html">
               <p>
                 It is a good thing for an uneducated man to read books of
@@ -86,7 +86,7 @@ function Typo() {
               </p>
               <cite>Winston S. Churchill, Brave New World</cite>
             </blockquote>
-          </main>
+          </div>
           <Code>
             <blockquote cite="https://www.huxley.net/bnw/four.html">
               <p>
@@ -96,9 +96,9 @@ function Typo() {
               <cite>Winston S. Churchill, Brave New World</cite>
             </blockquote>
           </Code>
-        </card>
+        </div>
       </section>
-    </container>
+    </article>
   );
 }
 

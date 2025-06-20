@@ -26,6 +26,7 @@ h1 {
   --line-height: 1.125;
   --font-weight: 300;
   --letter-spacing: -0.09375rem;
+  --margin-top: calc(var(--font-size) * 1.3);
 }
 
 h2 {
@@ -33,6 +34,7 @@ h2 {
   --line-height: 1.15;
   --font-weight: 500;
   --letter-spacing: -0.03125rem;
+  --margin-top: calc(var(--font-size) * 1.2);
 }
 
 h3 {
@@ -40,6 +42,7 @@ h3 {
   --line-height: 1.175;
   --font-weight: 600;
   --letter-spacing: 0rem;
+  --margin-top: calc(var(--font-size) * 1.1);
 }
 
 h4 {
@@ -47,19 +50,23 @@ h4 {
   --line-height: 1.2;
   --font-weight: 700;
   --letter-spacing: 0.015625rem;
+  --margin-top: var(--dim-4);
 }
 
 h5 {
-  --font-size: 1.125rem;
+  --font-size: 1rem;
   --line-height: 1.225;
-  --font-weight: 700;
+  --font-weight: 600;
   --letter-spacing: 0rem;
+  --margin-top: var(--dim-4);
+  opacity: 0.8;
 }
 
 h6 {
-  --font-size: 1rem;
+  --font-size: 0.9rem;
   --line-height: 1.25;
   --letter-spacing: 0.009375rem;
+  --font-weight: 600;
 }
 
 h1,
@@ -69,7 +76,6 @@ h4,
 h5,
 h6 {
   --margin-bottom: var(--dim-4);
-  --margin-top: calc(var(--font-size) * 1.5);
   margin: var(--margin-top) 0 var(--margin-bottom) 0;
   padding: 0;
   font-weight: var(--font-weight);

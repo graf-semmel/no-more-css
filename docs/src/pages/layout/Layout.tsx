@@ -4,13 +4,11 @@ import Footer from "./Footer";
 
 export default function Layout() {
   return (
-    <container class="blog">
-      <section>
-        <hgroup>
-          <h1>Layout</h1>
-          <p>Layouts are the foundation of your website.</p>
-        </hgroup>
-      </section>
+    <section class="container blog">
+      <hgroup>
+        <h1>Layout</h1>
+        <p>Layouts are the foundation of your website.</p>
+      </hgroup>
       <Flexbox />
       {/* <section>
         <h2>Section</h2>
@@ -103,6 +101,6 @@ export default function Layout() {
           </column>
         </Code>
       </section> */}
-    </container>
+    </section>
   );
 }
