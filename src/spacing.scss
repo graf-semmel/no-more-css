@@ -1,0 +1,105 @@
+// src/utilities/spacing.scss
+
+// Use a CSS variable for the base spacing step
+:root {
+  --spacing-step: 0.25rem;
+}
+
+// Utility classes using calc and the CSS variable
+.m-0 {
+  margin: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.p-0 {
+  padding: 0;
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// Step-based spacing utilities
+@for $i from 1 through 16 {
+  $step: $i;
+  .m-#{$step} {
+    margin: calc(var(--spacing-step) * #{$step});
+  }
+  .mt-#{$step} {
+    margin-top: calc(var(--spacing-step) * #{$step});
+  }
+  .mr-#{$step} {
+    margin-right: calc(var(--spacing-step) * #{$step});
+  }
+  .mb-#{$step} {
+    margin-bottom: calc(var(--spacing-step) * #{$step});
+  }
+  .ml-#{$step} {
+    margin-left: calc(var(--spacing-step) * #{$step});
+  }
+  .mx-#{$step} {
+    margin-left: calc(var(--spacing-step) * #{$step});
+    margin-right: calc(var(--spacing-step) * #{$step});
+  }
+  .my-#{$step} {
+    margin-top: calc(var(--spacing-step) * #{$step});
+    margin-bottom: calc(var(--spacing-step) * #{$step});
+  }
+  .p-#{$step} {
+    padding: calc(var(--spacing-step) * #{$step});
+  }
+  .pt-#{$step} {
+    padding-top: calc(var(--spacing-step) * #{$step});
+  }
+  .pr-#{$step} {
+    padding-right: calc(var(--spacing-step) * #{$step});
+  }
+  .pb-#{$step} {
+    padding-bottom: calc(var(--spacing-step) * #{$step});
+  }
+  .pl-#{$step} {
+    padding-left: calc(var(--spacing-step) * #{$step});
+  }
+  .px-#{$step} {
+    padding-left: calc(var(--spacing-step) * #{$step});
+    padding-right: calc(var(--spacing-step) * #{$step});
+  }
+  .py-#{$step} {
+    padding-top: calc(var(--spacing-step) * #{$step});
+    padding-bottom: calc(var(--spacing-step) * #{$step});
+  }
+}

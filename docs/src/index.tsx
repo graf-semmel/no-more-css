@@ -3,7 +3,7 @@ import { render } from "solid-js/web";
 import { HashRouter } from "@solidjs/router";
 import { lazy } from "solid-js";
 import Layout from "./Layout";
-import "@acss/all.css";
+import "@acss/all.scss";
 import "./index.css";
 import 'highlight.js/styles/lioshi.css';
 

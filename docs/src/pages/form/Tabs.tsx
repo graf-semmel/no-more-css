@@ -1,60 +1,38 @@
-import { JSX } from "solid-js";
+import { createSignal, JSX } from "solid-js";
 
 type Props = {
   items: Array<{ label: string; content: JSX.Element }>;
 };
 
 export default function Tabs(props: Props) {
-  const randomId = Math.random().toString(36).substring(7);
+  const [checkedIndex, setCheckedIndex] = createSignal(0);
+  const tablistId = `tablist-${Math.random().toString(36).substring(7)}`;
 
   return (
-    <tabs>
+    <div role="tablist">
       {props.items.map((tab, index) => {
         const { label, content } = tab;
+        const tabId = `${tablistId}-tab-${index + 1}`;
+        const contentId = `${tablistId}-content-${index + 1}`;
         return (
           <>
-            <label role="tab" aria-controls={`content${index + 1}`}>
+            <label id={tabId} role="tab" aria-controls={contentId} aria-selected={index == checkedIndex()}>
               {label}
               <input
                 type="radio"
-                name={`tabs-${randomId}`}
-                aria-checked={index == 0}
-                checked={index == 0}
+                name={`tabs-${tablistId}`}
+                aria-checked={index == checkedIndex()}
+                onChange={() => setCheckedIndex(index)}
+                checked={index == checkedIndex()}
+                value={index}
               />
             </label>
-            <section id={`content${index + 1}`} role="tabpanel">
+            <section id={contentId} role="tabpanel" aria-labelledby={tabId}>
               {content}
             </section>
           </>
         );
       })}
-      {/* <label role="tab" aria-controls="content1">
-          Tab 1
-          <input type="radio" name="tabs" aria-checked="true" checked />
-        </label>
-        <section id="content1" aria-labelledby="tab1" role="tabpanel">
-          <h3>Content for Tab 1</h3>
-          <p>Hello World from Tab 1!</p>
-          <button>Click me</button>
-        </section>
-
-        <label role="tab" aria-controls="content2">
-          Tab 2
-          <input type="radio" name="tabs" />
-        </label>
-        <section id="content2" aria-labelledby="tab2" role="tabpanel">
-          <h3>Content for Tab 2</h3>
-          <p>Hello World from Tab 2!</p>
-        </section>
-
-        <label role="tab" aria-controls="content3">
-          Tab 3
-          <input type="radio" name="tabs" />
-        </label>
-        <section id="content3" aria-labelledby="tab3" role="tabpanel">
-          <h3>Content for Tab 3</h3>
-          <p>Hello World from Tab 3!</p>
-        </section> */}
-    </tabs>
+    </div>
   );
 }

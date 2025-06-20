@@ -1,0 +1,75 @@
+// src/size.scss
+// Utility classes for width and height (similar to Tailwind)
+
+// Define the --size-step variable
+:root {
+  --size-step: 1rem;
+}
+
+// Width scale (multiples of --size-step, plus special cases)
+$widths: (
+  'auto': auto,
+  'px': 1px,
+  '0': 0,
+  '0_5': calc(var(--size-step) * 0.125),
+  '1': calc(var(--size-step) * 0.25),
+  '2': calc(var(--size-step) * 0.5),
+  '3': calc(var(--size-step) * 0.75),
+  '4': var(--size-step),
+  '5': calc(var(--size-step) * 1.25),
+  '6': calc(var(--size-step) * 1.5),
+  '8': calc(var(--size-step) * 2),
+  '10': calc(var(--size-step) * 2.5),
+  '12': calc(var(--size-step) * 3),
+  '16': calc(var(--size-step) * 4),
+  '20': calc(var(--size-step) * 5),
+  '24': calc(var(--size-step) * 6),
+  '32': calc(var(--size-step) * 8),
+  '40': calc(var(--size-step) * 10),
+  '48': calc(var(--size-step) * 12),
+  '56': calc(var(--size-step) * 14),
+  '64': calc(var(--size-step) * 16),
+  'full': 100%,
+  'screen': 100vw
+);
+
+// Height scale (multiples of --size-step, plus special cases)
+$heights: (
+  'auto': auto,
+  'px': 1px,
+  '0': 0,
+  '0_5': calc(var(--size-step) * 0.125),
+  '1': calc(var(--size-step) * 0.25),
+  '2': calc(var(--size-step) * 0.5),
+  '3': calc(var(--size-step) * 0.75),
+  '4': var(--size-step),
+  '5': calc(var(--size-step) * 1.25),
+  '6': calc(var(--size-step) * 1.5),
+  '8': calc(var(--size-step) * 2),
+  '10': calc(var(--size-step) * 2.5),
+  '12': calc(var(--size-step) * 3),
+  '16': calc(var(--size-step) * 4),
+  '20': calc(var(--size-step) * 5),
+  '24': calc(var(--size-step) * 6),
+  '32': calc(var(--size-step) * 8),
+  '40': calc(var(--size-step) * 10),
+  '48': calc(var(--size-step) * 12),
+  '56': calc(var(--size-step) * 14),
+  '64': calc(var(--size-step) * 16),
+  'full': 100%,
+  'screen': 100vh
+);
+
+// Width utilities
+@each $name, $value in $widths {
+  .w-#{$name} { width: $value; }
+  .min-w-#{$name} { min-width: $value; }
+  .max-w-#{$name} { max-width: $value; }
+}
+
+// Height utilities
+@each $name, $value in $heights {
+  .h-#{$name} { height: $value; }
+  .min-h-#{$name} { min-height: $value; }
+  .max-h-#{$name} { max-height: $value; }
+}

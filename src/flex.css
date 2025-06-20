@@ -8,6 +8,16 @@ column, .column {
   flex-direction: column;
 }
 
+inline-row, .inline-row {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+inline-column, .inline-column {
+  display: inline-flex;
+  flex-direction: column;
+}
+
 row-reverse, .row-reverse {
   display: flex;
   flex-direction: row-reverse;

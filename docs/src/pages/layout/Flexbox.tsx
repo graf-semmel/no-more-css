@@ -1,6 +1,7 @@
 import { createEffect, createSignal } from "solid-js";
 import Code from "../../Code";
 import { FlexItemPlayground } from "./FlexItemPlayground"; // Added import
+import Tabs from "../form/Tabs";
 
 export default function Flexbox() {
   return (
@@ -174,8 +175,12 @@ export function ContainerPropertiesSection() {
       <p>
         <code>flex</code> or <code>inline-flex</code> turns an element into a
         flex container, unlocking a whole new world of layout possibilities for
-        its children.
+        its children. Use <code>flex</code> when you want the flex container to
+        behave like a block element and take up the full width. Use{" "}
+        <code>inline-flex</code> when you want the flex container to behave like
+        an inline element and only take up the space it needs.
       </p>
+      <FlexDisplayExample />
       <h4>flex-direction</h4>
       <p>
         Choose <code>row</code> or <code>row-reverse</code> to lay items out
@@ -271,6 +276,56 @@ export function ItemPropertiesSection() {
         Change the visual order of your flex items without touching the HTML.
         Lower numbers appear first, higher numbers later—simple as that.
       </p>
+    </section>
+  );
+}
+
+const mapToClass = (type: string) =>
+  type === "flex" ? "row" : type === "inline-flex" ? "inline-row" : type;
+
+function FlexDisplayExample() {
+  return (
+    <section>
+      <Tabs
+        items={["block", "flex", "inline-flex"].map((type) => {
+          const mappedType = mapToClass(type) ;
+          return {
+            label: type,
+            content: (
+              <div class="row gap-4 mt-1 wrap">
+                <div class="grow canvas" style={{ "flex-basis": "400px" }}>
+                  Lorem ipsum dolor 
+                  <div class={`${mappedType} gap-2`}>
+                    <div class="item">Item 1</div>
+                    <div class="item">Item 2</div>
+                    <div class="item">Item 3</div>
+                  </div>
+                </div>
+                <div
+                  class="column content-center"
+                  style={{
+                    "min-width": "270px",
+                  }}
+                >
+                  <Code language="html">
+                    <div>
+                      Lorem ipsum dolor \n
+                      <div class={mappedType}>
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div>Item 3</div>
+                      </div>
+                    </div>
+                  </Code>
+                  <Code language="css">
+                    {`.${mappedType} {\n` + `  display: ${type};\n` + `}`}
+                  </Code>
+                </div>
+              </div>
+            ),
+          };
+        })}
+      />
     </section>
   );
 }

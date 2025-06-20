@@ -159,7 +159,7 @@ export function FlexItemPlayground() {
         `  flex-basis: ${item3().flexBasis}px;\n` +
         `  align-self: ${item3().alignSelf};\n` +
         `  order: ${item3().order};\n` +
-        `}` 
+        `}`
     );
   });
 
@@ -230,28 +230,29 @@ export function FlexItemPlayground() {
         itemNumber={3}
       />
 
-      <div class="w-full col gap-4">
-        <div class="col gap-2 flex-1">
-          <h4>Visual Output</h4>
-          <div
-            class="flex-container-base"
-            style={{
-              display: "flex",
-              height: "200px",
-              border: "1px dashed #999",
-              padding: "10px",
-              gap: "10px", // Fixed gap for item playground visualization
-            }}
-          >
-            <div style={getItemStyle(1)}>Item 1</div>
-            <div style={getItemStyle(2)}>Item 2</div>
-            <div style={getItemStyle(3)}>Item 3</div>
-          </div>
+      <div
+        class="w-full gap-4"
+        style={{ display: "grid", "grid-template-columns": "1fr 250px" }}
+      >
+        <div
+          class="flex-container-base"
+          style={{
+            display: "flex",
+            height: "200px",
+            border: "1px dashed #999",
+            padding: "10px",
+            gap: "10px", // Fixed gap for item playground visualization
+            "min-width": "0",
+          }}
+        >
+          <div style={getItemStyle(1)}>Item 1</div>
+          <div style={getItemStyle(2)}>Item 2</div>
+          <div style={getItemStyle(3)}>Item 3</div>
         </div>
-        <div class="col gap-2 flex-1">
-          <h4>Generated CSS</h4>
+        
+        <fieldset style={{ flex: "0 0 250px" }}>
           <Code language="css">{cssText()}</Code>
-        </div>
+        </fieldset>
       </div>
     </section>
   );
