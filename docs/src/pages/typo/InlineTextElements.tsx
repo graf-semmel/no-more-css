@@ -2,9 +2,8 @@ export default function InlineTextElements() {
   return (
     <section>
       <h2>Inline text elements</h2>
-      <div class="row gap-4 items-grow">
+      <div class="grid gap-4">
         <dl>
-          {/* Semantic/importance */}
           <dt>
             <code>{"<b>strong</b>"}</code> &rarr; <b>strong</b>
           </dt>
@@ -26,8 +25,6 @@ export default function InlineTextElements() {
             <code>{"<em>emphasis</em>"}</code> &rarr; <em>emphasis</em>
           </dt>
           <dd>Stress a word or phrase.</dd>
-
-          {/* Text decoration */}
           <dt>
             <code>{"<u>underline</u>"}</code> &rarr; <u>underline</u>
           </dt>
@@ -44,13 +41,12 @@ export default function InlineTextElements() {
             <code>{"<ins>inserted</ins>"}</code> &rarr; <ins>inserted</ins>
           </dt>
           <dd>Highlight additions to a document.</dd>
-        </dl>
-        <dl>
-          {/* Code/technical */}
           <dt>
             <code>{"<code>code</code>"}</code> &rarr; <code>code</code>
           </dt>
           <dd>Inline code fragment.</dd>
+        </dl>
+        <dl>
           <dt>
             <code>{"<kbd>cmd+f</kbd>"}</code> &rarr; <kbd>cmd+f</kbd>
           </dt>
@@ -63,7 +59,6 @@ export default function InlineTextElements() {
             <code>{"<var>x</var>"}</code> &rarr; <var>x</var>
           </dt>
           <dd>Variable in a mathematical expression or programming context.</dd>
-          {/* Reference/definition */}
           <dt>
             <code>{"<dfn>definition</dfn>"}</code> &rarr; <dfn>definition</dfn>
           </dt>
@@ -76,7 +71,6 @@ export default function InlineTextElements() {
             <code>{"<q>quote</q>"}</code> &rarr; <q>quote</q>
           </dt>
           <dd>Short inline quotation.</dd>
-          {/* Subscript/Superscript */}
           <dt>
             <code>{"<sub>subscript</sub>"}</code> &rarr; <sub>subscript</sub>
           </dt>
@@ -88,7 +82,7 @@ export default function InlineTextElements() {
           <dd>Exponents or footnotes.</dd>
         </dl>
       </div>
-      <dl>
+      <dl >
         <dt>
           <code>{'<abbr title="HyperText Markup Language">html</abbr>'}</code>{" "}
           &rarr; <abbr title="HyperText Markup Language">html</abbr>
