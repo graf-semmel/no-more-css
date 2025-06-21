@@ -37,11 +37,11 @@ dt {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   margin: 0;
-  font-style: italic;
   color: var(--base-content-muted);
 }
 
 dd {
+  font-style: italic;
   font-size: 1rem;
   margin: 0 0 0.5rem 2rem;
   &:last-child {

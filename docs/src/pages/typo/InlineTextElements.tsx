@@ -2,147 +2,103 @@ export default function InlineTextElements() {
   return (
     <section>
       <h2>Inline text elements</h2>
+      <div class="row gap-4 items-grow">
+        <dl>
+          {/* Semantic/importance */}
+          <dt>
+            <code>{"<b>strong</b>"}</code> &rarr; <b>strong</b>
+          </dt>
+          <dd>Indicate important text.</dd>
+          <dt>
+            <code>{"<mark>highlight</mark>"}</code> &rarr;{" "}
+            <mark>highlight</mark>
+          </dt>
+          <dd>Draw attention to text.</dd>
+          <dt>
+            <code>{"<small>small</small>"}</code> &rarr; <small>small</small>
+          </dt>
+          <dd>Less important or fine print.</dd>
+          <dt>
+            <code>{"<i>italic</i>"}</code> &rarr; <i>italic</i>
+          </dt>
+          <dd>Alternate voice or subtle emphasis.</dd>
+          <dt>
+            <code>{"<em>emphasis</em>"}</code> &rarr; <em>emphasis</em>
+          </dt>
+          <dd>Stress a word or phrase.</dd>
+
+          {/* Text decoration */}
+          <dt>
+            <code>{"<u>underline</u>"}</code> &rarr; <u>underline</u>
+          </dt>
+          <dd>Signify importance or highlight.</dd>
+          <dt>
+            <code>{"<s>strikethrough</s>"}</code> &rarr; <s>strikethrough</s>
+          </dt>
+          <dd>Show something is removed or incorrect.</dd>
+          <dt>
+            <code>{"<del>deleted</del>"}</code> &rarr; <del>deleted</del>
+          </dt>
+          <dd>Show what has been removed.</dd>
+          <dt>
+            <code>{"<ins>inserted</ins>"}</code> &rarr; <ins>inserted</ins>
+          </dt>
+          <dd>Highlight additions to a document.</dd>
+        </dl>
+        <dl>
+          {/* Code/technical */}
+          <dt>
+            <code>{"<code>code</code>"}</code> &rarr; <code>code</code>
+          </dt>
+          <dd>Inline code fragment.</dd>
+          <dt>
+            <code>{"<kbd>cmd+f</kbd>"}</code> &rarr; <kbd>cmd+f</kbd>
+          </dt>
+          <dd>Keyboard input or shortcuts.</dd>
+          <dt>
+            <code>{"<samp>output</samp>"}</code> &rarr; <samp>output</samp>
+          </dt>
+          <dd>Sample output from a program or computer.</dd>
+          <dt>
+            <code>{"<var>x</var>"}</code> &rarr; <var>x</var>
+          </dt>
+          <dd>Variable in a mathematical expression or programming context.</dd>
+          {/* Reference/definition */}
+          <dt>
+            <code>{"<dfn>definition</dfn>"}</code> &rarr; <dfn>definition</dfn>
+          </dt>
+          <dd>Explain the meaning of a term.</dd>
+          <dt>
+            <code>{"<cite>citation</cite>"}</code> &rarr; <cite>citation</cite>
+          </dt>
+          <dd>Reference a creative work or source.</dd>
+          <dt>
+            <code>{"<q>quote</q>"}</code> &rarr; <q>quote</q>
+          </dt>
+          <dd>Short inline quotation.</dd>
+          {/* Subscript/Superscript */}
+          <dt>
+            <code>{"<sub>subscript</sub>"}</code> &rarr; <sub>subscript</sub>
+          </dt>
+          <dd>Chemical formulas or math.</dd>
+          <dt>
+            <code>{"<sup>superscript</sup>"}</code> &rarr;{" "}
+            <sup>superscript</sup>
+          </dt>
+          <dd>Exponents or footnotes.</dd>
+        </dl>
+      </div>
       <dl>
-        <dt>Strong</dt>
-        <dd>
-          <code>
-            <b>Strong</b>
-          </code>
-        </dd>
-        <dd>
-          This text is <b>strongly emphasized</b> for importance.
-        </dd>
-
-        <dt>Italic</dt>
-        <dd>
-          <code>
-            <i>Italic</i>
-          </code>
-        </dd>
-        <dd>
-          Using italics can provide <i>a subtle emphasis</i>.
-        </dd>
-
-        <dt>Emphasis</dt>
-        <dd>
-          <code>
-            <em>Emphasis</em>
-          </code>
-        </dd>
-        <dd>
-          Adding <em>emphasis</em> often changes the tone of a sentence.
-        </dd>
-
-        <dt>Underline</dt>
-        <dd>
-          <code>
-            <u>Underline</u>
-          </code>
-        </dd>
-        <dd>
-          Underlining text can <u>signify its importance</u>.
-        </dd>
-
-        <dt>Strikethrough</dt>
-        <dd>
-          <code>
-            <s>Strikethrough</s>
-          </code>
-        </dd>
-        <dd>
-          <s>Strikethrough</s> is used to show that something is removed or
-          incorrect.
-        </dd>
-
-        <dt>Highlight</dt>
-        <dd>
-          <code>
-            <mark>Highlight</mark>
-          </code>
-        </dd>
-        <dd>
-          Words can be <mark>highlighted</mark> to draw attention.
-        </dd>
-
-        <dt>Small</dt>
-        <dd>
-          <code>
-            <small>Small</small>
-          </code>
-        </dd>
-        <dd>
-          Using <small>small text</small> can indicate less importance or size.
-        </dd>
-
-        <dt>Subscript</dt>
-        <dd>
-          <code>
-            <sub>Subscript</sub>
-          </code>
-        </dd>
-        <dd>
-          Chemical formulas use <sub>subscript</sub> for representing elements.
-        </dd>
-
-        <dt>Superscript</dt>
-        <dd>
-          <code>
-            <sup>Superscript</sup>
-          </code>
-        </dd>
-        <dd>
-          Mathematical equations often have <sup>superscript</sup> numbers.
-        </dd>
-
-        <dt>Keyboard</dt>
-        <dd>
-          <code>
-            <kbd>Keyboard</kbd>
-          </code>
-        </dd>
-        <dd>
-          To refresh the page press <kbd>CMD+R</kbd>.
-        </dd>
-
-        <dt>Citation</dt>
-        <dd>
-          <code>
-            <cite>Citation</cite>
-          </code>
-        </dd>
-        <dd>
-          Citations are crucial in <cite>academic writing</cite>.
-        </dd>
-
-        <dt>Deleted</dt>
-        <dd>
-          <code>
-            <del>Deleted</del>
-          </code>
-        </dd>
-        <dd>
-          <del>Deleted text</del> shows what has been removed.
-        </dd>
-
-        <dt>Inserted</dt>
-        <dd>
-          <code>
-            <ins>Inserted</ins>
-          </code>
-        </dd>
-        <dd>
-          <ins>Inserted text</ins> highlights additions to a document.
-        </dd>
-
-        <dt>Definition</dt>
-        <dd>
-          <code>
-            <dfn>Definition</dfn>
-          </code>
-        </dd>
-        <dd>
-          A <dfn>definition</dfn> explains the meaning of a term.
-        </dd>
+        <dt>
+          <code>{'<abbr title="HyperText Markup Language">html</abbr>'}</code>{" "}
+          &rarr; <abbr title="HyperText Markup Language">html</abbr>
+        </dt>
+        <dd>Abbreviation or acronym, with an optional description.</dd>
+        <dt>
+          <code>{'<time datetime="2025-06-22">June 22, 2025</time>'}</code>{" "}
+          &rarr; <time dateTime="2025-06-22">June 22, 2025</time>
+        </dt>
+        <dd>Represents a specific period in time.</dd>
       </dl>
     </section>
   );
