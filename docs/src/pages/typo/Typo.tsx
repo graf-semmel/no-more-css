@@ -42,10 +42,10 @@ function Typo() {
       <section>
         <h2>Header groups</h2>
         <p>
-          The <code>hgroup</code> element groups a heading (e.g., <code>h1</code>)
-          with its associated content, like a subheading or tagline, which is often
-          in a <code>p</code> tag. This semantically links the heading and its
-          description as a single unit.
+          The <code>hgroup</code> element groups a heading (e.g.,{" "}
+          <code>h1</code>) with its associated content, like a subheading or
+          tagline, which is often in a <code>p</code> tag. This semantically
+          links the heading and its description as a single unit.
         </p>
         <div class="row gap-2">
           <div class="canvas grow">
@@ -83,26 +83,22 @@ function Typo() {
       <InlineTextElements />
       <section>
         <h2>Block quotes</h2>
-        <div class="column gap-2">
-          <div class="canvas grow">
-            <blockquote cite="https://www.huxley.net/bnw/four.html">
-              <p>
-                It is a good thing for an uneducated man to read books of
-                quotations.
-              </p>
-              <cite>Winston S. Churchill, Brave New World</cite>
-            </blockquote>
-          </div>
-          <Code>
-            <blockquote cite="https://www.huxley.net/bnw/four.html">
-              <p>
-                It is a good thing for an uneducated man to read books of
-                quotations.
-              </p>
-              <cite>Winston S. Churchill, Brave New World</cite>
-            </blockquote>
-          </Code>
-        </div>
+        <blockquote cite="https://www.huxley.net/bnw/four.html">
+          <p>
+            It is a good thing for an uneducated man to read books of
+            quotations.
+          </p>
+          <cite>Winston S. Churchill, Brave New World</cite>
+        </blockquote>
+        <Code>
+          <blockquote cite="https://www.huxley.net/bnw/four.html">
+            <p>
+              It is a good thing for an uneducated man to read books of
+              quotations.
+            </p>
+            <cite>Winston S. Churchill, Brave New World</cite>
+          </blockquote>
+        </Code>
       </section>
     </article>
   );
