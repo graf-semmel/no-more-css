@@ -186,7 +186,7 @@ input[type="radio"] {
 }
 
 input[type="range"] {
-  --color: var(--base-content);
+  --color: var(--surface-content);
   --track-height: 0.5rem;
   --thumb-size: calc(var(--track-height) * 2);
   -webkit-appearance: none;
@@ -213,7 +213,7 @@ input[type="range"] {
   }
 
   &:hover::-webkit-slider-thumb {
-    background-color: var(--base-content-hover);
+    background-color: var(--base);
   }
 
   &:active::-webkit-slider-thumb {
@@ -237,7 +237,7 @@ input[type="range"] {
     outline: none;
 
     &::-webkit-slider-runnable-track {
-      background-color: var(--surface-hover);
+      background-color: var(--secondary-hover);
     }
   }
 }

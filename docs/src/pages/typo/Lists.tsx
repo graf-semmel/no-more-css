@@ -1,5 +1,57 @@
 import Code from "../../Code";
 
+function UnorderedListExample() {
+  return (
+    <ul>
+      <li>Coffee</li>
+      <li>Milk</li>
+      <li>
+        Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+    </ul>
+  );
+}
+
+function OrderedListExample() {
+  return (
+    <ol>
+      <li>Coffee</li>
+      <li>Milk</li>
+      <li>
+        Tea
+        <ol>
+          <li>Black tea</li>
+          <li>Green tea</li>
+          <li>
+            Tea
+            <ol>
+              <li>Black tea</li>
+              <li>Green tea</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  );
+}
+
+function DefinitionListExample() {
+  return (
+    <dl>
+      <dt>Coffee</dt>
+      <dd>Black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>White cold drink</dd>
+      <dt>Tea</dt>
+      <dd>Green hot drink</dd>
+    </dl>
+  );
+}
+
 export default function Lists() {
   return (
     <section>
@@ -11,95 +63,33 @@ export default function Lists() {
         unordered, and they can contain a mix of text, images, and other
         elements.
       </p>
-
       <h3>Unordered</h3>
       <div class="row gap-2">
         <div class="canvas grow">
-          <ul>
-            <li>Coffee</li>
-            <li>Milk</li>
-            <li>
-              Tea
-              <ul>
-                <li>Black tea</li>
-                <li>Green tea</li>
-              </ul>
-            </li>
-          </ul>
+          <UnorderedListExample />
         </div>
         <Code>
-          <ul>
-            <li>Coffee</li>
-            <li>Milk</li>
-            <li>
-              Tea
-              <ul>
-                <li>Black tea</li>
-                <li>Green tea</li>
-              </ul>
-            </li>
-          </ul>
+          <UnorderedListExample />
         </Code>
       </div>
 
       <h3>Ordered Lists</h3>
       <div class="row gap-2">
         <div class="canvas grow">
-          <ol>
-            <li>Coffee</li>
-            <li>Milk</li>
-            <li>
-              Tea
-              <ol>
-                <li>Black tea</li>
-                <li>Green tea</li>
-                <li>
-                  Tea
-                  <ol>
-                    <li>Black tea</li>
-                    <li>Green tea</li>
-                  </ol>
-                </li>
-              </ol>
-            </li>
-          </ol>
+          <OrderedListExample />
         </div>
         <Code>
-          <ol>
-            <li>Coffee</li>
-            <li>Milk</li>
-            <li>
-              Tea
-              <ol>
-                <li>Black tea</li>
-                <li>Green tea</li>
-              </ol>
-            </li>
-          </ol>
+          <OrderedListExample />
         </Code>
       </div>
 
       <h3>Definition Lists</h3>
       <div class="row gap-2">
         <div class="canvas grow">
-          <dl>
-            <dt>Coffee</dt>
-            <dd>Black hot drink</dd>
-            <dt>Milk</dt>
-            <dd>White cold drink</dd>
-            <dt>Tea</dt>
-            <dd>Green hot drink</dd>
-          </dl>
+          <DefinitionListExample />
         </div>
         <Code>
-          <dl>
-            <dt>Coffee</dt>
-            <dd>Black hot drink</dd>
-            <dt>Milk</dt>
-            <dd>White cold drink</dd>
-            <dt>Tea</dt>
-            <dd>Green hot drink</dd>
-          </dl>
+          <DefinitionListExample />
         </Code>
       </div>
     </section>

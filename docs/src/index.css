@@ -47,9 +47,20 @@ footer row section {
 
 .canvas {
   width: 100%;
+  border-top: dashed 1px var(--surface);
+  border-bottom: dashed 1px var(--surface);
   border: dashed 1px var(--surface);
+  padding: var(--dim-4) 0;
   padding: var(--dim-4);
+  margin-left: calc(-1 * var(--dim-4));
   .inline-row {
     margin-inline-start: var(--dim-2);
   }
+}
+
+.breakout {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }

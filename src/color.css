@@ -1,8 +1,8 @@
 :root {
   --primary: hsl(224, 48%, 22%);
   --primary-content: rgb(255, 255, 255);
-  --primary-hover: hsl(224, 48%, 32%);
   --primary-content-muted: hsla(0, 0%, 100%, 0.7);
+  --primary-hover: hsl(224, 48%, 32%);
   --secondary: hsl(329, 55%, 32%);
   --secondary-hover: hsl(329, 55%, 42%);
   --secondary-content: hsl(0, 0%, 100%);
@@ -16,9 +16,7 @@
   --base-hover: hsl(0, 0%, 88%);
   --base-content: hsl(240, 4%, 16%);
   --base-content-muted: hsl(240, 4%, 26%);
-  --base-content-hover: hsl(240, 4%, 26%);
   --surface: hsl(0, 0%, 85%);
-  --surface-hover: color-mix(in srgb, var(--surface), #000 15%);
   --surface-content: hsl(240, 4%, 16%);
   --disabled: hsl(0, 0%, 90%);
   --disabled-content: hsl(0, 0%, 40%);

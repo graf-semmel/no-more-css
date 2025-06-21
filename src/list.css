@@ -6,9 +6,11 @@ ol {
   line-height: 1.6;
 }
 
-li {
-  --color-marker: var(--primary);
+ul {
+  list-style: disc;
+}
 
+li {
   margin: 0;
   padding: 0;
 
@@ -44,5 +46,107 @@ dd {
   margin: 0 0 0.5rem 2rem;
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+ul, ol {
+  &.primary {
+    --color-marker: var(--primary);
+  }
+  &.secondary {
+    --color-marker: var(--secondary);
+  }
+  &.success {
+    --color-marker: var(--success);
+  }
+  &.error {
+    --color-marker: var(--error);
+  }
+  &.base {
+    --color-marker: var(--base-content);
+  }
+  &.surface {
+    --color-marker: var(--surface-content);
+  }
+  &.disabled {
+    --color-marker: var(--disabled-content);
+  }
+  &.no-marker {
+    list-style: none;
+  }
+  &.square {
+    list-style: square;
+  }
+  &.circle {
+    list-style: circle;
+  }
+  &.disc {
+    list-style: disc;
+  }
+  &.decimal {
+    list-style: decimal;
+  }
+  &.lower-alpha {
+    list-style: lower-alpha;
+  }
+  &.upper-alpha {
+    list-style: upper-alpha;
+  }
+  &.lower-roman {
+    list-style: lower-roman;
+  }
+  &.upper-roman {
+    list-style: upper-roman;
+  }
+}
+
+li {
+  &.primary {
+    --color-marker: var(--primary);
+  }
+  &.secondary {
+    --color-marker: var(--secondary);
+  }
+  &.success {
+    --color-marker: var(--success);
+  }
+  &.error {
+    --color-marker: var(--error);
+  }
+  &.base {
+    --color-marker: var(--base-content);
+  }
+  &.surface {
+    --color-marker: var(--surface-content);
+  }
+  &.disabled {
+    --color-marker: var(--disabled-content);
+  }
+  &.no-marker {
+    list-style: none;
+  }
+  &.square {
+    list-style: square;
+  }
+  &.circle {
+    list-style: circle;
+  }
+  &.disc {
+    list-style: disc;
+  }
+  &.decimal {
+    list-style: decimal;
+  }
+  &.lower-alpha {
+    list-style: lower-alpha;
+  }
+  &.upper-alpha {
+    list-style: upper-alpha;
+  }
+  &.lower-roman {
+    list-style: lower-roman;
+  }
+  &.upper-roman {
+    list-style: upper-roman;
   }
 }

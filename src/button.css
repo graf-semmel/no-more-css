@@ -9,9 +9,9 @@ input::file-selector-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  --background-color: var(--base-content);
-  --background-color-hover: var(--base-content-hover);
-  --color: var(--base);
+  --background-color: var(--base);
+  --background-color-hover: var(--base-hover);
+  --color: var(--base-content);
   --font-weight: 500;
   --padding-x: 1rem;
   --padding-y: calc(var(--padding-x) * 0.75);
@@ -114,8 +114,8 @@ input[type="submit"] {
   }
 
   &:is([type="reset"]) {
-    --background-color: var(--surface);
-    --background-color-hover: var(--surface-hover);
+    --background-color: var(--secondary);
+    --background-color-hover: var(--secondary-hover);
     --color: var(--surface-content);
   }
 }

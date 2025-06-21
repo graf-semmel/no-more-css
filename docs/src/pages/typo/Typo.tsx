@@ -11,6 +11,15 @@ function Typo() {
       </hgroup>
       <section>
         <h2>Headings</h2>
+        <p>
+          Headings structure your content, making it easy to scan and understand
+          the hierarchy of information. Use <code>h1</code> for the main title,
+          and <code>h2</code>–<code>h6</code> for sub-sections. Common CSS
+          properties for styling headings include <code>font-size</code>,
+          <code>font-weight</code>, <code>margin</code>,{" "}
+          <code>line-height</code>, and <code>letter-spacing</code> to control
+          their appearance and spacing.
+        </p>
         <div class="row gap-2">
           <div class="canvas grow">
             <h1>Heading 1</h1>
@@ -33,10 +42,10 @@ function Typo() {
       <section>
         <h2>Header groups</h2>
         <p>
-          The hgroup element represents a heading and related content. The
-          element may be used to group an h1–h6 element with one or more p
-          elements containing content representing a subheading, alternative
-          title, or tagline.
+          The <code>hgroup</code> element groups a heading (e.g., <code>h1</code>)
+          with its associated content, like a subheading or tagline, which is often
+          in a <code>p</code> tag. This semantically links the heading and its
+          description as a single unit.
         </p>
         <div class="row gap-2">
           <div class="canvas grow">
