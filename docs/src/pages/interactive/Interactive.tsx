@@ -2,7 +2,7 @@ import Code from "../../Code";
 
 function Interactive() {
   return (
-    <container class="blog">
+    <div class="container blog">
       <hgroup>
         <h1>Interactive elements</h1>
         <p>Collection of interactive elements like buttons and links.</p>
@@ -105,7 +105,7 @@ function Interactive() {
           </Code>
         </column>
       </section>
-    </container>
+    </div>
   );
 }
 

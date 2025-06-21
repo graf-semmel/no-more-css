@@ -4,7 +4,7 @@ import Code from "../../Code";
 
 export default function Form() {
   return (
-    <container class="gap-8">
+    <div class="container blog">
       <hgroup>
         <h1>Forms</h1>
         <p>Collection of common form elements.</p>
@@ -396,7 +396,7 @@ export default function Form() {
           }
         />
       </section>
-    </container>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import Code from "./Code";
 
 function App() {
   return (
-    <container>
+    <div class="container blog">
       <section style="background: #eee">
         <h2>Button</h2>
         <Code>
@@ -42,7 +42,7 @@ function App() {
           </footer>
         </card>
       </section>
-    </container>
+    </div>
   );
 }
 
