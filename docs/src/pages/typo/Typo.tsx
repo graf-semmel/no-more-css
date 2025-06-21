@@ -58,26 +58,23 @@ function Typo() {
         <h2>Code blocks</h2>
         <div class="row gap-2">
           <div class="canvas grow">
-            <p>position the Code inline to avoid additional padding</p>
-            <pre>
-              <Code>
-                <pre>
-                  <Code>
-                    <button>Default</button>
-                  </Code>
-                </pre>
-              </Code>
-            </pre>
+            <Code>
+              <button>Default</button>
+            </Code>
           </div>
           <Code>
-            <button>Default</button>
+            {`<pre>
+  <code>
+    <button>Default</button>
+  </code>
+</pre>`}
           </Code>
         </div>
       </section>
       <InlineTextElements />
       <section>
         <h2>Block quotes</h2>
-        <div class="row gap-2">
+        <div class="column gap-2">
           <div class="canvas grow">
             <blockquote cite="https://www.huxley.net/bnw/four.html">
               <p>

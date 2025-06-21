@@ -27,22 +27,22 @@ dl {
 }
 
 dt {
-  --font-size: 1rem;
-  --font-weight: 600;
+  --font-size: 1.1rem;
+  --font-weight: 700;
   --color: var(--primary);
   --first-letter-font-size: calc(var(--font-size) * 1.5);
 
   font-size: var(--font-size);
   font-weight: var(--font-weight);
-  color: var(--color);
   margin: 0;
-
-  &::first-letter {
-    font-size: var(--first-letter-font-size);
-  }
+  font-style: italic;
+  color: var(--base-content-muted);
 }
 
 dd {
   font-size: 1rem;
-  margin: 0 0 0 2rem;
+  margin: 0 0 0.5rem 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

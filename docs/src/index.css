@@ -41,7 +41,7 @@ footer row section {
 .item {
   font-size: 0.8rem;
   padding: var(--dim-2);
-  border: solid 1px var(--surface-content);
+  border: solid 1px var(--surface);
   border-radius: var(--border-radius);
 }
 
@@ -49,4 +49,7 @@ footer row section {
   width: 100%;
   border: dashed 1px var(--surface);
   padding: var(--dim-4);
+  .inline-row {
+    margin-inline-start: var(--dim-2);
+  }
 }
