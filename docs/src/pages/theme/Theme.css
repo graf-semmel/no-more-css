@@ -12,10 +12,33 @@
     font-size: var(--text-xs);
     color: var(--foreground);
   }
-  
+
   .color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 2.5rem;
     border-radius: var(--border-radius);
+    transition: scale 0.1s ease-in-out;
+    &.light {
+      color: var(--grey-800);
+    }
+    &.dark {
+      color: var(--grey-200);
+    }
+    * {
+      opacity: 0;
+    }
+    &:hover {
+      outline: 1px solid var(--grey-400);
+      outline-offset: 1px;
+      * {
+        opacity: 1;
+      }
+    }
+    &:active {
+      scale: 0.8;
+    }
   }
 }
