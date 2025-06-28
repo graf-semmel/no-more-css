@@ -3,16 +3,23 @@
   "version": "0.1.0",
   "description": "Lightweight utility-bases CSS library",
   "main": "index.css",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "directories": {
     "doc": "docs"
   },
   "devDependencies": {
+    "@types/node": "^24.0.7",
     "prettier": "3.3.3",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "uico": "^0.10.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:scss": "sass src:src --no-source-map --style=expanded --update --load-path=src"
+    "build:scss": "sass src:src --no-source-map --style=expanded --update --load-path=src",
+    "build:colors": "node src/build-colors.ts"
   },
   "repository": {
     "type": "git",
