@@ -1,0 +1,65 @@
+:root {
+  --dim-0: 0;
+  --dim-1: 0.25rem;
+  --dim-2: 0.5rem;
+  --dim-3: 0.75rem;
+  --dim-4: 1rem;
+  --dim-6: 1.5rem;
+  --dim-8: 2rem;
+  --size-base: 1rem;
+  --size-step: 0.125rem;
+  --size-3xs: calc(var(--size-base) - var(--size-step) * 4);
+  --size-2xs: calc(var(--size-base) - var(--size-step) * 3);
+  --size-xs: calc(var(--size-base) - var(--size-step) * 2);
+  --size-sm: calc(var(--size-base) - var(--size-step) * 1);
+  --size-lg: calc(var(--size-base) + var(--size-step) * 1);
+  --size-xl: calc(var(--size-base) + var(--size-step) * 2);
+  --size-2xl: calc(var(--size-base) + var(--size-step) * 3);
+  --size-3xl: calc(var(--size-base) + var(--size-step) * 4);
+  --size-4xl: calc(var(--size-base) + var(--size-step) * 5);
+  --text-3xs: var(--size-3xs);
+  --text-2xs: var(--size-2xs);
+  --text-xs: var(--size-xs);
+  --text-sm: var(--size-sm);
+  --text-base: var(--size-base);
+  --text-lg: var(--size-lg);
+  --text-xl: var(--size-xl);
+  --text-2xl: var(--size-2xl);
+  --text-3xl: var(--size-3xl);
+  --text-4xl: var(--size-4xl);
+}
+
+$gaps: (
+  0: var(--dim-0),
+  1: var(--dim-1),
+  2: var(--dim-2),
+  3: var(--dim-3),
+  4: var(--dim-4),
+  6: calc(var(--dim-2) * 3),
+  8: calc(var(--dim-2) * 4)
+);
+
+@each $key, $val in $gaps {
+  .gap-#{$key} {
+    gap: #{$val};
+  }
+}
+
+$text-sizes: (
+  3xs: var(--size-3xs),
+  2xs: var(--size-2xs),
+  xs: var(--size-xs),
+  sm: var(--size-sm),
+  base: var(--size-base),
+  lg: var(--size-lg),
+  xl: var(--size-xl),
+  2xl: var(--size-2xl),
+  3xl: var(--size-3xl),
+  4xl: var(--size-4xl)
+);
+
+@each $key, $val in $text-sizes {
+  .text-#{$key} {
+    font-size: #{$val};
+  }
+}
