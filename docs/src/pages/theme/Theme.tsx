@@ -1,17 +1,27 @@
-import "./palette-grid.css";
+import "./Theme.css";
 
+// Sorted color families: greyscale, then spectrum (red to violet), then accent colors
 const colorFamilies = [
   "red",
   "orange",
   "yellow",
+  "lime",
   "green",
+  "emerald",
+  "teal",
   "cyan",
+  "sky",
   "blue",
+  "indigo",
+  "violet",
   "purple",
+  "fuchsia",
   "pink",
+  "rose",
+  "amber",
   "grey",
 ];
-const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+const steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
 
 export default function Palette() {
   return (
@@ -34,10 +44,6 @@ export default function Palette() {
               return (
                 <div class="color" style={{ background: `var(${varName})` }} />
               );
-              {
-                /* TODO tooltip */
-                /* <code class="palette-var">{varName}</code> */
-              }
             }),
           ])}
         </div>

@@ -10,7 +10,7 @@ export default function Layout(props: any) {
           <a href="#/interactive">Interactive</a>
           <a href="#/form">Form</a>
           <a href="#/typo">Typography</a>
-          <a href="#/theme/palette">Palette</a>
+          <a href="#/theme">Theme</a>
         </nav>
       </header>
       <hr />

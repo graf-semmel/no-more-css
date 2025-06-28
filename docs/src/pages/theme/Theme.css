@@ -1,7 +1,7 @@
 #palette {
   display: grid;
-  grid-template-columns: repeat(11, minmax(2rem, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(12, minmax(2rem, 1fr));
+  gap: var(--dim-1);
   justify-items: center;
   align-items: center;
   justify-content: stretch;
@@ -16,6 +16,6 @@
   .color {
     width: 100%;
     height: 2.5rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius);
   }
 }

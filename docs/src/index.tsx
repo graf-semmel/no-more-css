@@ -32,8 +32,8 @@ const routes = [
         component: lazy(() => import("./pages/form/Form.tsx")),
       },
       {
-        path: "/theme/palette",
-        component: lazy(() => import("./pages/theme/Palette.tsx")),
+        path: "/theme",
+        component: lazy(() => import("./pages/theme/Theme.tsx")),
       },
     ],
   },
