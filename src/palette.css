@@ -1,0 +1,134 @@
+/* Tailwind-like, fully customizable color palette using OKLCH and CSS custom properties for each color and step. Uses a common chroma variable for all colors. */
+:root {
+  /* Palette steps (L values) */
+  --step-50: 0.97;
+  --step-100: 0.93;
+  --step-200: 0.87;
+  --step-300: 0.80;
+  --step-400: 0.72;
+  --step-500: 0.65;
+  --step-600: 0.55;
+  --step-700: 0.45;
+  --step-800: 0.35;
+  --step-900: 0.25;
+
+  /* Common chroma for all colors */
+  --chroma: 0.14;
+
+  /* RED */
+  --red-h: 25;
+  --red-50:  oklch(var(--step-50) var(--chroma) var(--red-h));
+  --red-100: oklch(var(--step-100) var(--chroma) var(--red-h));
+  --red-200: oklch(var(--step-200) var(--chroma) var(--red-h));
+  --red-300: oklch(var(--step-300) var(--chroma) var(--red-h));
+  --red-400: oklch(var(--step-400) var(--chroma) var(--red-h));
+  --red-500: oklch(var(--step-500) var(--chroma) var(--red-h));
+  --red-600: oklch(var(--step-600) var(--chroma) var(--red-h));
+  --red-700: oklch(var(--step-700) var(--chroma) var(--red-h));
+  --red-800: oklch(var(--step-800) var(--chroma) var(--red-h));
+  --red-900: oklch(var(--step-900) var(--chroma) var(--red-h));
+
+  /* ORANGE */
+  --orange-h: 55;
+  --orange-50:  oklch(var(--step-50) var(--chroma) var(--orange-h));
+  --orange-100: oklch(var(--step-100) var(--chroma) var(--orange-h));
+  --orange-200: oklch(var(--step-200) var(--chroma) var(--orange-h));
+  --orange-300: oklch(var(--step-300) var(--chroma) var(--orange-h));
+  --orange-400: oklch(var(--step-400) var(--chroma) var(--orange-h));
+  --orange-500: oklch(var(--step-500) var(--chroma) var(--orange-h));
+  --orange-600: oklch(var(--step-600) var(--chroma) var(--orange-h));
+  --orange-700: oklch(var(--step-700) var(--chroma) var(--orange-h));
+  --orange-800: oklch(var(--step-800) var(--chroma) var(--orange-h));
+  --orange-900: oklch(var(--step-900) var(--chroma) var(--orange-h));
+
+  /* YELLOW */
+  --yellow-h: 100;
+  --yellow-50:  oklch(var(--step-50) var(--chroma) var(--yellow-h));
+  --yellow-100: oklch(var(--step-100) var(--chroma) var(--yellow-h));
+  --yellow-200: oklch(var(--step-200) var(--chroma) var(--yellow-h));
+  --yellow-300: oklch(var(--step-300) var(--chroma) var(--yellow-h));
+  --yellow-400: oklch(var(--step-400) var(--chroma) var(--yellow-h));
+  --yellow-500: oklch(var(--step-500) var(--chroma) var(--yellow-h));
+  --yellow-600: oklch(var(--step-600) var(--chroma) var(--yellow-h));
+  --yellow-700: oklch(var(--step-700) var(--chroma) var(--yellow-h));
+  --yellow-800: oklch(var(--step-800) var(--chroma) var(--yellow-h));
+  --yellow-900: oklch(var(--step-900) var(--chroma) var(--yellow-h));
+
+  /* GREEN */
+  --green-h: 145;
+  --green-50:  oklch(var(--step-50) var(--chroma) var(--green-h));
+  --green-100: oklch(var(--step-100) var(--chroma) var(--green-h));
+  --green-200: oklch(var(--step-200) var(--chroma) var(--green-h));
+  --green-300: oklch(var(--step-300) var(--chroma) var(--green-h));
+  --green-400: oklch(var(--step-400) var(--chroma) var(--green-h));
+  --green-500: oklch(var(--step-500) var(--chroma) var(--green-h));
+  --green-600: oklch(var(--step-600) var(--chroma) var(--green-h));
+  --green-700: oklch(var(--step-700) var(--chroma) var(--green-h));
+  --green-800: oklch(var(--step-800) var(--chroma) var(--green-h));
+  --green-900: oklch(var(--step-900) var(--chroma) var(--green-h));
+
+  /* CYAN */
+  --cyan-h: 195;
+  --cyan-50:  oklch(var(--step-50) var(--chroma) var(--cyan-h));
+  --cyan-100: oklch(var(--step-100) var(--chroma) var(--cyan-h));
+  --cyan-200: oklch(var(--step-200) var(--chroma) var(--cyan-h));
+  --cyan-300: oklch(var(--step-300) var(--chroma) var(--cyan-h));
+  --cyan-400: oklch(var(--step-400) var(--chroma) var(--cyan-h));
+  --cyan-500: oklch(var(--step-500) var(--chroma) var(--cyan-h));
+  --cyan-600: oklch(var(--step-600) var(--chroma) var(--cyan-h));
+  --cyan-700: oklch(var(--step-700) var(--chroma) var(--cyan-h));
+  --cyan-800: oklch(var(--step-800) var(--chroma) var(--cyan-h));
+  --cyan-900: oklch(var(--step-900) var(--chroma) var(--cyan-h));
+
+  /* BLUE */
+  --blue-h: 264;
+  --blue-50:  oklch(var(--step-50) var(--chroma) var(--blue-h));
+  --blue-100: oklch(var(--step-100) var(--chroma) var(--blue-h));
+  --blue-200: oklch(var(--step-200) var(--chroma) var(--blue-h));
+  --blue-300: oklch(var(--step-300) var(--chroma) var(--blue-h));
+  --blue-400: oklch(var(--step-400) var(--chroma) var(--blue-h));
+  --blue-500: oklch(var(--step-500) var(--chroma) var(--blue-h));
+  --blue-600: oklch(var(--step-600) var(--chroma) var(--blue-h));
+  --blue-700: oklch(var(--step-700) var(--chroma) var(--blue-h));
+  --blue-800: oklch(var(--step-800) var(--chroma) var(--blue-h));
+  --blue-900: oklch(var(--step-900) var(--chroma) var(--blue-h));
+
+  /* PURPLE */
+  --purple-h: 295;
+  --purple-50:  oklch(var(--step-50) var(--chroma) var(--purple-h));
+  --purple-100: oklch(var(--step-100) var(--chroma) var(--purple-h));
+  --purple-200: oklch(var(--step-200) var(--chroma) var(--purple-h));
+  --purple-300: oklch(var(--step-300) var(--chroma) var(--purple-h));
+  --purple-400: oklch(var(--step-400) var(--chroma) var(--purple-h));
+  --purple-500: oklch(var(--step-500) var(--chroma) var(--purple-h));
+  --purple-600: oklch(var(--step-600) var(--chroma) var(--purple-h));
+  --purple-700: oklch(var(--step-700) var(--chroma) var(--purple-h));
+  --purple-800: oklch(var(--step-800) var(--chroma) var(--purple-h));
+  --purple-900: oklch(var(--step-900) var(--chroma) var(--purple-h));
+
+  /* PINK */
+  --pink-h: 340;
+  --pink-50:  oklch(var(--step-50) var(--chroma) var(--pink-h));
+  --pink-100: oklch(var(--step-100) var(--chroma) var(--pink-h));
+  --pink-200: oklch(var(--step-200) var(--chroma) var(--pink-h));
+  --pink-300: oklch(var(--step-300) var(--chroma) var(--pink-h));
+  --pink-400: oklch(var(--step-400) var(--chroma) var(--pink-h));
+  --pink-500: oklch(var(--step-500) var(--chroma) var(--pink-h));
+  --pink-600: oklch(var(--step-600) var(--chroma) var(--pink-h));
+  --pink-700: oklch(var(--step-700) var(--chroma) var(--pink-h));
+  --pink-800: oklch(var(--step-800) var(--chroma) var(--pink-h));
+  --pink-900: oklch(var(--step-900) var(--chroma) var(--pink-h));
+
+  /* GREY */
+  --grey-h: 0;
+  --grey-50:  oklch(var(--step-50) var(--chroma) var(--grey-h));
+  --grey-100: oklch(var(--step-100) var(--chroma) var(--grey-h));
+  --grey-200: oklch(var(--step-200) var(--chroma) var(--grey-h));
+  --grey-300: oklch(var(--step-300) var(--chroma) var(--grey-h));
+  --grey-400: oklch(var(--step-400) var(--chroma) var(--grey-h));
+  --grey-500: oklch(var(--step-500) var(--chroma) var(--grey-h));
+  --grey-600: oklch(var(--step-600) var(--chroma) var(--grey-h));
+  --grey-700: oklch(var(--step-700) var(--chroma) var(--grey-h));
+  --grey-800: oklch(var(--step-800) var(--chroma) var(--grey-h));
+  --grey-900: oklch(var(--step-900) var(--chroma) var(--grey-h));
+}
