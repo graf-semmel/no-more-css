@@ -1,0 +1,21 @@
+#palette {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(2rem, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  width: 100%;
+
+  .header {
+    font-weight: 600;
+    font-size: var(--text-xs);
+    color: var(--foreground);
+  }
+  
+  .color {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+  }
+}
