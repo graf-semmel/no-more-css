@@ -20,4 +20,5 @@
   --surface-content: hsl(240, 4%, 16%);
   --disabled: hsl(0, 0%, 90%);
   --disabled-content: hsl(0, 0%, 40%);
+  --foreground: var(--grey-800);
 }
