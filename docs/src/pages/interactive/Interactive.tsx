@@ -48,7 +48,6 @@ function Interactive() {
             <button class="error">error</button>
             <button class="base">base</button>
           </row>
-
           <Code>
             <button>default</button>
             <button class="primary">primary</button>
@@ -57,20 +56,22 @@ function Interactive() {
             <button class="error">error</button>
             <button class="base">base</button>
           </Code>
-          <row class="gap-2 items-baseline">
-            <button class="XS">extra small</button>
-            <button class="S">small</button>
-            <button>normal</button>
-            <button class="L">large</button>
-            <button class="XL">extra large</button>
+
+          <row class="gap-2">
+            <button class="muted">default</button>
+            <button class="muted primary">primary</button>
+            <button class="muted secondary">secondary</button>
+            <button class="muted success">success</button>
+            <button class="muted error">error</button>
           </row>
           <Code>
-            <button class="XS">extra small</button>
-            <button class="S">small</button>
-            <button>normal</button>
-            <button class="L">large</button>
-            <button class="XL">extra large</button>
+            <button class="muted">default</button>
+            <button class="muted primary">primary</button>
+            <button class="muted secondary">secondary</button>
+            <button class="muted success">success</button>
+            <button class="muted error">error</button>
           </Code>
+
           <row class="gap-2">
             <button class="outline">default</button>
             <button class="outline primary">primary</button>
@@ -85,6 +86,22 @@ function Interactive() {
             <button class="outline success">success</button>
             <button class="outline error">error</button>
           </Code>
+          
+          <row class="gap-2 items-baseline">
+            <button class="XS">extra small</button>
+            <button class="S">small</button>
+            <button>normal</button>
+            <button class="L">large</button>
+            <button class="XL">extra large</button>
+          </row>
+          <Code>
+            <button class="XS">extra small</button>
+            <button class="S">small</button>
+            <button>normal</button>
+            <button class="L">large</button>
+            <button class="XL">extra large</button>
+          </Code>
+
           <row class="gap-2">
             <button disabled>disabled</button>
             <button class="primary" disabled>

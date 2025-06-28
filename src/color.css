@@ -1,24 +1,81 @@
 :root {
-  --primary: hsl(224, 48%, 22%);
-  --primary-content: rgb(255, 255, 255);
-  --primary-content-muted: hsla(0, 0%, 100%, 0.7);
-  --primary-hover: hsl(224, 48%, 32%);
-  --secondary: hsl(329, 55%, 32%);
-  --secondary-hover: hsl(329, 55%, 42%);
-  --secondary-content: hsl(0, 0%, 100%);
-  --success: hsl(152, 64%, 41%);
-  --success-hover: hsl(152, 64%, 31%);
-  --success-content: hsl(0, 0%, 100%);
-  --error: hsl(342, 100%, 50%);
-  --error-hover: hsl(342, 100%, 40%);
-  --error-content: hsl(0, 0%, 100%);
-  --base: hsl(0, 0%, 98%);
-  --base-hover: hsl(0, 0%, 88%);
-  --base-content: hsl(240, 4%, 16%);
-  --base-content-muted: hsl(240, 4%, 26%);
-  --surface: hsl(0, 0%, 85%);
-  --surface-content: hsl(240, 4%, 16%);
-  --disabled: hsl(0, 0%, 90%);
-  --disabled-content: hsl(0, 0%, 40%);
-  --foreground: var(--grey-800);
+  /* --- Global Deltas --- */
+  --accent-delta: 0.1;
+  --muted-delta: -0.1;
+  --content-muted-delta: -0.1;
+
+  /* --- Brand Colors --- */
+  --primary: var(--grey-900);
+  --primary-accent: oklch(
+    from var(--primary) calc(l + var(--accent-delta)) c h
+  );
+  --primary-content: var(--grey-100);
+  --primary-content-muted: oklch(
+    from var(--primary-content) calc(l + var(--content-muted-delta)) c h
+  );
+  --primary-muted: oklch(from var(--primary) l calc(c + var(--muted-delta)) h);
+
+  --secondary: var(--violet-700);
+  --secondary-accent: oklch(
+    from var(--secondary) calc(l + var(--accent-delta)) c h
+  );
+  --secondary-content: var(--grey-100);
+  --secondary-content-muted: oklch(
+    from var(--secondary-content) calc(l + var(--content-muted-delta)) c h
+  );
+  --secondary-muted: oklch(
+    from var(--secondary) l calc(c + var(--muted-delta)) h
+  );
+
+  /* --- Status Colors --- */
+  --success: var(--green-600);
+  --success-accent: oklch(
+    from var(--success) calc(l + var(--accent-delta)) c h
+  );
+  --success-content: var(--grey-100);
+  --success-muted: oklch(from var(--success) l calc(c + var(--muted-delta)) h);
+  --success-content-muted: oklch(
+    from var(--success-content) calc(l + var(--content-muted-delta)) c h
+  );
+
+  --error: var(--red-600);
+  --error-accent: oklch(from var(--error) calc(l + var(--accent-delta)) c h);
+  --error-content: var(--grey-100);
+  --error-muted: oklch(from var(--error) l calc(c + var(--muted-delta)) h);
+  --error-content-muted: oklch(
+    from var(--error-content) calc(l + var(--content-muted-delta)) c h
+  );
+
+  /* --- UI & Surface Colors --- */
+  --base: var(--grey-100);
+  --base-accent: oklch(from var(--base) calc(l + var(--muted-delta)) c h);
+  --base-content: var(--grey-900);
+  --base-content-muted: var(--grey-700);
+  --base-muted: oklch(from var(--base) l calc(c + var(--muted-delta)) h);
+
+  --surface: var(--grey-200);
+  --surface-accent: oklch(
+    from var(--surface) calc(l + var(--accent-delta)) c h
+  );
+  --surface-content: var(--grey-900);
+  --surface-muted: oklch(from var(--surface) l calc(c + var(--muted-delta)) h);
+  --surface-content-muted: oklch(
+    from var(--surface-content) calc(l + var(--content-muted-delta)) c h
+  );
+
+  --disabled: var(--grey-300);
+  --disabled-accent: oklch(
+    from var(--disabled) calc(l + var(--accent-delta)) c h
+  );
+  --disabled-muted: oklch(
+    from var(--disabled) l calc(c + var(--muted-delta)) h
+  );
+  --disabled-content: var(--grey-500);
+  --disabled-content-muted: oklch(
+    from var(--disabled-content) calc(l + var(--content-muted-delta)) c h
+  );
+
+  /* --- Content & Text Colors --- */
+  --content: var(--grey-800);
+  --content-muted: var(--grey-600);
 }
