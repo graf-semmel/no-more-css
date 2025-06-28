@@ -1,4 +1,4 @@
-import { escapeHtml } from "../../Code";
+import Code from "../../Code";
 
 export default function Footer() {
   return (
@@ -46,7 +46,7 @@ export default function Footer() {
           <br />
           ...
           <br />
-          {escapeHtml(
+          <Code>
             <footer class="gap-8">
               <section>
                 <h6 class="footer-title">Services</h6>
@@ -71,9 +71,9 @@ export default function Footer() {
                   <a class="link link-hover">Privacy policy</a>
                 </nav>
               </section>
-            </footer>,
-            1
-          )}
+            </footer>
+            ,
+          </Code>
           <br />
           &lt;/body&gt;
         </code>

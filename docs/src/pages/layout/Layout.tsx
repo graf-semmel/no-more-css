@@ -1,6 +1,6 @@
-import Code, { escapeHtml } from "../../Code";
+// import Code, { escapeHtml } from "../../Code";
 import Flexbox from "./Flexbox";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 export default function Layout() {
   return (
