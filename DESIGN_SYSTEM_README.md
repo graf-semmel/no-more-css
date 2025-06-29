@@ -52,7 +52,6 @@ Here are some common semantic token names, grouped by their function, to guide t
 *   `--info`: For informational messages.
 
 ### UI & Surface
-*   `--base`: The main background color.
 *   `--surface`: For layered surfaces like cards or modals.
 *   `--border`: For borders and dividers.
 *   `--disabled`: For disabled or inactive elements.
