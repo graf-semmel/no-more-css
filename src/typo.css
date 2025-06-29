@@ -14,7 +14,7 @@
 }
 
 body {
-  color: var(--base-content);
+  color: var(--fg);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
@@ -91,7 +91,7 @@ hgroup {
   margin: var(--dim-8) 0 var(--dim-4) 0;
   padding: 0;
   padding-left: var(--dim-4);
-  border-left: solid var(--dim-2) var(--base-content);
+  border-left: solid var(--dim-2) var(--fg);
 
   * {
     margin: 0;
@@ -105,7 +105,7 @@ hgroup {
   > p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--base-content-muted);
+    color: var(--fg-muted);
   }
 }
 

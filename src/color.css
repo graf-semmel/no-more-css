@@ -2,7 +2,6 @@
   /* --- Global Deltas --- */
   --accent-delta: 0.1;
   --muted-delta: -0.1;
-  --content-muted-delta: -0.1;
 
   /* --- Brand Colors --- */
   --primary: var(--grey-900);
@@ -10,9 +9,6 @@
     from var(--primary) calc(l + var(--accent-delta)) c h
   );
   --primary-content: var(--grey-100);
-  --primary-content-muted: oklch(
-    from var(--primary-content) calc(l + var(--content-muted-delta)) c h
-  );
   --primary-muted: oklch(from var(--primary) l calc(c + var(--muted-delta)) h);
 
   --secondary: var(--violet-700);
@@ -20,9 +16,6 @@
     from var(--secondary) calc(l + var(--accent-delta)) c h
   );
   --secondary-content: var(--grey-100);
-  --secondary-content-muted: oklch(
-    from var(--secondary-content) calc(l + var(--content-muted-delta)) c h
-  );
   --secondary-muted: oklch(
     from var(--secondary) l calc(c + var(--muted-delta)) h
   );
@@ -34,48 +27,34 @@
   );
   --success-content: var(--grey-100);
   --success-muted: oklch(from var(--success) l calc(c + var(--muted-delta)) h);
-  --success-content-muted: oklch(
-    from var(--success-content) calc(l + var(--content-muted-delta)) c h
-  );
 
   --error: var(--red-600);
   --error-accent: oklch(from var(--error) calc(l + var(--accent-delta)) c h);
   --error-content: var(--grey-100);
   --error-muted: oklch(from var(--error) l calc(c + var(--muted-delta)) h);
-  --error-content-muted: oklch(
-    from var(--error-content) calc(l + var(--content-muted-delta)) c h
+
+  --wargning: var(--yellow-600);
+  --warning-accent: oklch(
+    from var(--warning) calc(l + var(--accent-delta)) c h
   );
+  --warning-content: var(--grey-100);
+  --warning-muted: oklch(from var(--warning) l calc(c + var(--muted-delta)) h);
+
+  --info: var(--blue-600);
+  --info-accent: oklch(from var(--info) calc(l + var(--accent-delta)) c h);
+  --info-content: var(--grey-100);
+  --info-muted: oklch(from var(--info) l calc(c + var(--muted-delta)) h);
 
   /* --- UI & Surface Colors --- */
-  --base: var(--grey-100);
-  --base-accent: oklch(from var(--base) calc(l + var(--muted-delta)) c h);
-  --base-content: var(--grey-900);
-  --base-content-muted: var(--grey-700);
-  --base-muted: oklch(from var(--base) l calc(c + var(--muted-delta)) h);
+  --bg: var(--grey-100);
 
   --surface: var(--grey-200);
-  --surface-accent: oklch(
-    from var(--surface) calc(l + var(--accent-delta)) c h
-  );
   --surface-content: var(--grey-900);
-  --surface-muted: oklch(from var(--surface) l calc(c + var(--muted-delta)) h);
-  --surface-content-muted: oklch(
-    from var(--surface-content) calc(l + var(--content-muted-delta)) c h
-  );
 
   --disabled: var(--grey-300);
-  --disabled-accent: oklch(
-    from var(--disabled) calc(l + var(--accent-delta)) c h
-  );
-  --disabled-muted: oklch(
-    from var(--disabled) l calc(c + var(--muted-delta)) h
-  );
   --disabled-content: var(--grey-500);
-  --disabled-content-muted: oklch(
-    from var(--disabled-content) calc(l + var(--content-muted-delta)) c h
-  );
 
   /* --- Content & Text Colors --- */
-  --content: var(--grey-800);
-  --content-muted: var(--grey-600);
+  --fg: var(--grey-800);
+  --fg-muted: var(--grey-600);
 }

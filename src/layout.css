@@ -15,8 +15,8 @@
 } */
 
 body > header {
-  --background-color: var(--base);
-  --color: var(--base-content);
+  --background-color: var(--bg);
+  --color: var(--fg);
 
   width: 100%;
   background-color: var(--background-color);
@@ -42,8 +42,8 @@ body > main {
 
 body > footer,
 #footer {
-  --background-color: var(--base);
-  --color: var(--base-content);
+  --background-color: var(--bg);
+  --color: var(--fg);
   width: 100%;
   display: flex;
   flex-direction: row;

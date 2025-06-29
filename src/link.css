@@ -3,7 +3,7 @@ a {
   --color-hover: var(--primary-hover);
   --color-active: var(--secondary);
   --color-focus: var(--secondary-hover);
-  --color-visited: var(--base);
+  --color-visited: var(--bg);
   --font-weight: 500;
 }
 

@@ -35,8 +35,8 @@ input:where([type="checkbox"][role="switch"]) {
   }
 
   &:checked {
-    --color: var(--base-content);
-    --color-content: var(--base);
+    --color: var(--fg);
+    --color-content: var(--bg);
     background-color: var(--color);
 
     &::before {

@@ -65,17 +65,6 @@ input[type="submit"] {
     }
   }
 
-  &.base {
-    --background-color: var(--base);
-    --background-color-accent: var(--base-accent);
-    --color: var(--base-content);
-    &.muted {
-      --background-color: var(--base-muted);
-      --background-color-accent: var(--base);
-      --color: var(--base-content-muted);
-    }
-  }
-
   &.success {
     --background-color: var(--success);
     --background-color-accent: var(--success-accent);

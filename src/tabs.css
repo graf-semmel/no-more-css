@@ -31,7 +31,7 @@
     --height: var(--button-height);
     --font-weight: 500;
     --font-size: 1rem;
-    --border: solid var(--dim-1) var(--base-content);
+    --border: solid var(--dim-1) var(--fg);
     margin-inline-end: 1rem;
     min-height: var(--height);
     font-weight: var(--font-weight);

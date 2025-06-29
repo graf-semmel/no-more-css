@@ -147,7 +147,7 @@ input {
 input[type="checkbox"]:not([role="switch"]) {
   appearance: none;
   background-color: transparent;
-  border: solid 1px var(--base-content);
+  border: solid 1px var(--fg);
   border-radius: 0.2rem;
   margin: 0;
   padding: 0;
@@ -172,8 +172,8 @@ input[type="radio"] {
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  border: solid 0.1rem var(--base-content-muted);
-  background-color: var(--base);
+  border: solid 0.1rem var(--surface);
+  background-color: var(--bg);
   transition:
     border-width var(--transition-duration) ease,
     border-color var(--transition-duration) ease;
@@ -206,14 +206,14 @@ input[type="range"] {
     margin-top: calc((var(--track-height) - var(--thumb-size)) / 2);
     background: var(--color);
     cursor: pointer;
-    outline: solid 2px var(--base);
+    outline: solid 2px var(--bg);
     transition:
       background-color var(--transition),
       transform var(--transition);
   }
 
   &:hover::-webkit-slider-thumb {
-    background-color: var(--base);
+    background-color: var(--bg);
   }
 
   &:active::-webkit-slider-thumb {
@@ -258,7 +258,7 @@ input[type="color"] {
   border-radius: var(--border-radius);
 
   &:focus {
-    outline: solid 2px var(--base-content);
+    outline: solid 2px var(--fg);
     outline-offset: 2px;
   }
 
@@ -267,13 +267,13 @@ input[type="color"] {
   }
 
   &::-webkit-color-swatch {
-    border: solid 1px var(--base-content);
+    border: solid 1px var(--fg);
     border-radius: var(--border-radius);
     /*border: none;*/
   }
 
   &::-moz-color-swatch {
-    border: solid 1px var(--base-content);
+    border: solid 1px var(--fg);
     border-radius: var(--border-radius);
   }
 
