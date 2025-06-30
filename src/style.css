@@ -21,3 +21,10 @@ hr {
   border: none;
   border-bottom: solid 1px var(--color);
 }
+
+.radius {
+  border-radius: var(--border-radius);
+}
+.border {
+  border: var(--border)
+}

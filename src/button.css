@@ -9,15 +9,14 @@ input::file-selector-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  --background-color: var(--primary);
-  --background-color-accent: var(--primary-accent);
-  --color: var(--primary-content);
   --font-weight: 500;
   --padding-x: 1rem;
   --padding-y: calc(var(--padding-x) * 0.75);
   --font-size: 1rem;
   --height: var(--button-height);
 
+  background-color: var(--background-color);
+  color: var(--color);
   padding: var(--padding-y) var(--padding-x);
   border: none;
   border-radius: var(--border-radius);
@@ -29,8 +28,6 @@ input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.25s;
-  background-color: var(--background-color);
-  color: var(--color);
   white-space: nowrap;
   width: fit-content;
   max-height: min-content;
@@ -38,52 +35,13 @@ input[type="submit"] {
   &:hover {
     background-color: var(--background-color-accent);
   }
+
   &.muted {
-    --background-color: var(--primary-muted);
-    --background-color-accent: var(--primary);
-    --color: var(--primary-content-muted);
-  }
-  &.primary {
-    --background-color: var(--primary);
-    --background-color-accent: var(--primary-accent);
-    --color: var(--primary-content);
-    &.muted{
-      --background-color: var(--primary-muted);
-      --background-color-accent: var(--primary);
-      --color: var(--primary-content-muted);
-    }
-  }
-
-  &.secondary {
-    --background-color: var(--secondary);
-    --background-color-accent: var(--secondary-accent);
-    --color: var(--secondary-content);
-    &.muted {
-      --background-color: var(--secondary-muted);
-      --background-color-accent: var(--secondary);
-      --color: var(--secondary-content-muted);
-    }
-  }
-
-  &.success {
-    --background-color: var(--success);
-    --background-color-accent: var(--success-accent);
-    --color: var(--success-content);
-    &.muted {
-      --background-color: var(--success-muted);
-      --background-color-accent: var(--success);
-      --color: var(--success-content-muted);
-    }
-  }
-
-  &.error {
-    --background-color: var(--error);
-    --background-color-accent: var(--error-accent);
-    --color: var(--error-content);
-    &.muted {
-      --background-color: var(--error-muted);
-      --background-color-accent: var(--error);
-      --color: var(--error-content-muted);
+    background-color: var(--background-color-muted);
+    color: var(--background-color);
+    &:hover {
+      background-color: var(--background-color-muted-accent);
+      color: var(--color);
     }
   }
 
@@ -132,9 +90,10 @@ input[type="submit"] {
   }
 
   &:is([type="reset"]) {
-    --background-color: var(--secondary);
-    --background-color-accent: var(--secondary-accent);
-    --color: var(--surface-content);
+    --background-color: var(--warning);
+    --background-color-accent: var(--warning-accent);
+    --background-color-muted: var(--warning-muted);
+    --color: var(--warning-content);
   }
 }
 

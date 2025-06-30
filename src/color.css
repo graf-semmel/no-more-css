@@ -1,60 +1,79 @@
-:root {
-  /* --- Global Deltas --- */
-  --accent-delta: 0.1;
-  --muted-delta: -0.1;
+@layer tokens {
+  :root {
+    /* --- Global Deltas --- */
 
-  /* --- Brand Colors --- */
-  --primary: var(--grey-900);
-  --primary-accent: oklch(
-    from var(--primary) calc(l + var(--accent-delta)) c h
-  );
-  --primary-content: var(--grey-100);
-  --primary-muted: oklch(from var(--primary) l calc(c + var(--muted-delta)) h);
 
-  --secondary: var(--violet-700);
-  --secondary-accent: oklch(
-    from var(--secondary) calc(l + var(--accent-delta)) c h
-  );
-  --secondary-content: var(--grey-100);
-  --secondary-muted: oklch(
-    from var(--secondary) l calc(c + var(--muted-delta)) h
-  );
+    --neutral: var(--grey-900);
+    /* --neutral-accent: oklch(
+      from var(--neutral) calc(l + var(--accent-delta)) c h
+    ); */
+    --neutral-content: var(--grey-100);
+    /* --neutral-muted: oklch(
+      from var(--neutral) l calc(c + var(--muted-delta)) h
+    ); */
 
-  /* --- Status Colors --- */
-  --success: var(--green-600);
-  --success-accent: oklch(
-    from var(--success) calc(l + var(--accent-delta)) c h
-  );
-  --success-content: var(--grey-100);
-  --success-muted: oklch(from var(--success) l calc(c + var(--muted-delta)) h);
+    --primary: var(--grey-900);
+    /* --primary-accent: oklch(
+      from var(--primary) calc(l + var(--accent-delta)) c h
+    ); */
+    --primary-content: var(--grey-100);
+    /* --primary-muted: oklch(
+      from var(--primary) l calc(c + var(--muted-delta)) h
+    ); */
 
-  --error: var(--red-600);
-  --error-accent: oklch(from var(--error) calc(l + var(--accent-delta)) c h);
-  --error-content: var(--grey-100);
-  --error-muted: oklch(from var(--error) l calc(c + var(--muted-delta)) h);
+    --secondary: var(--violet-700);
+    /* --secondary-accent: oklch(
+      from var(--secondary) calc(l + var(--accent-delta)) c h
+    ); */
+    --secondary-content: var(--grey-100);
+    /* --secondary-muted: oklch(
+      from var(--secondary) l calc(c + var(--muted-delta)) h
+    ); */
 
-  --wargning: var(--yellow-600);
-  --warning-accent: oklch(
-    from var(--warning) calc(l + var(--accent-delta)) c h
-  );
-  --warning-content: var(--grey-100);
-  --warning-muted: oklch(from var(--warning) l calc(c + var(--muted-delta)) h);
+    /* --- Status Colors --- */
+    --success: var(--green-600);
+    /* --success-accent: oklch(
+      from var(--success) calc(l + var(--accent-delta)) c h
+    ); */
+    --success-content: var(--grey-100);
+    /* --success-muted: oklch(
+      from var(--success) l calc(c + var(--muted-delta)) h
+    ); */
 
-  --info: var(--blue-600);
-  --info-accent: oklch(from var(--info) calc(l + var(--accent-delta)) c h);
-  --info-content: var(--grey-100);
-  --info-muted: oklch(from var(--info) l calc(c + var(--muted-delta)) h);
+    --danger: var(--red-600);
+    /* --danger-accent: oklch(
+      from var(--danger) calc(l + var(--accent-delta)) c h
+    ); */
+    --danger-content: var(--grey-100);
+    /* --danger-muted: oklch(from var(--danger) l calc(c + var(--muted-delta)) h); */
 
-  /* --- UI & Surface Colors --- */
-  --bg: var(--grey-100);
+    --warning: var(--yellow-600);
+    /* --warning-accent: oklch(
+      from var(--warning) calc(l + var(--accent-delta)) c h
+    ); */
+    --warning-content: var(--grey-100);
+    /* --warning-muted: oklch(
+      from var(--warning) l calc(c + var(--muted-delta)) h
+    ); */
 
-  --surface: var(--grey-200);
-  --surface-content: var(--grey-900);
+    --info: var(--blue-600);
+    /* --info-accent: oklch(from var(--info) calc(l + var(--accent-delta)) c h); */
+    --info-content: var(--grey-100);
+    /* --info-muted: oklch(from var(--info) l calc(c + var(--muted-delta)) h); */
 
-  --disabled: var(--grey-300);
-  --disabled-content: var(--grey-500);
+    /* --- UI & Surface Colors --- */
+    --bg: var(--grey-100);
 
-  /* --- Content & Text Colors --- */
-  --fg: var(--grey-800);
-  --fg-muted: var(--grey-600);
+    --surface: var(--grey-200);
+    --surface-content: var(--grey-900);
+
+    --disabled: var(--grey-300);
+    --disabled-content: var(--grey-500);
+
+    /* --- Content & Text Colors --- */
+    --fg: var(--grey-800);
+    --fg-muted: var(--grey-600);
+
+    --border: solid 1px var(--surface);
+  }
 }

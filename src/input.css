@@ -140,7 +140,7 @@ input {
   &:user-invalid,
   &[aria-invalid="true"] {
     --icon: var(--icon-alert);
-    outline-color: var(--error);
+    outline-color: var(--danger);
   }
 }
 

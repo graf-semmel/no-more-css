@@ -45,16 +45,18 @@ function Interactive() {
             <button class="primary">primary</button>
             <button class="secondary">secondary</button>
             <button class="success">success</button>
-            <button class="error">error</button>
-            <button class="base">base</button>
+            <button class="danger">danger</button>
+            <button class="warning">warning</button>
+            <button class="info">info</button>
           </row>
           <Code>
             <button>default</button>
             <button class="primary">primary</button>
             <button class="secondary">secondary</button>
             <button class="success">success</button>
-            <button class="error">error</button>
-            <button class="base">base</button>
+            <button class="danger">danger</button>
+            <button class="warning">warning</button>
+            <button class="info">info</button>
           </Code>
 
           <row class="gap-2">
@@ -62,14 +64,18 @@ function Interactive() {
             <button class="muted primary">primary</button>
             <button class="muted secondary">secondary</button>
             <button class="muted success">success</button>
-            <button class="muted error">error</button>
+            <button class="muted danger">danger</button>
+            <button class="muted warning">warning</button>
+            <button class="muted info">info</button>
           </row>
           <Code>
             <button class="muted">default</button>
             <button class="muted primary">primary</button>
             <button class="muted secondary">secondary</button>
             <button class="muted success">success</button>
-            <button class="muted error">error</button>
+            <button class="muted danger">danger</button>
+            <button class="muted warning">warning</button>
+            <button class="muted info">info</button>
           </Code>
 
           <row class="gap-2">
@@ -77,16 +83,16 @@ function Interactive() {
             <button class="outline primary">primary</button>
             <button class="outline secondary">secondary</button>
             <button class="outline success">success</button>
-            <button class="outline error">error</button>
+            <button class="outline danger">danger</button>
           </row>
           <Code>
             <button class="outline">default</button>
             <button class="outline primary">primary</button>
             <button class="outline secondary">secondary</button>
             <button class="outline success">success</button>
-            <button class="outline error">error</button>
+            <button class="outline danger">danger</button>
           </Code>
-          
+
           <row class="gap-2 items-baseline">
             <button class="XS">extra small</button>
             <button class="S">small</button>
