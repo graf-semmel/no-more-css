@@ -7,7 +7,7 @@ This document outlines our approach for defining and using color tokens, leverag
 Our system uses a hybrid approach to naming color tokens to provide both flexibility and maintainability.
 
 *   **Palette Tokens**: A wide range of base colors with literal names (e.g., `--blue-500`, `--grey-100`).
-*   **Semantic Tokens**: Tokens named for their UI function (e.g., `--primary`, `--background-body`, `--text-error`). These reference palette tokens, making the codebase readable and theming much easier.
+*   **Semantic Tokens**: Tokens named for their UI function (e.g., `--primary`, `--background-body`, `--text-danger`). These reference palette tokens, making the codebase readable and theming much easier.
 
 ## 2. The Oklch Color Space
 
@@ -47,7 +47,7 @@ Here are some common semantic token names, grouped by their function, to guide t
 
 ### Status & Feedback
 *   `--success`: For successful operations.
-*   `--error`: For failed operations.
+*   `--danger`: For failed operations.
 *   `--warning`: To warn about potential issues.
 *   `--info`: For informational messages.
 
