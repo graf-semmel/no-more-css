@@ -95,7 +95,6 @@ function SemanticColors() {
   ];
 
   // Interactive state for base color and deltas
-  const [baseColor, setBaseColor] = createSignal("primary");
   const [accentDelta, setAccentDelta] = createSignal(0.1);
   const [mutedDelta, setMutedDelta] = createSignal(-0.1);
 
