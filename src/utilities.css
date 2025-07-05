@@ -1,4 +1,4 @@
-@layer utilities {  
+@layer utilities {
   .radius-xs {
     border-radius: var(--dim-1);
   }
@@ -17,8 +17,17 @@
   }
   .radius-full {
     border-radius: 9999px;
-  } 
+  }
   .radius-none {
     border-radius: 0;
+  }
+  .primary,
+  .secondary,
+  .success,
+  .danger,
+  .warning,
+  .info {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
   }
 }

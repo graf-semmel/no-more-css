@@ -1,7 +1,5 @@
-@layer tokens {
+@layer theme {
   :root {
-    --neutral: var(--grey-900);
-    --neutral-content: var(--grey-100);
     --primary: var(--grey-900);
     --primary-content: var(--grey-100);
     --secondary: var(--violet-700);
@@ -15,7 +13,7 @@
     --info: var(--blue-600);
     --info-content: var(--grey-100);
 
-    --canvas: var(--grey-50);
+    --canvas: var(--grey-0);
     --canvas-content: var(--grey-900);
     --surface: var(--grey-100);
     --surface-content: var(--grey-900);

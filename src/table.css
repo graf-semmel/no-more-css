@@ -4,6 +4,12 @@ table {
   border-collapse: collapse;
   font-size: var(--text-sm);
   overflow: hidden;
+
+  &.striped {
+    tr:nth-child(odd) td {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
 }
 
 th, td {
@@ -13,19 +19,15 @@ th, td {
 
 th {
   font-weight: 600;
-  border-bottom: 1px solid var(--surface-content, #e0e0e0);
+  border-bottom: 1px solid var(--surface, #e0e0e0);
 }
-
+    
 td {
   border-bottom: 1px solid var(--surface, #e0e0e0);
 }
 
 tr:last-child td {
   border-bottom: none;
-}
-
-tr:hover td {
-  background: var(--surface, #f6f6f7);
 }
 
 code {

@@ -91,7 +91,7 @@ hgroup {
   margin: var(--dim-8) 0 var(--dim-4) 0;
   padding: 0;
   padding-left: var(--dim-4);
-  border-left: solid var(--dim-2) var(--fg);
+  border-left: solid var(--dim-2) var(--primary);
 
   * {
     margin: 0;

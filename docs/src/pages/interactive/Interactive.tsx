@@ -42,7 +42,6 @@ function Interactive() {
         <column class="gap-4">
           <row class="gap-2">
             <button>default</button>
-            <button class="primary">primary</button>
             <button class="secondary">secondary</button>
             <button class="success">success</button>
             <button class="danger">danger</button>
@@ -51,7 +50,6 @@ function Interactive() {
           </row>
           <Code>
             <button>default</button>
-            <button class="primary">primary</button>
             <button class="secondary">secondary</button>
             <button class="success">success</button>
             <button class="danger">danger</button>
@@ -60,37 +58,20 @@ function Interactive() {
           </Code>
 
           <row class="gap-2">
-            <button class="muted">default</button>
-            <button class="muted primary">primary</button>
-            <button class="muted secondary">secondary</button>
-            <button class="muted success">success</button>
-            <button class="muted danger">danger</button>
-            <button class="muted warning">warning</button>
-            <button class="muted info">info</button>
-          </row>
-          <Code>
-            <button class="muted">default</button>
-            <button class="muted primary">primary</button>
-            <button class="muted secondary">secondary</button>
-            <button class="muted success">success</button>
-            <button class="muted danger">danger</button>
-            <button class="muted warning">warning</button>
-            <button class="muted info">info</button>
-          </Code>
-
-          <row class="gap-2">
             <button class="outline">default</button>
-            <button class="outline primary">primary</button>
             <button class="outline secondary">secondary</button>
             <button class="outline success">success</button>
             <button class="outline danger">danger</button>
+            <button class="outline warning">warning</button>
+            <button class="outline info">info</button>
           </row>
           <Code>
             <button class="outline">default</button>
-            <button class="outline primary">primary</button>
             <button class="outline secondary">secondary</button>
             <button class="outline success">success</button>
             <button class="outline danger">danger</button>
+            <button class="outline warning">warning</button>
+            <button class="outline info">info</button>
           </Code>
 
           <row class="gap-2 items-baseline">

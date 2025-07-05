@@ -1,8 +1,11 @@
-@layer roles {
-  .neutral {
-    --background-color: var(--neutral);
-    --foreground-color: var(--neutral-content);
+@layer base {
+  :root {
+    --accent-delta: -0.2;
+    --muted-delta: -0.1;
+    --muted-alpha: 0.3;
   }
+
+  :root,
   .primary {
     --background-color: var(--primary);
     --foreground-color: var(--primary-content);
@@ -27,4 +30,30 @@
     --background-color: var(--info);
     --foreground-color: var(--info-content);
   }
+  .surface {
+    --background-color: var(--surface);
+    --foreground-color: var(--surface-content);
+  }
+  .disabled {
+    --background-color: var(--disabled);
+    --foreground-color: var(--disabled-content);
+  }
+  .canvas {
+    --background-color: var(--canvas);
+    --foreground-color: var(--canvas-content);
+  }
+
+  :root,
+  .primary,
+  .secondary,
+  .success,
+  .danger,
+  .warning,
+  .info {
+    --background-color-accent: oklch(
+      from var(--background-color) calc(l + var(--accent-delta)) c h
+    );
+  }
+
+
 }
