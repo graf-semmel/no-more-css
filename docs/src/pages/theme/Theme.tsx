@@ -72,7 +72,6 @@ const darkThemeCode = `
 function Themes() {
   return (
     <section>
-      <h2>Theme</h2>
       <p>
         This theme provides a set of design tokens that define the visual style
         of the application. It includes colors, typography, spacing, and other
@@ -106,69 +105,25 @@ function Themes() {
 function Colors() {
   // List of primary semantic color tokens, their explanations, and class names (without leading dot)
   const tokens = [
-    {
-      name: "--primary",
-      desc: "Primary brand/action color",
-    },
-    {
-      name: "--primary-content",
-      desc: "Content color on primary backgrounds",
-    },
-    {
-      name: "--secondary",
-      desc: "Secondary/accent color",
-    },
-    {
-      name: "--secondary-content",
-      desc: "Content color on secondary backgrounds",
-    },
-    {
-      name: "--success",
-      desc: "Success/confirmation color",
-    },
-    {
-      name: "--success-content",
-      desc: "Content color on success backgrounds",
-    },
+    { name: "--primary", desc: "Primary brand/action color" },
+    { name: "--primary-content", desc: "Text/icon color on primary" },
+    { name: "--secondary", desc: "Secondary/accent color" },
+    { name: "--secondary-content", desc: "Text/icon color on secondary" },
+    { name: "--success", desc: "Success/confirmation color" },
+    { name: "--success-content", desc: "Text/icon color on success" },
     { name: "--danger", desc: "Danger/error color" },
-    {
-      name: "--danger-content",
-      desc: "Content color on danger backgrounds",
-    },
+    { name: "--danger-content", desc: "Text/icon color on danger" },
     { name: "--warning", desc: "Warning/alert color" },
-    {
-      name: "--warning-content",
-      desc: "Content color on warning backgrounds",
-    },
+    { name: "--warning-content", desc: "Text/icon color on warning" },
     { name: "--info", desc: "Info/notification color" },
-    {
-      name: "--info-content",
-      desc: "Content color on info backgrounds",
-    },
-    {
-      name: "--canvas",
-      desc: "Main app background (canvas)",
-    },
-    {
-      name: "--canvas-content",
-      desc: "Content color on canvas background",
-    },
-    {
-      name: "--surface",
-      desc: "Surface color for cards, panels, etc.",
-    },
-    {
-      name: "--surface-content",
-      desc: "Content color on surface backgrounds",
-    },
-    {
-      name: "--disabled",
-      desc: "Disabled element background",
-    },
-    {
-      name: "--disabled-content",
-      desc: "Content color for disabled elements",
-    },
+    { name: "--info-content", desc: "Text/icon color on info" },
+    { name: "--background", desc: "Main app background" },
+    { name: "--background-content", desc: "Text/icon color on background" },
+    { name: "--background-content-muted", desc: "Muted text/icon color on background" },
+    { name: "--surface", desc: "Surface color for cards, panels, etc." },
+    { name: "--surface-content", desc: "Text/icon color on surface" },
+    { name: "--disabled", desc: "Disabled element background" },
+    { name: "--disabled-content", desc: "Text/icon color for disabled elements" },
   ];
 
   return (
