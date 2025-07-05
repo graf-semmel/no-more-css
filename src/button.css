@@ -3,100 +3,93 @@
   --border-radius-sm: 4px;
   --button-height: 2.4rem;
 }
+@layer components {
+  button,
+  input::file-selector-button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    --font-weight: 500;
+    --padding-x: 1rem;
+    --padding-y: calc(var(--padding-x) * 0.75);
+    --font-size: 1rem;
+    --height: var(--button-height);
 
-button,
-input::file-selector-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  --font-weight: 500;
-  --padding-x: 1rem;
-  --padding-y: calc(var(--padding-x) * 0.75);
-  --font-size: 1rem;
-  --height: var(--button-height);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    padding: var(--padding-y) var(--padding-x);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    font-family: inherit;
+    font-weight: var(--font-weight);
+    box-shadow: none;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    white-space: nowrap;
+    width: fit-content;
+    max-height: min-content;
 
-  background-color: var(--background-color);
-  color: var(--color);
-  padding: var(--padding-y) var(--padding-x);
-  border: none;
-  border-radius: var(--border-radius);
-  font-size: var(--font-size);
-  font-family: inherit;
-  font-weight: var(--font-weight);
-  box-shadow: none;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.25s;
-  white-space: nowrap;
-  width: fit-content;
-  max-height: min-content;
+    &:hover {
+      background-color: var(--background-color-accent);
+      color: var(--foreground-color);
+    }
 
-  &:hover {
+    &.XS {
+      --height: calc(var(--button-height) - 0.8rem);
+      --padding-x: 0.6rem;
+      --font-size: 0.8rem;
+    }
+
+    &.S {
+      --height: calc(var(--button-height) - 0.4rem);
+      --padding-x: 0.8rem;
+      --font-size: 0.9rem;
+    }
+
+    &.L {
+      --height: calc(var(--button-height) + 0.4rem);
+      --padding-x: 1.2rem;
+      --font-size: 1.1rem;
+    }
+
+    &.XL {
+      --height: calc(var(--button-height) + 0.8rem);
+      --padding-x: 1.4rem;
+      --font-size: 1.2rem;
+    }
+
+    &.outline {
+      background-color: transparent;
+      color: var(--background-color);
+      outline: 1px solid var(--background-color);
+
+      &:hover {
+        outline-width: 1.5px;
+        outline-color: var(--background-color-accent);
+        color: var(--background-color-accent);
+      }
+    }
+
+    &:disabled,
+    &.outline:disabled {
+      background-color: var(--disabled);
+      color: var(--disabled-content);
+      cursor: not-allowed;
+      outline: none;
+    }
+
+    &:is([type="reset"]) {
+      --background-color: var(--warning);
+      --background-color-accent: var(--warning-accent);
+      --background-color-muted: var(--warning-muted);
+      --color: var(--warning-content);
+    }
+  }
+
+  input[type="file"]::file-selector-button:hover {
     background-color: var(--background-color-accent);
   }
-
-  &.muted {
-    background-color: var(--background-color-muted);
-    color: var(--background-color);
-    &:hover {
-      background-color: var(--background-color-muted-accent);
-      color: var(--color);
-    }
-  }
-
-  &.XS {
-    --height: calc(var(--button-height) - 0.8rem);
-    --padding-x: 0.6rem;
-    --font-size: 0.8rem;
-  }
-
-  &.S {
-    --height: calc(var(--button-height) - 0.4rem);
-    --padding-x: 0.8rem;
-    --font-size: 0.9rem;
-  }
-
-  &.L {
-    --height: calc(var(--button-height) + 0.4rem);
-    --padding-x: 1.2rem;
-    --font-size: 1.1rem;
-  }
-
-  &.XL {
-    --height: calc(var(--button-height) + 0.8rem);
-    --padding-x: 1.4rem;
-    --font-size: 1.2rem;
-  }
-
-  &.outline {
-    background-color: transparent;
-    color: var(--background-color);
-    outline: 1px solid var(--background-color);
-
-    &:hover {
-      outline-width: 1.5px;
-      outline-color: var(--background-color-accent);
-      color: var(--background-color-accent);
-    }
-  }
-
-  &:disabled,
-  &.outline:disabled {
-    background-color: var(--disabled);
-    color: var(--disabled-content);
-    cursor: not-allowed;
-    outline: none;
-  }
-
-  &:is([type="reset"]) {
-    --background-color: var(--warning);
-    --background-color-accent: var(--warning-accent);
-    --background-color-muted: var(--warning-muted);
-    --color: var(--warning-content);
-  }
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: var(--background-color-accent);
 }

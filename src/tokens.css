@@ -5,51 +5,10 @@
     --muted-alpha: 0.3;
 
     --background-color: var(--neutral);
-    --color: var(--neutral-content);
-
-    --background-color-accent: oklch(
-      from var(--background-color) calc(l + var(--accent-delta)) c h
-    );
-    --background-color-muted: oklch(
-      from var(--background-color) l calc(c + var(--muted-delta)) h / 0.2
-    );
-    --background-color-muted-accent: var(--background-color);
-  }
-  .neutral {
-    --background-color: var(--neutral);
-    --color: var(--neutral-content);
+    --foreground-color: var(--neutral-content);
   }
 
-  .primary {
-    --background-color: var(--primary);
-    --color: var(--primary-content);
-  }
-
-  .secondary {
-    --background-color: var(--secondary);
-    --color: var(--secondary-content);
-  }
-
-  .success {
-    --background-color: var(--success);
-    --color: var(--success-content);
-  }
-
-  .danger {
-    --background-color: var(--danger);
-    --color: var(--danger-content);
-  }
-
-  .warning {
-    --background-color: var(--warning);
-    --color: var(--warning-content);
-  }
-
-  .info {
-    --background-color: var(--info);
-    --color: var(--info-content);
-  }
-
+  :root,
   .neutral,
   .primary,
   .secondary,
@@ -60,9 +19,18 @@
     --background-color-accent: oklch(
       from var(--background-color) calc(l + var(--accent-delta)) c h
     );
+
     --background-color-muted: oklch(
-      from var(--background-color) l calc(c + var(--muted-delta)) h / var(--muted-alpha)
+      from var(--background-color) calc(l) calc(c + var(--muted-delta)) h/
+        var(--muted-alpha)
     );
-    --background-color-muted-accent: var(--background-color);
+  }
+}
+
+@layer components {
+  :root,
+  .muted {
+    background-color: var(--background-color-muted);
+    color: var(--background-color);
   }
 }
