@@ -156,6 +156,11 @@ function Palette() {
   return (
     <section>
       <h2>Color Palette</h2>
+      <p>
+        Each color in the palette is defined as a CSS variable using the format{" "}
+        <code>--color-step</code>. For example, the cell in the <b>blue</b> row and{" "}
+        <b>500</b> column uses <code>--blue-500</code>. You can use these variables directly in your styles for consistent color usage.
+      </p>
       <div id="palette">
         <div></div>
         {steps.map((step) => (

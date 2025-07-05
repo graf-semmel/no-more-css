@@ -3,9 +3,10 @@
     --accent-delta: -0.2;
     --muted-delta: -0.1;
     --muted-alpha: 0.3;
+    --border: solid 1px var(--surface);
   }
 
-  :root,
+  button,
   .primary {
     --background-color: var(--primary);
     --foreground-color: var(--primary-content);
@@ -43,7 +44,7 @@
     --foreground-color: var(--canvas-content);
   }
 
-  :root,
+  button,
   .primary,
   .secondary,
   .success,
@@ -54,6 +55,4 @@
       from var(--background-color) calc(l + var(--accent-delta)) c h
     );
   }
-
-
 }
