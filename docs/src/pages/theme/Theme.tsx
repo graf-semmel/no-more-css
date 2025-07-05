@@ -1,3 +1,4 @@
+import Code from "../../Code";
 import "./Theme.css";
 
 export default function Theme() {
@@ -7,9 +8,98 @@ export default function Theme() {
         <h1>Theme</h1>
         <p>Collection of design tokens for the theme.</p>
       </hgroup>
+      <Themes />
       <Colors />
       <Palette />
     </article>
+  );
+}
+
+const themeCode = `
+@layer theme {
+  :root {
+    --primary: var(--grey-900);
+    --primary-content: var(--grey-100);
+    --secondary: var(--violet-700);
+    --secondary-content: var(--grey-100);
+    --success: var(--green-600);
+    --success-content: var(--grey-100);
+    --danger: var(--red-600);
+    --danger-content: var(--grey-100);
+    --warning: var(--yellow-600);
+    --warning-content: var(--grey-100);
+    --info: var(--blue-600);
+    --info-content: var(--grey-100);
+
+    --background: var(--grey-0);
+    --background-content: var(--grey-900);
+    --surface: var(--grey-100);
+    --surface-content: var(--grey-900);
+    --disabled: var(--grey-300);
+    --disabled-content: var(--grey-500);
+  }
+}`.trim();
+const darkThemeCode = `
+@layer theme {
+  :root {
+    ...
+  }
+
+  [data-theme="dark"] {
+    --primary: var(--grey-200);
+    --primary-content: var(--grey-900);
+    --secondary: var(--violet-700);
+    --secondary-content: var(--grey-100);
+    --success: var(--green-600);
+    --success-content: var(--grey-100);
+    --danger: var(--red-600);
+    --danger-content: var(--grey-100);
+    --warning: var(--yellow-600);
+    --warning-content: var(--grey-100);
+    --info: var(--blue-600);
+    --info-content: var(--grey-100);
+
+    --background: var(--grey-950);
+    --background-content: var(--grey-200);
+    --background-content-muted: var(--grey-400);
+    --surface: var(--grey-900);
+    --surface-content: var(--grey-100);
+    --disabled: var(--grey-700);
+    --disabled-content: var(--grey-500);
+  }
+}`;
+
+function Themes() {
+  return (
+    <section>
+      <h2>Theme</h2>
+      <p>
+        This theme provides a set of design tokens that define the visual style
+        of the application. It includes colors, typography, spacing, and other
+        design elements to ensure a consistent look and feel.
+      </p>
+      <p>
+        The theme is built using CSS custom properties (variables) for easy
+        customization and theming. You can override these variables in your own
+        stylesheets to create a unique look while maintaining the overall
+        structure.
+      </p>
+      <Code language="css">{themeCode}</Code>
+      <h3>Support for multiple themes</h3>
+      <p>
+        The theme supports multiple themes by using the <code>data-theme</code>{" "}
+        attribute on the root element. This allows you to switch between light
+        and dark themes or any other custom themes you define.
+      </p>
+      <Code language="css">{darkThemeCode}</Code>
+      <p>
+        To apply the dark theme, simply add the <code>data-theme="dark"</code>{" "}
+        attribute to the <code>&lt;body&gt;</code> element:
+      </p>
+      <Code language="html">
+        {`<body data-theme="dark">`}
+      </Code>
+    </section>
   );
 }
 
@@ -85,7 +175,9 @@ function Colors() {
     <section>
       <h2>Colors</h2>
       <p>
-        Here are the main color tokens used in the theme. Each one has a specific job—like backgrounds, text, or alerts—so you can keep your colors consistent and easy to update.
+        Here are the main color tokens used in the theme. Each one has a
+        specific job—like backgrounds, text, or alerts—so you can keep your
+        colors consistent and easy to update.
       </p>
       <table>
         <thead>
@@ -158,8 +250,9 @@ function Palette() {
       <h2>Color Palette</h2>
       <p>
         Each color in the palette is defined as a CSS variable using the format{" "}
-        <code>--color-step</code>. For example, the cell in the <b>blue</b> row and{" "}
-        <b>500</b> column uses <code>--blue-500</code>. You can use these variables directly in your styles for consistent color usage.
+        <code>--color-step</code>. For example, the cell in the <b>blue</b> row
+        and <b>500</b> column uses <code>--blue-500</code>. You can use these
+        variables directly in your styles for consistent color usage.
       </p>
       <div id="palette">
         <div></div>
