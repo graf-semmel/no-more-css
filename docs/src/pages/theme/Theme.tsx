@@ -15,156 +15,63 @@ export default function Theme() {
 }
 
 function SemanticColors() {
-  // List of semantic color tokens and their variants
-  const semanticColors = [
-    {
-      name: "primary",
-      label: "Primary",
-      variants: [
-        "primary",
-        "primary-accent",
-        "primary-muted",
-        "primary-content",
-      ],
-    },
-    {
-      name: "secondary",
-      label: "Secondary",
-      variants: [
-        "secondary",
-        "secondary-accent",
-        "secondary-muted",
-        "secondary-content",
-      ],
-    },
-    {
-      name: "success",
-      label: "Success",
-      variants: [
-        "success",
-        "success-accent",
-        "success-muted",
-        "success-content",
-      ],
-    },
-    {
-      name: "danger",
-      label: "danger",
-      variants: ["danger", "danger-accent", "danger-muted", "danger-content"],
-    },
-    {
-      name: "warning",
-      label: "Warning",
-      variants: [
-        "warning",
-        "warning-accent",
-        "warning-muted",
-        "warning-content",
-      ],
-    },
-    {
-      name: "info",
-      label: "Info",
-      variants: ["info", "info-accent", "info-muted", "info-content"],
-    },
-    {
-      name: "surface",
-      label: "Surface",
-      variants: [
-        "surface",
-        "surface-accent",
-        "surface-muted",
-        "surface-content",
-      ],
-    },
-    {
-      name: "disabled",
-      label: "Disabled",
-      variants: ["disabled", "disabled-content"],
-    },
-    {
-      name: "fg",
-      label: "Foreground",
-      variants: ["fg", "fg-muted"],
-    },
-    {
-      name: "bg",
-      label: "Background",
-      variants: ["bg"],
-    },
+  // List of primary semantic color tokens and their explanations
+  const tokens = [
+    { name: "--neutral", desc: "Default neutral background color (often used for base surfaces)" },
+    { name: "--neutral-content", desc: "Content color (text/icons) on neutral backgrounds" },
+    { name: "--primary", desc: "Primary brand/action color" },
+    { name: "--primary-content", desc: "Content color on primary backgrounds" },
+    { name: "--secondary", desc: "Secondary/accent color" },
+    { name: "--secondary-content", desc: "Content color on secondary backgrounds" },
+    { name: "--success", desc: "Success/confirmation color" },
+    { name: "--success-content", desc: "Content color on success backgrounds" },
+    { name: "--danger", desc: "Danger/error color" },
+    { name: "--danger-content", desc: "Content color on danger backgrounds" },
+    { name: "--warning", desc: "Warning/alert color" },
+    { name: "--warning-content", desc: "Content color on warning backgrounds" },
+    { name: "--info", desc: "Info/notification color" },
+    { name: "--info-content", desc: "Content color on info backgrounds" },
+    { name: "--canvas", desc: "Main app background (canvas)" },
+    { name: "--canvas-content", desc: "Content color on canvas background" },
+    { name: "--surface", desc: "Surface color for cards, panels, etc." },
+    { name: "--surface-content", desc: "Content color on surface backgrounds" },
+    { name: "--disabled", desc: "Disabled element background" },
+    { name: "--disabled-content", desc: "Content color for disabled elements" },
   ];
-
-  // Interactive state for base color and deltas
-  const [accentDelta, setAccentDelta] = createSignal(0.1);
-  const [mutedDelta, setMutedDelta] = createSignal(-0.1);
-
-  // Handler to update CSS variables for deltas
-  function updateDelta(varName: string, value: number) {
-    document.documentElement.style.setProperty(varName, value.toString());
-  }
 
   return (
     <section>
       <h2>Semantic Colors</h2>
-      <div>
-        <div class="row gap-4">
-          <label style={{ display: "block", "margin-top": "1rem" }}>
-            Accent delta:
-            <input
-              type="range"
-              min={0}
-              max={0.3}
-              step={0.01}
-              value={accentDelta()}
-              onInput={(e) => {
-                setAccentDelta(Number(e.currentTarget.value));
-                updateDelta("--accent-delta", Number(e.currentTarget.value));
-              }}
-            />
-            <span>{accentDelta()}</span>
-          </label>
-          <label style={{ display: "block", "margin-top": "1rem" }}>
-            Muted delta:
-            <input
-              type="range"
-              min={-0.3}
-              max={0}
-              step={0.01}
-              value={mutedDelta()}
-              onInput={(e) => {
-                setMutedDelta(Number(e.currentTarget.value));
-                updateDelta("--muted-delta", Number(e.currentTarget.value));
-              }}
-            />
-            <span>{mutedDelta()}</span>
-          </label>
-        </div>
-        <ul class="no-marker p-0 m-0 row wrap gap-4 items-grow">
-          {semanticColors.map((color) => (
-            <li>
-              {/* {color.label} */}
-              <ul class="no-marker p-0 m-0">
-                {color.variants.map((variant) => (
-                  <li class="row gap-1 text-xs items-center mb-1">
-                    <div
-                      class="p-3 radius border"
-                      style={{
-                        background: `var(--${variant})`,
-                      }}
-                      title={`var(--${variant})`}
-                    />
-                    {`--${variant}`}
-                  </li>
-                ))}
-              </ul>
-            </li>
+      <table class="semantic-tokens-table">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Preview</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tokens.map((token) => (
+            <tr>
+              <td><code>{token.name}</code></td>
+              <td>
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "2.5rem",
+                    height: "1.5rem",
+                    background: `var(${token.name})`,
+                    border: "1px solid #ccc",
+                    "border-radius": "0.25rem",
+                  }}
+                  title={token.name}
+                />
+              </td>
+              <td>{token.desc}</td>
+            </tr>
           ))}
-        </ul>
-      </div>
-      <p style={{ "margin-top": "2rem" }}>
-        <b>Tip:</b> Select a base color to highlight it. Adjust the accent/muted
-        delta sliders to see all variants update live.
-      </p>
+        </tbody>
+      </table>
     </section>
   );
 }

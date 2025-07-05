@@ -1,0 +1,24 @@
+@layer utilities {  
+  .radius-xs {
+    border-radius: var(--dim-1);
+  }
+  .radius-sm {
+    border-radius: var(--dim-2);
+  }
+  .radius,
+  .radius-md {
+    border-radius: var(--dim-3);
+  }
+  .radius-lg {
+    border-radius: var(--dim-4);
+  }
+  .radius-xl {
+    border-radius: var(--dim-5);
+  }
+  .radius-full {
+    border-radius: 9999px;
+  } 
+  .radius-none {
+    border-radius: 0;
+  }
+}

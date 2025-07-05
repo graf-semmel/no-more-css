@@ -5,7 +5,8 @@
 
 html {
   width: 100vw;
-  background-color: var(--bg);
+  background-color: var(--canvas);
+  color: var(--canvas-content);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -26,5 +27,5 @@ hr {
   border-radius: var(--border-radius);
 }
 .border {
-  border: var(--border)
+  border: var(--border);
 }

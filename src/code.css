@@ -27,7 +27,7 @@ code:not(pre > code) {
   background-color: var(--surface);
   color: var(--surface-content);
   padding: 0.05rem 0.3rem;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   border-radius: 0.25rem;
   user-select: all;
 }

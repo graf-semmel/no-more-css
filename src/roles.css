@@ -1,0 +1,30 @@
+@layer roles {
+  .neutral {
+    --background-color: var(--neutral);
+    --foreground-color: var(--neutral-content);
+  }
+  .primary {
+    --background-color: var(--primary);
+    --foreground-color: var(--primary-content);
+  }
+  .secondary {
+    --background-color: var(--secondary);
+    --foreground-color: var(--secondary-content);
+  }
+  .success {
+    --background-color: var(--success);
+    --foreground-color: var(--success-content);
+  }
+  .danger {
+    --background-color: var(--danger);
+    --foreground-color: var(--danger-content);
+  }
+  .warning {
+    --background-color: var(--warning);
+    --foreground-color: var(--warning-content);
+  }
+  .info {
+    --background-color: var(--info);
+    --foreground-color: var(--info-content);
+  }
+}
