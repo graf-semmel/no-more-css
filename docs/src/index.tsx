@@ -2,7 +2,7 @@
 import { render } from "solid-js/web";
 import { HashRouter } from "@solidjs/router";
 import { lazy } from "solid-js";
-import Layout from "./Layout";
+import Layout from "./components/Layout.tsx";
 import "@acss/all.scss";
 import "./index.css";
 import 'highlight.js/styles/lioshi.css';
@@ -13,7 +13,7 @@ const routes = [
     children: [
       {
         path: "/",
-        component: lazy(() => import("./App.tsx")),
+        component: lazy(() => import("./pages/home/Home.tsx")),
       },
       {
         path: "/layout",

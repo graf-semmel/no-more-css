@@ -1,6 +1,6 @@
 import { JSX } from "solid-js";
 import Tabs from "./Tabs";
-import Code from "../../Code";
+import Code from "../../components/Code";
 
 export default function Form() {
   return (

@@ -1,5 +1,5 @@
 import { createEffect, createSignal } from "solid-js";
-import Code from "../../Code";
+import Code from "../../components/Code";
 import { FlexItemPlayground } from "./FlexItemPlayground"; // Added import
 import Tabs from "../form/Tabs";
 

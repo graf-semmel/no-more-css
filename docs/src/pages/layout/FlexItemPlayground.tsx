@@ -1,5 +1,5 @@
 import { createSignal, createEffect, Accessor, Setter } from "solid-js";
-import Code from "../../Code";
+import Code from "../../components/Code";
 
 // Define the type for a single flex item's properties
 interface FlexItemProps {
