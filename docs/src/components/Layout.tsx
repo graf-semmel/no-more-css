@@ -13,7 +13,7 @@ export default function Layout(props: any) {
           <a href="#/theme">Theme</a>
         </nav>
       </header>
-      <hr />
+      {/* <hr /> */}
       <main>{props.children}</main>
       <footer>
         <row class="gap-8 justify-center">

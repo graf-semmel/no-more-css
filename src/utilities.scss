@@ -1,0 +1,27 @@
+@layer utilities {
+  .primary,
+  .secondary,
+  .success,
+  .danger,
+  .warning,
+  .info {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .lowercase {
+    text-transform: lowercase;  
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  // Font weight utilities
+  @each $weight in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
+    .font-#{$weight} { font-weight: $weight; }
+  }
+}

@@ -64,3 +64,8 @@ footer row section {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
+
+body > header {
+  background-color: oklch(from var(--background) l c h/0.7);
+  border-bottom: none;
+}

@@ -1,105 +1,131 @@
-// src/utilities/spacing.scss
+// Size scale map (multiplicator only)
+$size-scale: (
+  6xs: 0.125,
+  5xs: 0.25,
+  4xs: 0.325,
+  3xs: 0.5,
+  2xs: 0.625,
+  xs: 0.75,
+  sm: 0.825,
+  md: 1,
+  lg: 1.25,
+  xl: 1.5,
+  '2xl': 2,
+  '3xl': 3,
+  '4xl': 4,
+  '5xl': 6,
+  '6xl': 8,
+);
 
-// Use a CSS variable for the base spacing step
-:root {
-  --spacing-step: 0.25rem;
-}
-
-// Utility classes using calc and the CSS variable
-.m-0 {
-  margin: 0;
-}
-.mt-0 {
-  margin-top: 0;
-}
-.mr-0 {
-  margin-right: 0;
-}
-.mb-0 {
-  margin-bottom: 0;
-}
-.ml-0 {
-  margin-left: 0;
-}
-.mx-0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-.my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.p-0 {
-  padding: 0;
-}
-.pt-0 {
-  padding-top: 0;
-}
-.pr-0 {
-  padding-right: 0;
-}
-.pb-0 {
-  padding-bottom: 0;
-}
-.pl-0 {
-  padding-left: 0;
-}
-.px-0 {
-  padding-left: 0;
-  padding-right: 0;
-}
-.py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+@layer theme {
+  :root {
+    // Multiplicator variables
+    @each $name, $multiplier in $size-scale {
+      --#{$name}: #{$multiplier};
+    }
+    // Base variables for each group
+    --font-base: 1rem;
+    --radius-base: 0.5rem;
+    --w-base: 1rem;
+    --h-base: 1rem;
+    --gap-base: 1rem;
+    --line-base: 1;
+    --spacing-base: 0.1em;
+    --m-base: 1rem;
+    --p-base: 1rem;
+    // Grouped CSS variables using multiplicators
+    @each $name, $multiplier in $size-scale {
+      --font-#{$name}: calc(var(--#{$name}) * var(--font-base));
+      --radius-#{$name}: calc(var(--#{$name}) * var(--radius-base));
+      --w-#{$name}: calc(var(--#{$name}) * var(--w-base));
+      --h-#{$name}: calc(var(--#{$name}) * var(--h-base));
+      --gap-#{$name}: calc(var(--#{$name}) * var(--gap-base));
+      --row-gap-#{$name}: calc(var(--#{$name}) * var(--gap-base));
+      --col-gap-#{$name}: calc(var(--#{$name}) * var(--gap-base));
+      --line-#{$name}: calc(var(--#{$name}) * var(--line-base));
+      --spacing-#{$name}: calc(var(--#{$name}) * var(--spacing-base));
+      --m-#{$name}: calc(var(--#{$name}) * var(--m-base));
+      --p-#{$name}: calc(var(--#{$name}) * var(--p-base));
+    }
+  }
 }
 
-// Step-based spacing utilities
-@for $i from 1 through 16 {
-  $step: $i;
-  .m-#{$step} {
-    margin: calc(var(--spacing-step) * #{$step});
+@layer utilities {
+  // Margin & Padding utilities
+  @each $name, $multiplier in $size-scale {
+    .m-#{$name} { margin: var(--m-#{$name}); }
+    .mt-#{$name} { margin-top: var(--m-#{$name}); }
+    .mr-#{$name} { margin-right: var(--m-#{$name}); }
+    .mb-#{$name} { margin-bottom: var(--m-#{$name}); }
+    .ml-#{$name} { margin-left: var(--m-#{$name}); }
+    .mx-#{$name} { margin-left: var(--m-#{$name}); margin-right: var(--m-#{$name}); }
+    .my-#{$name} { margin-top: var(--m-#{$name}); margin-bottom: var(--m-#{$name}); }
+    .p-#{$name} { padding: var(--p-#{$name}); }
+    .pt-#{$name} { padding-top: var(--p-#{$name}); }
+    .pr-#{$name} { padding-right: var(--p-#{$name}); }
+    .pb-#{$name} { padding-bottom: var(--p-#{$name}); }
+    .pl-#{$name} { padding-left: var(--p-#{$name}); }
+    .px-#{$name} { padding-left: var(--p-#{$name}); padding-right: var(--p-#{$name}); }
+    .py-#{$name} { padding-top: var(--p-#{$name}); padding-bottom: var(--p-#{$name}); }
   }
-  .mt-#{$step} {
-    margin-top: calc(var(--spacing-step) * #{$step});
+  // None and full variations for margin and padding
+  .m-none, .mt-none, .mr-none, .mb-none, .ml-none, .mx-none, .my-none { margin: 0 !important; }
+  .p-none, .pt-none, .pr-none, .pb-none, .pl-none, .px-none, .py-none { padding: 0 !important; }
+  .m-full, .mt-full, .mr-full, .mb-full, .ml-full, .mx-full, .my-full { margin: 100% !important; }
+  .p-full, .pt-full, .pr-full, .pb-full, .pl-full, .px-full, .py-full { padding: 100% !important; }
+
+  // Font size utilities
+  @each $name, $multiplier in $size-scale {
+    .font-#{$name} { font-size: var(--font-#{$name}); }
   }
-  .mr-#{$step} {
-    margin-right: calc(var(--spacing-step) * #{$step});
+  .font-none { font-size: 0 !important; }
+  .font-full { font-size: 100vw !important; }
+
+  // Border radius utilities
+  @each $name, $multiplier in $size-scale {
+    .radius-#{$name} { border-radius: var(--radius-#{$name}); }
   }
-  .mb-#{$step} {
-    margin-bottom: calc(var(--spacing-step) * #{$step});
+  .radius-none { border-radius: 0 !important; }
+  .radius-full { border-radius: 9999px !important; }
+
+  // Width/Height utilities
+  @each $name, $multiplier in $size-scale {
+    .w-#{$name} { width: var(--w-#{$name}); }
+    .h-#{$name} { height: var(--h-#{$name}); }
+    .min-w-#{$name} { min-width: var(--w-#{$name}); }
+    .min-h-#{$name} { min-height: var(--h-#{$name}); }
+    .max-w-#{$name} { max-width: var(--w-#{$name}); }
+    .max-h-#{$name} { max-height: var(--h-#{$name}); }
   }
-  .ml-#{$step} {
-    margin-left: calc(var(--spacing-step) * #{$step});
+  .w-none { width: 0 !important; }
+  .h-none { height: 0 !important; }
+  .w-full { width: 100% !important; }
+  .h-full { height: 100% !important; }
+  .min-w-none { min-width: 0 !important; }
+  .min-h-none { min-height: 0 !important; }
+  .max-w-full { max-width: 100% !important; }
+  .max-h-full { max-height: 100% !important; }
+
+  // Gap utilities
+  @each $name, $multiplier in $size-scale {
+    .gap-#{$name} { gap: var(--gap-#{$name}); }
+    .row-gap-#{$name} { row-gap: var(--row-gap-#{$name}); }
+    .col-gap-#{$name} { column-gap: var(--col-gap-#{$name}); }
   }
-  .mx-#{$step} {
-    margin-left: calc(var(--spacing-step) * #{$step});
-    margin-right: calc(var(--spacing-step) * #{$step});
+  .gap-none, .row-gap-none, .col-gap-none { gap: 0 !important; row-gap: 0 !important; column-gap: 0 !important; }
+  .gap-full, .row-gap-full, .col-gap-full { gap: 100% !important; row-gap: 100% !important; column-gap: 100% !important; }
+
+  // Line height utilities
+  @each $name, $multiplier in $size-scale {
+    .line-#{$name} { line-height: var(--line-#{$name}); }
   }
-  .my-#{$step} {
-    margin-top: calc(var(--spacing-step) * #{$step});
-    margin-bottom: calc(var(--spacing-step) * #{$step});
+  .line-none { line-height: 1 !important; }
+  .line-full { line-height: 2 !important; }
+
+  // Letter spacing utilities
+  @each $name, $multiplier in $size-scale {
+    .spacing-#{$name} { letter-spacing: var(--spacing-#{$name}); }
   }
-  .p-#{$step} {
-    padding: calc(var(--spacing-step) * #{$step});
-  }
-  .pt-#{$step} {
-    padding-top: calc(var(--spacing-step) * #{$step});
-  }
-  .pr-#{$step} {
-    padding-right: calc(var(--spacing-step) * #{$step});
-  }
-  .pb-#{$step} {
-    padding-bottom: calc(var(--spacing-step) * #{$step});
-  }
-  .pl-#{$step} {
-    padding-left: calc(var(--spacing-step) * #{$step});
-  }
-  .px-#{$step} {
-    padding-left: calc(var(--spacing-step) * #{$step});
-    padding-right: calc(var(--spacing-step) * #{$step});
-  }
-  .py-#{$step} {
-    padding-top: calc(var(--spacing-step) * #{$step});
-    padding-bottom: calc(var(--spacing-step) * #{$step});
-  }
+  .spacing-none { letter-spacing: 0 !important; }
+  .spacing-full { letter-spacing: 1em !important; }
 }

@@ -146,7 +146,7 @@ function Colors() {
           {tokens.map((token) => (
             <tr>
               <td>
-                <div class="p-3" style={{ background: `var(${token.name})` }} />
+                <div class="p-xs" style={{ background: `var(${token.name})` }} />
               </td>
               <td>
                 <code>{token.name}</code>
